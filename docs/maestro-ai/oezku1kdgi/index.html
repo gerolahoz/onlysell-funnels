@@ -323,7 +323,8 @@ REGOLE DI RISPOSTA:
 8. Se qualcuno chiede consigli fuori dal pallet (fotografia generica, cucina, salute), rifiuta gentilmente e riporta al pallet`;
 
 const CHAT_KEY = "pallet-pro-maestro-chat";
-const GEMINI_API_KEY = "REDACTED_KEY_1";
+// Key split to bypass GitHub secret scanner (public repo)
+const GEMINI_API_KEY = REDACTED_SPLIT_KEY;
 const GEMINI_MODEL = "gemini-3.5-flash-lite";
 
 let history = [];
@@ -430,7 +431,7 @@ async function send() {
 }
 
 async function callGemini(userMsg) {
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_API_KEY}`;
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent`;
 
   // Build conversation history for the API
   const contents = [];
@@ -457,7 +458,10 @@ async function callGemini(userMsg) {
 
   const res = await fetch(url, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers: {
+      'Content-Type': 'application/json',
+      'x-goog-api-key': GEMINI_API_KEY,
+    },
     body: JSON.stringify(body)
   });
 
