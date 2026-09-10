@@ -324,7 +324,7 @@ REGOLE DI RISPOSTA:
 
 const CHAT_KEY = "pallet-pro-maestro-chat";
 // Key split to bypass GitHub secret scanner (public repo)
-const GEMINI_API_KEY = REDACTED_SPLIT_KEY;
+const GEMINI_PROXY_URL = "https://rkschziqyvnolocixjhd.supabase.co/functions/v1/gemini-proxy";
 const GEMINI_MODEL = "gemini-3.5-flash-lite";
 
 let history = [];
@@ -431,14 +431,10 @@ async function send() {
 }
 
 async function callGemini(userMsg) {
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent`;
-
-  // Build conversation history for the API
   const contents = [];
   contents.push({ role: 'user', parts: [{ text: 'CONTESTO SISTEMA (non rispondere qui, memorizza):\n\n' + CONTEXT }] });
   contents.push({ role: 'model', parts: [{ text: 'Ho capito. Sono Il Maestro Falegname AI e risponderò in italiano seguendo le regole indicate.' }] });
 
-  // Add previous history (last 10 exchanges max)
   const recent = history.slice(-20);
   for (const m of recent.slice(0, -1)) {
     contents.push({
@@ -449,6 +445,7 @@ async function callGemini(userMsg) {
   contents.push({ role: 'user', parts: [{ text: userMsg }] });
 
   const body = {
+    model: GEMINI_MODEL,
     contents,
     generationConfig: {
       temperature: 0.7,
@@ -456,12 +453,9 @@ async function callGemini(userMsg) {
     }
   };
 
-  const res = await fetch(url, {
+  const res = await fetch(GEMINI_PROXY_URL, {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'x-goog-api-key': GEMINI_API_KEY,
-    },
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(body)
   });
 

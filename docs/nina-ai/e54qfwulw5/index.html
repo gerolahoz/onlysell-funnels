@@ -274,7 +274,7 @@ RESPONSE RULES:
 8. Use markdown-lite: **bold** for emphasis, bullets with "- " for lists.`;
 
 const CHAT_KEY = "bootie-master-nina-chat";
-const GEMINI_API_KEY = REDACTED_SPLIT_KEY;
+const GEMINI_PROXY_URL = "https://rkschziqyvnolocixjhd.supabase.co/functions/v1/gemini-proxy";
 const GEMINI_MODEL = "gemini-3.5-flash-lite";
 
 let history = [];
@@ -373,8 +373,6 @@ async function send() {
 }
 
 async function callGemini(userMsg) {
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent`;
-
   const contents = [];
   contents.push({ role: 'user', parts: [{ text: 'SYSTEM CONTEXT (do not reply here, memorize):\n\n' + CONTEXT }] });
   contents.push({ role: 'model', parts: [{ text: "Got it. I'm NINA, your Bootie Master crochet coach. I'll answer in warm, direct English following the rules above." }] });
@@ -389,16 +387,14 @@ async function callGemini(userMsg) {
   contents.push({ role: 'user', parts: [{ text: userMsg }] });
 
   const body = {
+    model: GEMINI_MODEL,
     contents,
     generationConfig: { temperature: 0.7, maxOutputTokens: 800 }
   };
 
-  const res = await fetch(url, {
+  const res = await fetch(GEMINI_PROXY_URL, {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'x-goog-api-key': GEMINI_API_KEY,
-    },
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(body)
   });
 
