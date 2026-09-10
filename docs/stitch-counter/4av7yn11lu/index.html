@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Stitch Counter · Bootie Master</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800;9..144,900&family=Nunito+Sans:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FDF8F4;--paper:#FFF;--ink:#3A2A25;--ink-soft:#6B4E45;
+  --wood:#9C5548;--wood-dark:#7A3F35;--wood-light:#C77A6C;
+  --burg:#3A2A25;--gold:#C9A227;--gold-dark:#A88818;
+  --line:#EDE0D5;--red:#B23A2E;--green:#4A7C4E;
+  --shadow:0 12px 40px rgba(58,42,37,.12);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:'Nunito Sans',-apple-system,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.55;
+  -webkit-font-smoothing:antialiased;min-height:100vh;
+  overscroll-behavior:none;user-select:none;
+  -webkit-user-select:none;-webkit-tap-highlight-color:transparent;
+}
+.topbar{
+  background:var(--burg);color:var(--gold);
+  padding:12px 20px;text-align:center;
+  font-family:'Fraunces',serif;font-weight:800;font-size:15px;
+}
+.topbar b{color:#FDF8F4}
+.wrap{max-width:520px;margin:0 auto;padding:20px 16px 40px}
+
+h1{
+  font-family:'Fraunces',serif;font-size:24px;font-weight:800;color:var(--burg);
+  text-align:center;margin-bottom:6px;
+}
+.tagline{text-align:center;color:var(--ink-soft);margin-bottom:24px;font-size:14px}
+
+.counter-card{
+  background:var(--paper);border:1px solid var(--line);border-radius:20px;
+  padding:24px 20px;box-shadow:var(--shadow);margin-bottom:16px;
+}
+.counter-card .label-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.counter-card input.name{
+  background:transparent;border:0;outline:0;font-family:'Fraunces',serif;
+  font-size:20px;font-weight:800;color:var(--burg);width:100%;padding:2px 0;
+}
+.counter-card .name:focus{border-bottom:2px solid var(--wood-light)}
+.counter-card .delete{
+  background:transparent;border:0;font-size:18px;cursor:pointer;color:var(--ink-soft);
+  padding:6px 10px;border-radius:8px;
+}
+.counter-card .delete:hover{background:#F7D5CF;color:var(--red)}
+
+.big-num{
+  font-family:'Fraunces',serif;font-size:88px;font-weight:900;color:var(--wood-dark);
+  text-align:center;line-height:1;margin:20px 0;letter-spacing:-.02em;
+}
+
+.buttons{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
+.btn{
+  padding:22px;border:0;border-radius:14px;cursor:pointer;
+  font-family:'Fraunces',serif;font-weight:800;font-size:22px;
+  transition:.1s;text-align:center;
+}
+.btn:active{transform:scale(0.97)}
+.btn-plus{
+  background:linear-gradient(180deg,var(--gold),var(--gold-dark));color:var(--burg);
+  box-shadow:0 5px 0 var(--wood-dark);
+}
+.btn-plus:hover{transform:translateY(-2px);box-shadow:0 7px 0 var(--wood-dark)}
+.btn-plus:active{transform:translateY(2px);box-shadow:0 3px 0 var(--wood-dark)}
+.btn-minus{
+  background:#FFF;color:var(--ink);border:2px solid var(--line);
+}
+.btn-minus:hover{border-color:var(--wood)}
+
+.controls{display:flex;gap:8px;margin-top:12px}
+.controls .action{
+  flex:1;padding:12px;background:#FFF;border:1px solid var(--line);border-radius:10px;
+  font-size:13px;font-weight:700;color:var(--ink-soft);cursor:pointer;
+  font-family:inherit;
+}
+.controls .action:hover{border-color:var(--wood);color:var(--burg)}
+
+.rows-note{
+  font-size:12px;color:var(--ink-soft);text-align:center;
+  margin-top:10px;font-style:italic;
+}
+
+.add-counter{
+  width:100%;padding:16px;background:transparent;
+  border:2px dashed var(--line);border-radius:14px;
+  font-family:'Fraunces',serif;font-weight:800;font-size:16px;color:var(--wood-dark);
+  cursor:pointer;margin-top:12px;transition:.15s;
+}
+.add-counter:hover{border-color:var(--wood);background:var(--paper)}
+
+.tips{
+  background:var(--paper);border:1px solid var(--line);border-radius:14px;
+  padding:20px 22px;margin-top:20px;font-size:14px;color:var(--ink-soft);line-height:1.6;
+}
+.tips h3{font-family:'Fraunces',serif;color:var(--burg);margin-bottom:8px;font-size:16px}
+.tips ul{padding-left:18px;margin-top:6px}
+.tips li{margin-bottom:4px}
+
+.foot{
+  text-align:center;color:var(--ink-soft);font-size:12px;
+  margin-top:24px;padding-top:16px;border-top:1px solid var(--line);
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">🧮 <b>Stitch Counter</b> · Bonus 3</div>
+
+<div class="wrap">
+  <h1>Stitch & Row Counter</h1>
+  <p class="tagline">Multiple counters. Auto-saves in your browser. Works offline.</p>
+
+  <div id="counters"></div>
+
+  <button class="add-counter" onclick="addCounter()">+ Add another counter</button>
+
+  <div class="tips">
+    <h3>Tips</h3>
+    <ul>
+      <li>Name each counter (e.g. "Round 1", "Left bootie", "Cushion #4")</li>
+      <li>Big <b>+1</b> for each stitch or row · <b>–1</b> to undo</li>
+      <li>Long-press <b>+1</b> for rapid counting (auto-repeat)</li>
+      <li>Counters auto-save in your browser — close and reopen safely</li>
+      <li>Set target to see progress</li>
+    </ul>
+  </div>
+
+  <div class="foot">© 2026 Bootie Master · Bonus 3 · Works offline after first load</div>
+</div>
+
+<script>
+const KEY = "bootie-master-counters";
+let counters = [];
+
+function load() {
+  try {
+    const saved = localStorage.getItem(KEY);
+    if (saved) counters = JSON.parse(saved);
+  } catch(e){}
+  if (counters.length === 0) {
+    counters = [{ id: Date.now(), name: "Main counter", value: 0, target: 0 }];
+  }
+  render();
+}
+function save() {
+  try { localStorage.setItem(KEY, JSON.stringify(counters)); } catch(e){}
+}
+function render() {
+  const wrap = document.getElementById('counters');
+  wrap.innerHTML = '';
+  counters.forEach((c, idx) => {
+    const div = document.createElement('div');
+    div.className = 'counter-card';
+    const targetInfo = c.target > 0 ? `Target: ${c.target} · <b>${Math.min(100, Math.round(c.value/c.target*100))}%</b>` : `Rows/stitches counted`;
+    div.innerHTML = `
+      <div class="label-row">
+        <input class="name" type="text" value="${c.name.replace(/"/g,'&quot;')}" oninput="updateName(${idx}, this.value)" placeholder="Counter name…">
+        ${counters.length > 1 ? `<button class="delete" onclick="deleteCounter(${idx})" title="Delete">✕</button>` : ''}
+      </div>
+      <div class="big-num">${c.value}</div>
+      <div class="buttons">
+        <button class="btn btn-minus" onclick="dec(${idx})" ontouchstart="startDec(${idx})" ontouchend="stopHold()">–1</button>
+        <button class="btn btn-plus" onclick="inc(${idx})" onmousedown="startInc(${idx})" onmouseup="stopHold()" onmouseleave="stopHold()" ontouchstart="startInc(${idx})" ontouchend="stopHold()">+1</button>
+      </div>
+      <div class="controls">
+        <button class="action" onclick="setTarget(${idx})">🎯 Target: ${c.target || '—'}</button>
+        <button class="action" onclick="reset(${idx})">↺ Reset</button>
+      </div>
+      <div class="rows-note">${targetInfo}</div>
+    `;
+    wrap.appendChild(div);
+  });
+}
+function inc(i) { counters[i].value++; save(); render(); vibrate(); }
+function dec(i) { counters[i].value = Math.max(0, counters[i].value - 1); save(); render(); vibrate(); }
+function updateName(i, v) { counters[i].name = v; save(); }
+function reset(i) { if (confirm('Reset this counter to 0?')) { counters[i].value = 0; save(); render(); } }
+function setTarget(i) {
+  const t = prompt('Set target (0 to clear):', counters[i].target || '');
+  if (t !== null) { counters[i].target = Math.max(0, parseInt(t) || 0); save(); render(); }
+}
+function deleteCounter(i) {
+  if (confirm('Delete this counter?')) { counters.splice(i, 1); save(); render(); }
+}
+function addCounter() {
+  counters.push({ id: Date.now(), name: `Counter ${counters.length + 1}`, value: 0, target: 0 });
+  save(); render();
+}
+function vibrate() { if (navigator.vibrate) navigator.vibrate(10); }
+
+// Auto-repeat on hold
+let holdTimer = null;
+let holdInterval = null;
+function startInc(i) {
+  holdTimer = setTimeout(() => {
+    holdInterval = setInterval(() => { counters[i].value++; save(); render(); }, 80);
+  }, 500);
+}
+function startDec(i) {
+  holdTimer = setTimeout(() => {
+    holdInterval = setInterval(() => { counters[i].value = Math.max(0, counters[i].value - 1); save(); render(); }, 80);
+  }, 500);
+}
+function stopHold() {
+  clearTimeout(holdTimer);
+  clearInterval(holdInterval);
+}
+
+// Keyboard shortcut for main counter (space = +1, backspace = -1)
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'INPUT') return;
+  if (e.code === 'Space') { e.preventDefault(); inc(0); }
+  if (e.code === 'Backspace') { e.preventDefault(); dec(0); }
+});
+
+load();
+</script>
+
+</body>
+</html>
