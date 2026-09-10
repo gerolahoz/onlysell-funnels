@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Il tuo Terza Età Attiva Pro · Accesso completo</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FAF6EF;--paper:#FFFFFF;--soft:#f0fdf4;--cream2:#eee2cf;
+  --ink:#111827;--ink-soft:#374151;--ink-muted:#6b7280;
+  --green:#15803d;--green-dark:#116330;--accent:#22c55e;
+  --forest:#1F3D2B;--gold:#E0A030;--gold-dark:#9a6a10;
+  --terracotta:#c0492e;
+  --shadow-sm:0 4px 12px rgba(17,99,48,.08);
+  --shadow:0 12px 40px rgba(17,99,48,.15);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',-apple-system,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:var(--green-dark);text-decoration:none}
+
+/* HERO */
+.hero{
+  background:linear-gradient(135deg,#1F3D2B 0%,#116330 55%,#15803d 130%);
+  color:#eee2cf;
+  padding:60px 24px 80px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;top:-100px;right:-100px;
+  width:400px;height:400px;
+  background:radial-gradient(circle,rgba(224,160,48,.20) 0%,transparent 70%);
+  border-radius:50%;
+}
+.hero::after{
+  content:"";position:absolute;bottom:-150px;left:-150px;
+  width:500px;height:500px;
+  background:radial-gradient(circle,rgba(34,197,94,.15) 0%,transparent 70%);
+  border-radius:50%;
+}
+.hero .inner{max-width:820px;margin:0 auto;position:relative;z-index:1}
+.hero .brand{
+  display:inline-flex;align-items:center;gap:10px;
+  background:rgba(224,160,48,.15);border:1px solid rgba(224,160,48,.35);
+  padding:8px 16px;border-radius:99px;margin-bottom:24px;
+}
+.hero .brand .logo{
+  width:28px;height:28px;background:var(--gold);color:var(--forest);
+  border-radius:8px;display:flex;align-items:center;justify-content:center;
+  font-family:'Nunito',serif;font-weight:900;font-size:15px;
+}
+.hero .brand span{color:var(--gold);font-family:'Nunito',serif;font-weight:900;font-size:15px}
+.hero .brand em{color:#FFFFFF;font-style:normal}
+.hero .kicker{
+  display:inline-block;background:var(--gold);color:var(--forest);
+  padding:6px 18px;border-radius:99px;
+  font-size:11px;font-weight:900;letter-spacing:.14em;
+  text-transform:uppercase;margin-bottom:18px;
+  box-shadow:0 4px 12px rgba(224,160,48,.35);
+}
+.hero h1{
+  font-family:'Nunito',serif;
+  font-size:clamp(34px,5.5vw,54px);font-weight:900;color:#FFFFFF;
+  line-height:1.08;letter-spacing:-.015em;margin-bottom:16px;
+}
+.hero h1 em{color:var(--gold);font-style:normal}
+.hero .sub{
+  font-size:clamp(16px,2.1vw,20px);color:#eee2cf;
+  max-width:640px;margin:0 auto 32px;line-height:1.5;
+}
+.hero .stats{
+  display:flex;justify-content:center;gap:36px;flex-wrap:wrap;
+  padding-top:16px;border-top:1px solid rgba(224,160,48,.25);
+  max-width:640px;margin:0 auto;
+}
+.hero .stat{text-align:center}
+.hero .stat .num{
+  font-family:'Nunito',serif;font-size:36px;font-weight:900;
+  color:var(--gold);line-height:1;
+}
+.hero .stat .lbl{
+  font-size:11px;color:#eee2cf;text-transform:uppercase;
+  letter-spacing:.08em;font-weight:700;margin-top:6px;
+}
+
+/* MAIN */
+.wrap{max-width:920px;margin:-40px auto 0;padding:0 20px 60px;position:relative;z-index:2}
+
+/* CORE PRODUCT — hero card */
+.core-card{
+  background:linear-gradient(135deg,var(--paper) 0%,#FFFCF6 100%);
+  border:2px solid var(--gold);
+  border-radius:24px;padding:36px 32px;
+  box-shadow:var(--shadow);margin-bottom:24px;
+  position:relative;overflow:hidden;
+}
+.core-card::before{
+  content:"⭐";position:absolute;top:20px;right:24px;
+  font-size:32px;opacity:.18;
+}
+.core-card .badge{
+  display:inline-block;
+  background:var(--forest);color:var(--gold);
+  padding:5px 14px;border-radius:99px;
+  font-size:11px;font-weight:900;letter-spacing:.12em;
+  text-transform:uppercase;margin-bottom:14px;
+  font-family:'Nunito',sans-serif;
+}
+.core-card h2{
+  font-family:'Nunito',serif;font-size:clamp(28px,4vw,38px);
+  font-weight:900;color:var(--ink);line-height:1.15;margin-bottom:10px;
+}
+.core-card h2 em{color:var(--green-dark);font-style:normal}
+.core-card .desc{
+  color:var(--ink-soft);font-size:16px;line-height:1.6;
+  margin-bottom:22px;max-width:640px;
+}
+.core-card .stats{
+  display:flex;gap:20px;flex-wrap:wrap;margin-bottom:24px;
+  padding:14px 18px;background:var(--soft);border-radius:12px;
+  border:1px solid var(--cream2);
+}
+.core-card .stats > div{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--ink)}
+.core-card .stats > div b{color:var(--green-dark);font-weight:900}
+
+.cta-primary{
+  display:inline-flex;align-items:center;gap:10px;
+  background:linear-gradient(135deg,var(--accent),var(--green));color:#FFFFFF;
+  padding:16px 32px;border-radius:14px;
+  font-family:'Nunito',sans-serif;font-weight:800;font-size:17px;
+  text-decoration:none;cursor:pointer;
+  box-shadow:0 5px 0 var(--green-dark),0 10px 24px rgba(21,128,61,.28);
+  transition:.12s;
+}
+.cta-primary:hover{transform:translateY(-2px);box-shadow:0 7px 0 var(--green-dark),0 14px 32px rgba(21,128,61,.35)}
+.cta-primary:active{transform:translateY(3px);box-shadow:0 2px 0 var(--green-dark)}
+.cta-primary .arrow{font-size:22px}
+
+/* BONUS SECTION */
+.section-title{margin:40px 0 20px;text-align:center}
+.section-title h3{
+  font-family:'Nunito',serif;font-size:clamp(24px,3.2vw,32px);
+  font-weight:900;color:var(--ink);margin-bottom:6px;
+}
+.section-title h3 em{color:var(--green);font-style:normal}
+.section-title p{color:var(--ink-soft);font-size:15px}
+
+.bonus-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:16px;
+}
+.bonus-card{
+  background:var(--paper);border:1px solid var(--cream2);
+  border-radius:16px;padding:24px 22px;
+  display:flex;flex-direction:column;transition:.15s;
+  text-decoration:none;color:inherit;
+}
+.bonus-card:hover{
+  transform:translateY(-3px);box-shadow:var(--shadow);
+  border-color:var(--green);background:#FFFCF6;
+}
+.bonus-card .head{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.bonus-card .icon{
+  width:46px;height:46px;
+  background:linear-gradient(135deg,var(--accent),var(--green));color:#FFFFFF;
+  border-radius:12px;display:flex;align-items:center;justify-content:center;
+  font-size:22px;flex-shrink:0;
+  box-shadow:0 3px 8px rgba(21,128,61,.20);
+}
+.bonus-card .num{
+  font-size:10px;font-weight:900;color:var(--green);
+  letter-spacing:.14em;text-transform:uppercase;
+  display:block;margin-bottom:2px;
+}
+.bonus-card .title{
+  font-family:'Nunito',serif;font-size:19px;font-weight:900;
+  color:var(--ink);line-height:1.18;
+}
+.bonus-card .desc{
+  color:var(--ink-soft);font-size:14px;line-height:1.55;
+  flex:1;margin-bottom:16px;
+}
+.bonus-card .cta{
+  display:inline-flex;align-items:center;gap:6px;
+  color:var(--green);font-size:14px;font-weight:800;
+  padding-top:12px;border-top:1px dashed var(--cream2);
+  font-family:'Nunito',sans-serif;
+}
+.bonus-card .cta .arrow{transition:.15s}
+.bonus-card:hover .cta .arrow{transform:translateX(4px)}
+
+/* HOW TO USE */
+.howto{
+  background:var(--paper);border:1px solid var(--cream2);
+  border-radius:16px;padding:28px 32px;margin-top:36px;
+}
+.howto h3{
+  font-family:'Nunito',serif;font-size:24px;
+  color:var(--ink);margin-bottom:14px;font-weight:900;
+  display:flex;align-items:center;gap:10px;
+}
+.howto h3 em{color:var(--green);font-style:normal}
+.howto ol{padding-left:22px;color:var(--ink);font-size:15px;line-height:1.75}
+.howto ol li{margin-bottom:8px}
+.howto ol li b{color:var(--green);font-weight:800}
+
+/* FOOT */
+.foot{
+  text-align:center;color:var(--ink-muted);font-size:13px;
+  padding:32px 20px 20px;border-top:1px solid var(--cream2);margin-top:40px;
+}
+.foot b{color:var(--ink);font-weight:800}
+
+@media(max-width:520px){
+  .hero{padding:40px 18px 60px}
+  .hero .stats{gap:24px}
+  .hero .stat .num{font-size:28px}
+  .wrap{padding:0 14px 40px;margin-top:-30px}
+  .core-card{padding:26px 22px}
+  .core-card .stats{padding:12px 14px}
+  .cta-primary{padding:14px 24px;font-size:15px;width:100%;justify-content:center}
+  .bonus-card{padding:20px 18px}
+  .howto{padding:22px 20px}
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="inner">
+    <div class="brand">
+      <span class="logo">T</span>
+      <span>Terza Età <em>Attiva Pro</em></span>
+    </div>
+
+    <span class="kicker">✓ Ordine confermato</span>
+
+    <h1>Benvenuto in <em>Terza Età Attiva Pro</em>.<br>Il tuo accesso completo <em>è qui</em>.</h1>
+    <p class="sub">Sotto trovi il kit principale (5 tomi) + i 4 bonus. Ogni link è tuo, senza scadenza. Salva questa pagina nei preferiti — la userai prima di ogni seduta.</p>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="num">5</div>
+        <div class="lbl">Tomi core</div>
+      </div>
+      <div class="stat">
+        <div class="num">4</div>
+        <div class="lbl">Bonus inclusi</div>
+      </div>
+      <div class="stat">
+        <div class="num">+1.395</div>
+        <div class="lbl">Esercizi illustrati</div>
+      </div>
+      <div class="stat">
+        <div class="num">∞</div>
+        <div class="lbl">Accesso a vita</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap">
+
+  <!-- CORE -->
+  <div class="core-card">
+    <span class="badge">⭐ Kit principale · 5 tomi</span>
+    <h2>Terza Età <em>Attiva Pro</em></h2>
+    <p class="desc">Il vault definitivo per la terza età — <b>5 tomi con esercizi illustrati</b> organizzati per obiettivo (Fisico · Equilibrio · Stretching · Dinamiche di gruppo · Attività Cognitive) con schede stampabili pronte. Ogni seduta si prepara in minuti, non in ore. <b>Smetti di improvvisare — apri, scegli, applica.</b></p>
+
+    <div class="stats">
+      <div>📄 <b>Kit 5 tomi</b></div>
+      <div>🇮🇹 Italiano</div>
+      <div>📅 Edizione <b>2026</b></div>
+      <div>♾️ Aggiornamenti gratuiti</div>
+    </div>
+
+    <a class="cta-primary" href="/terza-eta-attiva-pro/626o9wsys0/" target="_blank">
+      Apri il Kit Principale <span class="arrow">→</span>
+    </a>
+  </div>
+
+  <!-- BONUS SECTION -->
+  <div class="section-title">
+    <h3>🎁 I 4 <em>bonus</em> inclusi</h3>
+    <p>Ogni bonus copre un caso specifico che il kit principale non affronta in profondità. Apri quello che ti serve adesso.</p>
+  </div>
+
+  <div class="bonus-grid">
+
+    <a class="bonus-card" href="/mobilita-ridotta/xznncvex73/" target="_blank">
+      <div class="head">
+        <div class="icon">♿</div>
+        <div>
+          <span class="num">Bonus 1</span>
+          <div class="title">+100 Esercizi Mobilità Ridotta</div>
+        </div>
+      </div>
+      <p class="desc">Attività illustrate per pazienti in sedia a rotelle o con mobilità limitata. <b>Nessuno resta fuori dalla seduta</b> — dalle micro-attivazioni in letto agli esercizi di sedia con supporto.</p>
+      <div class="cta">Apri il PDF <span class="arrow">→</span></div>
+    </a>
+
+    <a class="bonus-card" href="/recupero-post-caduta/69fp28ys8u/" target="_blank">
+      <div class="head">
+        <div class="icon">🩹</div>
+        <div>
+          <span class="num">Bonus 2</span>
+          <div class="title">+60 Esercizi Recupero Post-Caduta</div>
+        </div>
+      </div>
+      <p class="desc">Progressione sicura passo-passo dopo caduta o chirurgia. <b>Dalla stanza al passo autonomo</b> in 4 fasi cliniche progressive, con warning e criteri di avanzamento.</p>
+      <div class="cta">Apri il PDF <span class="arrow">→</span></div>
+    </a>
+
+    <a class="bonus-card" href="/guida-valutazione/uu2z15hi61/" target="_blank">
+      <div class="head">
+        <div class="icon">📊</div>
+        <div>
+          <span class="num">Bonus 3</span>
+          <div class="title">Guida di Valutazione Fisica</div>
+        </div>
+      </div>
+      <p class="desc">Le 8 scale validate essenziali (Barthel · Tinetti · Berg · TUG · MMSE · GDS · IADL · 6MWT) + 6 schede stampabili + protocollo valutazione in 45 min. <b>Documenti i progressi che oggi non riesci a dimostrare</b>.</p>
+      <div class="cta">Apri il PDF <span class="arrow">→</span></div>
+    </a>
+
+    <a class="bonus-card" href="/costruttore-sedute/l6yy7zr0mc/" target="_blank">
+      <div class="head">
+        <div class="icon">🗂️</div>
+        <div>
+          <span class="num">Bonus 4</span>
+          <div class="title">Costruttore di Sedute</div>
+        </div>
+      </div>
+      <p class="desc">Modelli pronti di sedute 45/60/90 minuti per ogni obiettivo + 5 piani settimanali per profilo paziente + 4 setup attrezzatura (domicilio/RSA/gruppo/zero-euro). <b>Pianifichi la settimana in 15 minuti</b>.</p>
+      <div class="cta">Apri il PDF <span class="arrow">→</span></div>
+    </a>
+
+  </div>
+
+  <!-- HOWTO -->
+  <div class="howto">
+    <h3>💡 Come sfruttare al meglio <em>Terza Età Attiva Pro</em></h3>
+    <ol>
+      <li><b>Prima di tutto:</b> apri il <b>Kit Principale · 5 Tomi</b> e leggi le 3 pagine di introduzione. Poi sfoglia il Tomo che serve per il tuo prossimo appuntamento (Fisico · Equilibrio · Stretching · Dinamiche · Cognitivo).</li>
+      <li><b>Nuovo paziente:</b> parti dal <b>Bonus 3 · Guida di Valutazione</b> — somministra il protocollo 45 min (Barthel + Tinetti + MMSE) prima di costruire qualunque programma.</li>
+      <li><b>Pianificare la settimana:</b> usa il <b>Bonus 4 · Costruttore di Sedute</b> per pescare il modello 45/60/90 min adatto e riempirlo con esercizi del Kit principale.</li>
+      <li><b>Paziente in sedia o allettato:</b> apri il <b>Bonus 1 · Mobilità Ridotta</b> — hai 100+ attività per chi non può alzarsi.</li>
+      <li><b>Paziente reduce da caduta o chirurgia:</b> segui il <b>Bonus 2 · Recupero Post-Caduta</b> fase per fase, senza saltare i criteri di avanzamento.</li>
+      <li><b>Ogni 3 mesi:</b> rivaluta con le stesse scale del Bonus 3 — è così che dimostri i progressi alla famiglia, al medico e a te stesso.</li>
+      <li><b>Salva questa pagina nei preferiti</b> — è il tuo hub di accesso a tutto. Nessuna password, sempre disponibile.</li>
+    </ol>
+  </div>
+
+</main>
+
+<footer class="foot">
+  © 2026 <b>Terza Età Attiva Pro</b> · Ogni riproduzione o rivendita di questi materiali è vietata dalla legge italiana sul diritto d'autore.
+</footer>
+
+</body>
+</html>
