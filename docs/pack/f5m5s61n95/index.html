@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Il tuo Percorso del Terapeuta · Accesso completo</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FAF6FC;--paper:#FFFFFF;--soft:#F0DFEC;--lav:#E8D8ED;
+  --ink:#3D1454;--ink-soft:#6B5B7A;--ink-muted:#8B7A94;
+  --mag:#AD1FA2;--purp:#8134AF;--dark:#5D2482;
+  --border:#DEB5CB;--green:#16A34A;
+  --shadow-sm:0 4px 12px rgba(61,20,84,.08);
+  --shadow:0 12px 40px rgba(61,20,84,.15);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Manrope',-apple-system,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:var(--purp);text-decoration:none}
+
+/* HERO */
+.hero{
+  background:linear-gradient(135deg,#3D1454 0%,#5D2482 55%,#8134AF 130%);
+  color:#F0DFEC;
+  padding:60px 24px 80px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:"";
+  position:absolute;top:-100px;right:-100px;
+  width:400px;height:400px;
+  background:radial-gradient(circle,rgba(222,181,203,.20) 0%,transparent 70%);
+  border-radius:50%;
+}
+.hero::after{
+  content:"";
+  position:absolute;bottom:-150px;left:-150px;
+  width:500px;height:500px;
+  background:radial-gradient(circle,rgba(173,31,162,.15) 0%,transparent 70%);
+  border-radius:50%;
+}
+.hero .inner{max-width:820px;margin:0 auto;position:relative;z-index:1}
+.hero .brand{
+  display:inline-flex;align-items:center;gap:10px;
+  background:rgba(222,181,203,.15);border:1px solid rgba(222,181,203,.35);
+  padding:8px 16px;border-radius:99px;margin-bottom:24px;
+}
+.hero .brand .logo{
+  width:28px;height:28px;background:var(--mag);color:#FFFFFF;
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:700;font-size:17px;
+}
+.hero .brand span{color:var(--border);font-family:'Cormorant Garamond',serif;font-weight:600;font-size:15px;font-style:italic}
+.hero .brand em{color:#FFFFFF;font-style:italic}
+
+.hero .kicker{
+  display:inline-block;
+  background:var(--mag);color:#FFFFFF;
+  padding:6px 18px;border-radius:99px;
+  font-size:11px;font-weight:800;letter-spacing:.14em;
+  text-transform:uppercase;margin-bottom:18px;
+  box-shadow:0 4px 12px rgba(173,31,162,.35);
+}
+.hero h1{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(34px,5.5vw,54px);
+  font-weight:700;
+  color:#FFFFFF;
+  line-height:1.08;
+  letter-spacing:-.015em;
+  margin-bottom:16px;
+}
+.hero h1 em{color:var(--border);font-style:italic}
+.hero .sub{
+  font-size:clamp(16px,2.1vw,20px);
+  color:var(--lav);
+  max-width:640px;
+  margin:0 auto 32px;
+  line-height:1.5;
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+}
+.hero .stats{
+  display:flex;justify-content:center;gap:36px;flex-wrap:wrap;
+  padding-top:16px;border-top:1px solid rgba(222,181,203,.25);
+  max-width:640px;margin:0 auto;
+}
+.hero .stat{text-align:center}
+.hero .stat .num{
+  font-family:'Cormorant Garamond',serif;
+  font-size:36px;font-weight:700;color:#FFFFFF;line-height:1;font-style:italic;
+}
+.hero .stat .lbl{
+  font-size:11px;color:var(--border);text-transform:uppercase;
+  letter-spacing:.08em;font-weight:700;margin-top:6px;font-family:'Manrope',sans-serif;
+}
+
+/* MAIN */
+.wrap{max-width:920px;margin:-40px auto 0;padding:0 20px 60px;position:relative;z-index:2}
+
+/* CORE PRODUCT — hero card */
+.core-card{
+  background:linear-gradient(135deg,var(--paper) 0%,#FDF9FC 100%);
+  border:2px solid var(--mag);
+  border-radius:24px;
+  padding:36px 32px;
+  box-shadow:var(--shadow);
+  margin-bottom:24px;
+  position:relative;
+  overflow:hidden;
+}
+.core-card::before{
+  content:"🌿";
+  position:absolute;top:20px;right:24px;
+  font-size:32px;opacity:.20;
+}
+.core-card .badge{
+  display:inline-block;
+  background:linear-gradient(135deg,var(--mag),var(--purp));color:#FFFFFF;
+  padding:6px 16px;border-radius:99px;
+  font-size:11px;font-weight:800;letter-spacing:.12em;
+  text-transform:uppercase;margin-bottom:14px;
+}
+.core-card h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(28px,4vw,38px);
+  font-weight:700;color:var(--ink);
+  line-height:1.12;margin-bottom:10px;
+}
+.core-card h2 em{color:var(--mag);font-style:italic}
+.core-card .desc{
+  color:var(--ink-soft);font-size:16px;line-height:1.6;
+  margin-bottom:22px;max-width:640px;
+}
+.core-card .stats{
+  display:flex;gap:20px;flex-wrap:wrap;margin-bottom:24px;
+  padding:14px 18px;background:var(--soft);border-radius:12px;
+  border:1px solid var(--border);
+}
+.core-card .stats > div{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--ink)}
+.core-card .stats > div b{color:var(--dark);font-weight:800}
+
+.cta-primary{
+  display:inline-flex;align-items:center;gap:10px;
+  background:linear-gradient(135deg,var(--mag),var(--purp));
+  color:#FFFFFF;
+  padding:16px 32px;border-radius:14px;
+  font-family:'Manrope',sans-serif;font-weight:700;font-size:17px;letter-spacing:.01em;
+  text-decoration:none;cursor:pointer;
+  box-shadow:0 5px 0 var(--dark),0 10px 24px rgba(173,31,162,.28);
+  transition:.12s;
+}
+.cta-primary:hover{transform:translateY(-2px);box-shadow:0 7px 0 var(--dark),0 14px 32px rgba(173,31,162,.35)}
+.cta-primary:active{transform:translateY(3px);box-shadow:0 2px 0 var(--dark)}
+.cta-primary .arrow{font-size:22px}
+
+/* BONUS SECTION */
+.section-title{
+  margin:40px 0 20px;
+  text-align:center;
+}
+.section-title h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(24px,3.2vw,32px);
+  font-weight:700;color:var(--ink);
+  margin-bottom:6px;font-style:italic;
+}
+.section-title h3 em{color:var(--mag);font-style:italic}
+.section-title p{color:var(--ink-soft);font-size:15px}
+
+.bonus-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:16px;
+}
+.bonus-card{
+  background:var(--paper);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:24px 22px;
+  display:flex;flex-direction:column;
+  transition:.15s;
+  text-decoration:none;
+  color:inherit;
+}
+.bonus-card:hover{
+  transform:translateY(-3px);
+  box-shadow:var(--shadow);
+  border-color:var(--mag);
+  background:#FFFFFF;
+}
+.bonus-card .head{
+  display:flex;align-items:center;gap:12px;margin-bottom:12px;
+}
+.bonus-card .icon{
+  width:46px;height:46px;
+  background:linear-gradient(135deg,var(--mag),var(--purp));color:#FFFFFF;
+  border-radius:12px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:22px;flex-shrink:0;
+  box-shadow:0 3px 8px rgba(173,31,162,.20);
+}
+.bonus-card .num{
+  font-size:10px;font-weight:800;color:var(--mag);
+  letter-spacing:.14em;text-transform:uppercase;
+  display:block;margin-bottom:2px;
+}
+.bonus-card .title{
+  font-family:'Cormorant Garamond',serif;font-size:19px;
+  font-weight:700;color:var(--ink);line-height:1.18;
+}
+.bonus-card .desc{
+  color:var(--ink-soft);font-size:14px;line-height:1.55;
+  flex:1;margin-bottom:16px;
+}
+.bonus-card .cta{
+  display:inline-flex;align-items:center;gap:6px;
+  color:var(--mag);font-size:14px;font-weight:700;
+  padding-top:12px;border-top:1px dashed var(--border);
+  font-family:'Manrope',sans-serif;
+}
+.bonus-card .cta .arrow{transition:.15s}
+.bonus-card:hover .cta .arrow{transform:translateX(4px)}
+
+/* MAESTRO CARD — highlighted */
+.maestro-card{
+  background:linear-gradient(135deg,var(--dark),var(--ink));
+  color:var(--soft);
+  border:2px solid var(--mag);
+  border-radius:20px;
+  padding:32px 30px;
+  margin-top:28px;
+  display:flex;align-items:center;gap:24px;
+  box-shadow:var(--shadow);
+  transition:.15s;
+  text-decoration:none;
+  position:relative;
+  overflow:hidden;
+}
+.maestro-card::before{
+  content:"";
+  position:absolute;top:-50px;right:-50px;
+  width:200px;height:200px;
+  background:radial-gradient(circle,rgba(173,31,162,.25) 0%,transparent 70%);
+  border-radius:50%;
+}
+.maestro-card:hover{transform:translateY(-3px);box-shadow:0 20px 50px rgba(61,20,84,.30)}
+.maestro-card .icon-big{
+  width:80px;height:80px;flex-shrink:0;
+  background:var(--mag);color:#FFFFFF;
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-size:42px;font-weight:700;
+  box-shadow:0 6px 20px rgba(173,31,162,.4);
+  position:relative;z-index:1;
+}
+.maestro-card .info{flex:1;position:relative;z-index:1}
+.maestro-card .info .badge{
+  display:inline-block;background:rgba(222,181,203,.20);color:var(--border);
+  padding:4px 12px;border-radius:99px;font-size:10px;font-weight:800;
+  letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px;
+}
+.maestro-card .info h3{
+  font-family:'Cormorant Garamond',serif;color:#FFFFFF;
+  font-size:24px;font-weight:700;font-style:italic;margin-bottom:6px;line-height:1.1;
+}
+.maestro-card .info p{color:var(--lav);font-size:14.5px;line-height:1.5;font-family:'Cormorant Garamond',serif;font-style:italic}
+.maestro-card .arrow-big{
+  color:var(--mag);font-size:34px;font-weight:800;flex-shrink:0;
+  position:relative;z-index:1;transition:.15s;
+}
+.maestro-card:hover .arrow-big{transform:translateX(6px);color:#FFFFFF}
+
+/* HOW TO USE */
+.howto{
+  background:var(--paper);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:28px 32px;
+  margin-top:36px;
+}
+.howto h3{
+  font-family:'Cormorant Garamond',serif;font-size:24px;
+  color:var(--ink);margin-bottom:14px;font-style:italic;
+  display:flex;align-items:center;gap:10px;
+}
+.howto h3 em{color:var(--mag);font-style:italic}
+.howto ol{padding-left:22px;color:var(--ink);font-size:15px;line-height:1.75}
+.howto ol li{margin-bottom:8px}
+.howto ol li b{color:var(--mag);font-weight:800}
+
+/* FOOT */
+.foot{
+  text-align:center;
+  color:var(--ink-muted);font-size:13px;
+  padding:32px 20px 20px;
+  border-top:1px solid var(--border);
+  margin-top:40px;
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+}
+.foot b{color:var(--ink);font-style:normal;font-family:'Manrope',sans-serif;font-weight:800}
+
+@media(max-width:520px){
+  .hero{padding:40px 18px 60px}
+  .hero .stats{gap:24px}
+  .hero .stat .num{font-size:28px}
+  .wrap{padding:0 14px 40px;margin-top:-30px}
+  .core-card{padding:26px 22px}
+  .core-card .stats{padding:12px 14px}
+  .cta-primary{padding:14px 24px;font-size:15px;width:100%;justify-content:center}
+  .bonus-card{padding:20px 18px}
+  .maestro-card{padding:24px 22px;flex-direction:column;text-align:center;gap:16px}
+  .maestro-card .arrow-big{display:none}
+  .howto{padding:22px 20px}
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="inner">
+    <div class="brand">
+      <span class="logo">P</span>
+      <span>Il Percorso del <em>Terapeuta</em></span>
+    </div>
+
+    <span class="kicker">✓ Ordine confermato</span>
+
+    <h1>Benvenuta nel <em>Percorso</em>.<br>Il tuo accesso completo <em>è qui</em>.</h1>
+    <p class="sub">Sotto trovi il kit principale + i 5 bonus + il Maestro Sistemico AI. Ogni link è tuo, senza scadenza. Salva questa pagina nei preferiti — la userai prima di ogni sessione.</p>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="num">4</div>
+        <div class="lbl">Fasi della sessione</div>
+      </div>
+      <div class="stat">
+        <div class="num">5</div>
+        <div class="lbl">Bonus inclusi</div>
+      </div>
+      <div class="stat">
+        <div class="num">AI</div>
+        <div class="lbl">Supervisora 24/7</div>
+      </div>
+      <div class="stat">
+        <div class="num">∞</div>
+        <div class="lbl">Accesso a vita</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap">
+
+  <!-- CORE -->
+  <div class="core-card">
+    <span class="badge">🌿 Kit principale</span>
+    <h2>Il Percorso del <em>Terapeuta</em></h2>
+    <p class="desc">Il kit completo di sessione strutturata — copioni, domande sistemiche, protocolli e checklist organizzati nelle 4 fasi <b>Aprire · Approfondire · Sostenere · Chiudere</b>. Pronto per stampare, si prepara in 10 minuti prima di ogni cliente. Nessuna sessione più costruita da zero.</p>
+
+    <div class="stats">
+      <div>📄 <b>~120 pagine</b></div>
+      <div>🇮🇹 Italiano</div>
+      <div>📅 Edizione <b>2026</b></div>
+      <div>♾️ Aggiornamenti gratuiti</div>
+    </div>
+
+    <a class="cta-primary" href="/il-percorso-del-terapeuta/tq5iowv964/" target="_blank">
+      Apri Il Percorso <span class="arrow">→</span>
+    </a>
+  </div>
+
+  <!-- BONUS SECTION -->
+  <div class="section-title">
+    <h3>🎁 I 5 <em>bonus</em> inclusi</h3>
+    <p>Ogni bonus copre un momento diverso del lavoro sistemico. Apri il quello che ti serve adesso.</p>
+  </div>
+
+  <div class="bonus-grid">
+
+    <a class="bonus-card" href="/carte-sistemiche/1ppgnujoqe/" target="_blank">
+      <div class="head">
+        <div class="icon">🃏</div>
+        <div>
+          <span class="num">Bonus 1</span>
+          <div class="title">Carte Sistemiche</div>
+        </div>
+      </div>
+      <p class="desc">60 carte da stampare organizzate in 4 categorie sistemiche + guida di selezione per fase e per obiettivo — quando pescarle, come proporle senza forzare.</p>
+      <div class="cta">Apri il PDF <span class="arrow">→</span></div>
+    </a>
+
+    <a class="bonus-card" href="/copioni-sessione/gp216a94ys/" target="_blank">
+      <div class="head">
+        <div class="icon">📜</div>
+        <div>
+          <span class="num">Bonus 2</span>
+          <div class="title">Copioni di Sessione</div>
+        </div>
+      </div>
+      <p class="desc">12 copioni parola-per-parola per apertura, esplorazione, riordino, elaborazione di lutto e chiusura. Ogni copione con timer, snodi decisionali e uscita di sicurezza.</p>
+      <div class="cta">Apri il PDF <span class="arrow">→</span></div>
+    </a>
+
+    <a class="bonus-card" href="/oracolo-riconciliazione/rxbdysppfs/" target="_blank">
+      <div class="head">
+        <div class="icon">🕊️</div>
+        <div>
+          <span class="num">Bonus 3</span>
+          <div class="title">Oracolo della Riconciliazione</div>
+        </div>
+      </div>
+      <p class="desc">45 carte oracolari + consigna terapeutica per i casi con vincoli congelati — separazioni, silenzi generazionali, lutti non elaborati, esclusioni sistemiche.</p>
+      <div class="cta">Apri il PDF <span class="arrow">→</span></div>
+    </a>
+
+    <a class="bonus-card" href="/rituale-perdono/td08h8v714/" target="_blank">
+      <div class="head">
+        <div class="icon">🌹</div>
+        <div>
+          <span class="num">Bonus 4</span>
+          <div class="title">Rituale del Perdono</div>
+        </div>
+      </div>
+      <p class="desc">Pratica guidata di chiusura in 7 tappe — parola d'onore, restituzione del peso, benedizione degli antenati. Con script e varianti per casi speciali.</p>
+      <div class="cta">Apri il PDF <span class="arrow">→</span></div>
+    </a>
+
+    <a class="bonus-card" href="/kit-protezione-energetica/9p0bpotax1/" target="_blank">
+      <div class="head">
+        <div class="icon">🕯️</div>
+        <div>
+          <span class="num">Bonus 5</span>
+          <div class="title">Kit Protezione Energetica</div>
+        </div>
+      </div>
+      <p class="desc">30 pratiche prima · durante · dopo la sessione per non caricare i sistemi altrui. Grounding, ancoraggio, decarica notturna, protocollo di emergenza.</p>
+      <div class="cta">Apri il PDF <span class="arrow">→</span></div>
+    </a>
+
+  </div>
+
+  <!-- MAESTRO AI -->
+  <a class="maestro-card" href="/maestro-ai/cp4aepp7sg/" target="_blank">
+    <div class="icon-big">P</div>
+    <div class="info">
+      <span class="badge">🌿 Supervisora AI · 24/7</span>
+      <h3>Maestro Sistemico AI</h3>
+      <p>La supervisora virtuale con dentro tutto il tuo kit — chiedile del caso che hai in mano oggi, della fase in cui sei incastrata, del cliente difficile. Risponde in italiano, in pochi secondi, senza limiti.</p>
+    </div>
+    <div class="arrow-big">→</div>
+  </a>
+
+  <!-- HOWTO -->
+  <div class="howto">
+    <h3>💡 Come sfruttare al meglio <em>il Percorso</em></h3>
+    <ol>
+      <li><b>Prima di tutto:</b> apri il <b>Kit Principale · Il Percorso del Terapeuta</b> e leggi le 3 pagine di introduzione + la mappa delle 4 fasi. Questo è il tuo metodo di ora in poi.</li>
+      <li><b>Prima di una sessione nuova:</b> stampa dal Kit i copioni della fase Aprire + le domande di apertura. Poi apri il <b>Bonus 2 · Copioni di Sessione</b> se vuoi uno script più esteso per l'obiettivo specifico del cliente.</li>
+      <li><b>Quando la sessione entra in profondità:</b> tieni a portata il <b>Bonus 1 · Carte Sistemiche</b> o il <b>Bonus 3 · Oracolo della Riconciliazione</b> se il vincolo è congelato.</li>
+      <li><b>Alla chiusura di un percorso lungo:</b> usa il <b>Bonus 4 · Rituale del Perdono</b> — è la pratica di sigillo che nessuno insegna in formazione.</li>
+      <li><b>Ogni giorno di lavoro:</b> apri il <b>Bonus 5 · Kit Protezione Energetica</b> e scegli 1 pratica PRIMA, 1 DURANTE, 1 DOPO. È autocura professionale, non lusso.</li>
+      <li><b>Quando sei bloccata su un caso:</b> chiedi al <b>Maestro Sistemico AI</b>. Ha dentro tutto il materiale + i 4 OTO. Se non sa, te lo dice invece di inventare.</li>
+      <li><b>Salva questa pagina nei preferiti</b> — è il tuo hub di accesso a tutto. Nessuna password, sempre disponibile.</li>
+    </ol>
+  </div>
+
+</main>
+
+<footer class="foot">
+  © 2026 <b>Il Percorso del Terapeuta</b> · Ogni riproduzione o rivendita di questi materiali è vietata dalla legge italiana sul diritto d'autore.
+</footer>
+
+</body>
+</html>
