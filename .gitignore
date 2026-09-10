@@ -1,0 +1,10 @@
+.DS_Store
+node_modules/
+*.log
+.env
+.env.local
+
+# Working files — not needed in the deploy repo
+ai-ebook/paginas/
+ai-ebook/*.pdf
+pdf-sources/*.pdf

@@ -1,0 +1,11 @@
+ai-ebook/
+pdf-sources/
+*.py
+urls-random.md
+urls-random.json
+ARCHITECTURE.md
+README.md
+.env
+.env.local
+.DS_Store
+node_modules/
