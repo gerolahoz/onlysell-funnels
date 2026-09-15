@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Guía de Juego · 100 Juegos Sin Pantalla</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;700&display=swap">
+<style>
+:root{
+  --bg:#FBF6EE; --paper:#FFFDF8; --ink:#1F4B4A; --ink-soft:#4A6B68;
+  --mustard:#E8A33D; --mustard-soft:#F6E3C4; --line:#E3D9C8;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Nunito Sans",system-ui,sans-serif;font-size:16px;line-height:1.6;
+  display:flex;flex-direction:column;-webkit-font-smoothing:antialiased}
+header{background:var(--paper);border-bottom:1px solid var(--line);padding:18px 20px;flex:none}
+.hwrap{max-width:760px;margin:0 auto;display:flex;align-items:center;gap:14px}
+.mark{width:42px;height:42px;border-radius:50%;background:var(--mustard);flex:none;
+  display:grid;place-items:center;color:var(--paper);font-family:Fraunces,serif;font-weight:700;font-size:20px}
+h1{margin:0;font-family:Fraunces,Georgia,serif;font-weight:600;font-size:20px;line-height:1.15}
+.sub{margin:2px 0 0;font-size:13px;color:var(--ink-soft)}
+.clear{margin-left:auto;background:none;border:1px solid var(--line);color:var(--ink-soft);
+  font-family:inherit;font-size:12px;padding:6px 12px;border-radius:999px;cursor:pointer}
+.clear:hover{border-color:var(--mustard);color:var(--ink)}
+
+#chatArea{flex:1;overflow-y:auto;padding:26px 20px}
+.inner{max-width:760px;margin:0 auto}
+
+.welcome{text-align:left}
+.welcome h2{font-family:Fraunces,serif;font-weight:600;font-size:26px;margin:0 0 10px;line-height:1.2}
+.welcome p{margin:0 0 20px;color:var(--ink-soft);max-width:56ch}
+.ex{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.ex button{text-align:left;background:var(--paper);border:1px solid var(--line);border-radius:12px;
+  padding:13px 15px;cursor:pointer;font-family:inherit;font-size:14px;color:var(--ink);line-height:1.45}
+.ex button:hover{border-color:var(--mustard)}
+.ex b{display:block;font-family:Fraunces,serif;font-weight:600;font-size:13px;color:var(--mustard);
+  margin-bottom:4px;letter-spacing:.02em}
+
+.msg{margin-bottom:22px}
+.role{font-family:Fraunces,serif;font-weight:600;font-size:12px;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--mustard);margin-bottom:5px}
+.msg.user .role{color:var(--ink-soft)}
+.bubble{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:14px 17px}
+.msg.user .bubble{background:var(--mustard-soft);border-color:var(--mustard-soft)}
+.bubble p{margin:0 0 10px}.bubble p:last-child{margin:0}
+.bubble ul{margin:8px 0;padding-left:20px}.bubble li{margin-bottom:5px}
+.bubble b{color:var(--ink)}
+
+.typing{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px 17px;
+  display:inline-flex;gap:5px}
+.typing span{width:7px;height:7px;border-radius:50%;background:var(--mustard);opacity:.4;
+  animation:bounce 1.3s infinite}
+.typing span:nth-child(2){animation-delay:.18s}.typing span:nth-child(3){animation-delay:.36s}
+@keyframes bounce{0%,60%,100%{opacity:.35;transform:translateY(0)}30%{opacity:1;transform:translateY(-4px)}}
+@media (prefers-reduced-motion:reduce){.typing span{animation:none;opacity:.6}}
+
+.error-msg{background:#F6E2DE;border:1px solid #DFAEA4;color:#97362A;border-radius:12px;
+  padding:12px 15px;font-size:14px;margin-bottom:18px}
+
+footer{background:var(--paper);border-top:1px solid var(--line);padding:14px 20px 20px;flex:none}
+.fwrap{max-width:760px;margin:0 auto}
+.input-wrap{display:flex;gap:10px;align-items:flex-end;background:var(--bg);
+  border:1px solid var(--line);border-radius:16px;padding:9px 9px 9px 15px}
+.input-wrap:focus-within{border-color:var(--mustard)}
+textarea{flex:1;border:none;background:none;resize:none;font-family:inherit;font-size:15px;
+  color:var(--ink);line-height:1.5;max-height:120px;outline:none;padding:5px 0}
+textarea::placeholder{color:#A99B85}
+#sendBtn{flex:none;width:40px;height:40px;border-radius:50%;border:none;background:var(--ink);
+  color:var(--paper);cursor:pointer;font-size:17px;line-height:1}
+#sendBtn:disabled{opacity:.4;cursor:default}
+.disc{margin:10px 0 0;font-size:11.5px;color:#A99B85;text-align:center}
+@media (max-width:520px){h1{font-size:17px}.welcome h2{font-size:22px}#chatArea{padding:20px 16px}}
+</style>
+</head>
+<body>
+
+<header><div class="hwrap">
+  <div class="mark">J</div>
+  <div>
+    <h1>Guía de Juego</h1>
+    <p class="sub">Decime cuánto tiempo tenés y te digo a qué jugar</p>
+  </div>
+  <button class="clear" onclick="clearChat()">Borrar</button>
+</div></header>
+
+<div id="chatArea"><div class="inner" id="chatInner">
+  <div class="welcome">
+    <h2>¿Qué hacemos hoy?</h2>
+    <p>Conozco los 100 juegos del libro y los cinco materiales extra. Contame la edad, los minutos que tenés y qué hay a mano — te elijo uno y te lo explico.</p>
+    <div class="ex">
+      <button onclick="askExample(this)"><b>El caso más común</b>Tengo 15 minutos, mi hija tiene 2 años y estamos en la cocina</button>
+      <button onclick="askExample(this)"><b>Sin nada preparado</b>Son las 7 de la tarde, está insoportable y no tengo nada armado</button>
+      <button onclick="askExample(this)"><b>Afuera de casa</b>Estamos en la sala de espera del pediatra hace 40 minutos</button>
+      <button onclick="askExample(this)"><b>No le enganchó</b>Probé la bandeja de harina y la tiró toda al piso en dos minutos</button>
+    </div>
+  </div>
+</div></div>
+
+<footer><div class="fwrap">
+  <div class="input-wrap">
+    <textarea id="userInput" placeholder="Edad, minutos que tenés y qué hay en casa…" rows="1" oninput="autoResize(this)" onkeydown="handleKey(event)"></textarea>
+    <button id="sendBtn" onclick="send()" aria-label="Enviar">↑</button>
+  </div>
+  <p class="disc">Las actividades se hacen siempre con un adulto al lado. Nada de lo que hay acá reemplaza la consulta con el pediatra.</p>
+</div></footer>
+
+<script>
+const CONTEXT = `Sos la "Guía de Juego", la asistente del libro «100 Juegos Sin Pantalla» — 100 actividades sensoriales para chicos de 0 a 5 años que se hacen con cosas que ya hay en casa.
+
+HABLÁS EN ESPAÑOL RIOPLATENSE, con voseo (tenés, poné, dejá, fijate, probá). Tono de amiga que sabe del tema: cálida, concreta, nunca condescendiente y nunca culpabilizadora. La persona que te escribe suele estar cansada.
+
+QUÉ CONTIENE EL LIBRO
+100 actividades numeradas del 1 al 100, cada una con: qué necesitás, tres pasos y qué desarrolla.
+Están organizadas por edad — 0-1 años (juegos 1 al 22), 1-2 años (23 al 48), 2-3 años (49 al 74), 3-5 años (75 al 100) — y por duración: 5, 15 o 30 minutos.
+
+CATÁLOGO COMPLETO — usá SIEMPRE el número exacto de esta lista, nunca inventes un número:
+1. Botella de la calma (0-1, 5 min) — Botella chica, agua, aceite, brillantina
+2. Panel de texturas (0-1, 15 min) — Cartón, tela, papel aluminio, esponja
+3. Cinta en los pies (0-1, 5 min) — Cintas de raso de colores
+4. Espejo boca abajo (0-1, 15 min) — Espejo irrompible o bandeja metálica
+5. Bolsa sensorial de gel (0-1, 15 min) — Bolsa ziploc, gel de pelo, cinta
+6. Papel de seda (0-1, 5 min) — Hojas de papel de seda
+7. Móvil de contrastes (0-1, 15 min) — Cartulina blanca y negra, hilo
+8. Cuchara fría (0-1, 5 min) — Cuchara de metal, agua fría
+9. Cesto de los tesoros (0-1, 30 min) — Canasto bajo, 8 objetos de casa
+10. Pañuelos en la caja (0-1, 15 min) — Caja de pañuelos vacía, telas
+11. Pelota con cascabel (0-1, 5 min) — Pelota blanda, cascabel
+12. Rodar sobre la toalla (0-1, 15 min) — Toalla grande
+13. Luz y sombra (0-1, 15 min) — Linterna, pared lisa
+14. Sonidos de cocina (0-1, 5 min) — Cucharas, tapas, tupper
+15. Agua tibia (0-1, 30 min) — Palangana, agua tibia, vasos
+16. Cepillo suave (0-1, 5 min) — Cepillo de cerdas blandas
+17. Túnel de mantas (0-1, 30 min) — Dos sillas, una manta
+18. Hielo en bolsa (0-1, 5 min) — Cubito, bolsa chica, repasador
+19. Cintas colgadas (0-1, 15 min) — Cintas, marco de puerta
+20. Caja de resonancia (0-1, 15 min) — Caja de cartón grande
+21. Huellas de pies (0-1, 30 min) — Papel afiche, témpera lavable
+22. Canción con pausa (0-1, 5 min) — Solo tu voz
+23. Trasvasar con las manos (1-2, 15 min) — Dos boles, garbanzos
+24. Pegar y despegar (1-2, 5 min) — Cinta de papel, mesa
+25. Pintura en bolsa (1-2, 15 min) — Bolsa ziploc, témpera, cinta
+26. Tarros y tapas (1-2, 15 min) — Frascos de plástico con tapa
+27. Palitos en la botella (1-2, 15 min) — Botella, palitos de helado
+28. Torre de vasos (1-2, 5 min) — Vasos plásticos
+29. Pesca de tapitas (1-2, 30 min) — Palangana, tapitas, colador
+30. Camino de texturas (1-2, 30 min) — Toalla, papel, esponja, alfombra
+31. Arrugar y encestar (1-2, 5 min) — Hojas usadas, balde
+32. Esponja que chorrea (1-2, 15 min) — Dos boles, esponja
+33. Bolsa misteriosa (1-2, 15 min) — Bolsa de tela, 5 objetos conocidos
+34. Dibujar en harina (1-2, 15 min) — Bandeja, harina
+35. Sellos de corcho (1-2, 30 min) — Corchos, témpera, papel
+36. Arena de sémola (1-2, 30 min) — Caja baja, sémola, cucharas
+37. Colador y fideos (1-2, 15 min) — Colador, fideos largos
+38. Trepar el almohadón (1-2, 5 min) — Almohadones grandes
+39. Cinta en el piso (1-2, 5 min) — Cinta de papel
+40. Sonajeros de arroz (1-2, 15 min) — Botellas chicas, arroz, lentejas
+41. Espuma batida (1-2, 30 min) — Detergente neutro, batidor, bol
+42. Hielo con sorpresa (1-2, 30 min) — Juguetes chicos, agua, freezer
+43. Pelota por el tubo (1-2, 5 min) — Tubo de cartón, pelotita
+44. Tapas por color (1-2, 15 min) — Tapitas de colores, cartulinas
+45. Soplar la pluma (1-2, 5 min) — Pluma o papelito
+46. Guantes rellenos (1-2, 15 min) — Guantes de látex, arroz, gel
+47. Bandeja de espuma (1-2, 30 min) — Espuma de afeitar, bandeja
+48. Apilar latas (1-2, 15 min) — Latas vacías y limpias
+49. Enhebrar fideos (2-3, 15 min) — Fideos con agujero, cordón
+50. Pinzas de ropa (2-3, 15 min) — Broches, balde
+51. Mezclar colores (2-3, 15 min) — 3 frascos, agua, colorante
+52. Pintar con agua (2-3, 15 min) — Balde con agua, pincel grande
+53. Sopa de hojas (2-3, 30 min) — Olla vieja, hojas, palitos, agua
+54. Hielo de colores (2-3, 30 min) — Cubetera, témpera, agua
+55. Circuito de obstáculos (2-3, 30 min) — Almohadones, sillas, cinta
+56. Masa de sal (2-3, 30 min) — 2 tazas harina, 1 de sal, 1 de agua
+57. Estampar verduras (2-3, 30 min) — Papa, apio, témpera
+58. Lavar los juguetes (2-3, 30 min) — Palangana, esponja, jabón
+59. Trasvasar con jarra (2-3, 15 min) — Jarrita, dos vasos, agua
+60. Clasificar por tamaño (2-3, 15 min) — Objetos iguales de 3 tamaños
+61. Bandeja de barro (2-3, 30 min) — Tierra, agua, palitos, bandeja
+62. Cortar con tijera (2-3, 15 min) — Tijera de punta roma, tiras de papel
+63. Puzzle casero (2-3, 15 min) — Cartón, un dibujo suyo
+64. Caza de colores (2-3, 15 min) — Una hoja de color
+65. Pintura con esponja (2-3, 15 min) — Esponja cortada, témpera
+66. Regar las plantas (2-3, 15 min) — Regadera chica
+67. Peinar y atar (2-3, 15 min) — Muñeca, peine, gomitas
+68. Stickers en la línea (2-3, 5 min) — Stickers, hoja con líneas
+69. Caja de botones (2-3, 15 min) — Botones grandes, hilo grueso
+70. Caminar con el vaso (2-3, 5 min) — Vaso, agua hasta la mitad
+71. Volcán (2-3, 30 min) — Bicarbonato, vinagre, colorante
+72. Tender la ropa (2-3, 30 min) — Soga baja, broches, ropa de muñeca
+73. Dedos sobre azulejo (2-3, 30 min) — Témpera, pared de azulejo o bañera
+74. Adivinar el sonido (2-3, 5 min) — Objetos de casa
+75. Slime casero (3-5, 30 min) — Pegamento blanco, bicarbonato, gotas para lentes
+76. Letras en sal (3-5, 15 min) — Bandeja oscura, sal fina
+77. Telar de cartón (3-5, 30 min) — Cartón, lana, tijera
+78. Cocinar sin fuego (3-5, 30 min) — Galletitas, queso crema, frutas
+79. Construir con palitos (3-5, 30 min) — Palitos de brochette, plastilina
+80. Mapa del tesoro (3-5, 30 min) — Papel, lápiz, un objeto
+81. Teatro de sombras (3-5, 30 min) — Linterna, sábana, siluetas de cartón
+82. Herbario (3-5, 30 min) — Hojas, papel, libro pesado
+83. Flota o se hunde (3-5, 15 min) — Palangana, 8 objetos
+84. Pulseras de cuentas (3-5, 15 min) — Fideos, cuentas grandes, elástico
+85. Dibujar con música (3-5, 15 min) — Hojas, crayones, música
+86. Cadena de papel (3-5, 15 min) — Tiras de papel, plasticola
+87. Caja de luz (3-5, 30 min) — Caja, papel manteca, linterna
+88. Circuito de agua (3-5, 30 min) — Botellas cortadas, cinta, manguerita
+89. Cocina de barro (3-5, 30 min) — Barro, hojas, moldes, palitos
+90. Máscara de cartón (3-5, 30 min) — Cartón, elástico, témpera
+91. Semillas con pinza (3-5, 15 min) — Pinza de cocina, semillas, cubetera
+92. Instrumentos reciclados (3-5, 30 min) — Latas, arroz, gomas, caja
+93. Nombre con lana (3-5, 15 min) — Lana, plasticola, cartón
+94. Pintar sobre aluminio (3-5, 15 min) — Papel aluminio, témpera, detergente
+95. Poroto en algodón (3-5, 15 min) — Frasco, algodón, poroto
+96. Mímica de animales (3-5, 5 min) — Ninguno
+97. La torre más alta (3-5, 15 min) — Lo que haya en casa
+98. Origami de tres pliegues (3-5, 15 min) — Papel cuadrado
+99. Dictado de dibujos (3-5, 15 min) — Dos hojas, dos lápices
+100. Diario de la semana (3-5, 30 min) — Cuaderno, lápices
+
+LOS CINCO MATERIALES EXTRA QUE VIENEN CON EL LIBRO
+1. Los 30 materiales que ya tenés — lista de lo que hay en cualquier casa y qué se puede hacer con cada cosa.
+2. Calendario de 30 días — una actividad por día, ya elegida, para no tener que decidir.
+3. Señales por edad — qué se espera a cada edad y cuándo conviene consultar.
+4. 15 juegos para el auto y la espera — sin materiales, para sala de espera, viaje o restaurante.
+5. Rincón sensorial en una caja de zapatos — cómo armar el espacio fijo.
+
+CÓMO RESPONDÉS
+1. Si te dan edad + tiempo + materiales, recomendá UNA sola actividad. Nombrala con su número y su título, después los tres pasos en líneas separadas, y cerrá con qué desarrolla.
+2. Si falta algún dato, hacé UNA sola pregunta corta y ofrecé mientras tanto una opción segura.
+3. Nunca tires una lista de diez opciones: la persona que pregunta está sin tiempo. Una, y si no le sirve, otra.
+4. Si dice que una actividad no funcionó, no la repitas: preguntá qué pasó exactamente y ofrecé una del mismo tiempo pero de otro tipo sensorial.
+5. Si el chico es más chico o más grande que el rango de la actividad, decilo y adaptá el paso que haga falta.
+6. Respuestas cortas. Cuatro a ocho líneas está bien. Nada de introducciones largas.
+7. El número y el título tienen que coincidir EXACTAMENTE con el catálogo. Si no estás segura del número, nombrá la actividad sin número.
+8. Vocabulario natural rioplatense: decí "tu hija", "tu hijo", "la nena", "el nene". Nunca uses palabras raras ni traducciones literales.
+
+LÍMITES
+- No sos pediatra, ni fonoaudióloga, ni psicóloga. Si preguntan por un retraso, una conducta que preocupa o algo del desarrollo, decí claramente que eso lo evalúa un profesional y sugerí el material de Señales por edad como guía de qué observar.
+- No des indicaciones de alimentación, medicación ni sueño.
+- Si mencionan un material con riesgo para la edad (objetos chicos con menores de 3, bolsas, cuerdas, globos), avisá el riesgo antes de la actividad.
+- No hables de precios, no ofrezcas soporte humano, no des mails ni teléfonos, no prometas resultados de desarrollo.
+- Si preguntan algo que no tiene nada que ver (recetas, tecnología, política), decilo simpático y volvé al juego.`;
+
+const CHAT_KEY = "juegos-sin-pantalla-chat";
+const GEMINI_PROXY_URL = "https://rkschziqyvnolocixjhd.supabase.co/functions/v1/gemini-proxy";
+const GEMINI_MODEL = "gemini-3.5-flash-lite";
+const BOT = "Guía";
+
+let history = [];
+
+function saveHistory(){ try{ localStorage.setItem(CHAT_KEY, JSON.stringify(history)); }catch(e){} }
+function loadHistory(){ try{ const h=localStorage.getItem(CHAT_KEY); if(h) history=JSON.parse(h); }catch(e){} }
+
+function renderChat(){
+  const inner=document.getElementById('chatInner');
+  if(history.length===0) return;
+  inner.innerHTML='';
+  for(const m of history){
+    const div=document.createElement('div');
+    div.className='msg '+m.role;
+    div.innerHTML='<div class="role">'+(m.role==='user'?'Vos':BOT)+'</div><div class="bubble">'+formatMsg(m.content)+'</div>';
+    inner.appendChild(div);
+  }
+  scrollToBottom();
+}
+
+function formatMsg(t){
+  return t
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+    .replace(/\*\*([^*]+)\*\*/g,'<b>$1</b>')
+    .replace(/\*([^*]+)\*/g,'<i>$1</i>')
+    .replace(/^[-•] (.+)$/gm,'<li>$1</li>')
+    .replace(/(<li>.+<\/li>\n?)+/g, m=>'<ul>'+m+'</ul>')
+    .replace(/\n\n/g,'</p><p>')
+    .replace(/\n/g,'<br>')
+    .replace(/^(.+)/,'<p>$1')
+    .replace(/(.+)$/,'$1</p>');
+}
+
+function scrollToBottom(){ const c=document.getElementById('chatArea'); c.scrollTop=c.scrollHeight; }
+function autoResize(el){ el.style.height='auto'; el.style.height=Math.min(el.scrollHeight,120)+'px'; }
+function handleKey(e){ if(e.key==='Enter'&&!e.shiftKey){ e.preventDefault(); send(); } }
+
+function askExample(btn){
+  const clone=btn.cloneNode(true);
+  const b=clone.querySelector('b'); if(b) b.remove();
+  document.getElementById('userInput').value=clone.textContent.trim();
+  send();
+}
+
+async function send(){
+  const input=document.getElementById('userInput');
+  const btn=document.getElementById('sendBtn');
+  const text=input.value.trim();
+  if(!text) return;
+  const welcome=document.querySelector('.welcome'); if(welcome) welcome.remove();
+
+  history.push({role:'user',content:text});
+  input.value=''; input.style.height='auto'; btn.disabled=true;
+  renderChat(); scrollToBottom();
+
+  const inner=document.getElementById('chatInner');
+  const typing=document.createElement('div');
+  typing.className='msg assistant'; typing.id='typingMsg';
+  typing.innerHTML='<div class="role">'+BOT+'</div><div class="typing"><span></span><span></span><span></span></div>';
+  inner.appendChild(typing); scrollToBottom();
+
+  try{
+    const response=await callGemini(text);
+    document.getElementById('typingMsg')?.remove();
+    history.push({role:'assistant',content:response});
+    saveHistory(); renderChat();
+  }catch(err){
+    document.getElementById('typingMsg')?.remove();
+    showError('No pude responder ahora mismo. Probá de nuevo en un momento.');
+  }finally{
+    btn.disabled=false; input.focus();
+  }
+}
+
+async function callGemini(userMsg){
+  const contents=[];
+  contents.push({role:'user',parts:[{text:'CONTEXTO DEL SISTEMA (no respondas a esto, memorizalo):\n\n'+CONTEXT}]});
+  contents.push({role:'model',parts:[{text:'Entendido. Soy la Guía de Juego y voy a responder en rioplatense siguiendo esas reglas.'}]});
+  const recent=history.slice(-20);
+  for(const m of recent.slice(0,-1)){
+    contents.push({role:m.role==='user'?'user':'model',parts:[{text:m.content}]});
+  }
+  contents.push({role:'user',parts:[{text:userMsg}]});
+
+  const res=await fetch(GEMINI_PROXY_URL,{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({model:GEMINI_MODEL,contents,generationConfig:{temperature:0.7,maxOutputTokens:800}})
+  });
+  if(!res.ok){ const e=await res.json().catch(()=>({})); throw new Error(e.error?.message||('HTTP '+res.status)); }
+  const data=await res.json();
+  const reply=data.candidates?.[0]?.content?.parts?.[0]?.text;
+  if(!reply) throw new Error('respuesta vacía');
+  return reply;
+}
+
+function showError(msg){
+  const inner=document.getElementById('chatInner');
+  const err=document.createElement('div');
+  err.className='error-msg'; err.textContent=msg;
+  inner.appendChild(err); scrollToBottom();
+}
+
+function clearChat(){
+  if(!confirm('¿Borrar toda la conversación?')) return;
+  history=[]; saveHistory(); location.reload();
+}
+
+loadHistory();
+renderChat();
+</script>
+</body>
+</html>
