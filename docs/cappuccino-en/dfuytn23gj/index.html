@@ -4,23 +4,183 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>Artisan Cappuccino Capsules · Member Area</title>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Figtree:wght@400;600;700&display=swap" rel="stylesheet">
+<title>Your Artisan Cappuccino Capsules Access · Member Area</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800;900&family=Figtree:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-  :root{--brand:#9e5200;--brand-dark:#7c3600;--background:#fdf8ee;--card:#fefaf1;--foreground:#3c220f;--muted:#886b54}
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{background:var(--background);color:var(--foreground);font-family:'Figtree',sans-serif;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
-  .card{background:var(--card);border:1px solid #f0e2c9;border-radius:20px;padding:40px 32px;max-width:480px;text-align:center;box-shadow:0 12px 30px rgba(124,54,0,.08)}
-  .icon{font-size:40px;margin-bottom:12px}
-  h1{font-family:'Baloo 2',cursive;font-size:22px;color:var(--brand-dark);margin-bottom:10px}
-  p{font-size:15px;color:var(--muted);line-height:1.5}
+:root{
+  --bg:#fdf8ee;--paper:#fefaf1;--ink:#3c220f;--ink-soft:#886b54;
+  --brand:#9e5200;--brand-dark:#7c3600;--brand-light:#c98a4a;
+  --soft:#f9edda;--line:#f0e2c9;--green:#2f7d4f;
+  --shadow-sm:0 4px 12px rgba(60,35,15,.08);
+  --shadow:0 12px 40px rgba(60,35,15,.15);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Figtree',-apple-system,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--brand-dark);text-decoration:none}
+
+.hero{background:linear-gradient(135deg,#7c3600 0%,#9e5200 60%,#c98a4a 130%);color:#f9edda;padding:60px 24px 80px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;top:-100px;right:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(249,237,218,.15) 0%,transparent 70%);border-radius:50%}
+.hero::after{content:"";position:absolute;bottom:-150px;left:-150px;width:500px;height:500px;background:radial-gradient(circle,rgba(249,237,218,.08) 0%,transparent 70%);border-radius:50%}
+.hero .inner{max-width:820px;margin:0 auto;position:relative;z-index:1}
+.hero .brand{display:inline-flex;align-items:center;gap:10px;background:rgba(249,237,218,.15);border:1px solid rgba(249,237,218,.3);padding:8px 16px;border-radius:99px;margin-bottom:24px}
+.hero .brand .logo{width:26px;height:26px;background:var(--soft);color:var(--brand-dark);border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'Baloo 2',serif;font-weight:900;font-size:15px}
+.hero .brand span{color:var(--soft);font-family:'Baloo 2',serif;font-weight:800;font-size:14px}
+.hero .brand em{color:#fefaf1;font-style:normal}
+.hero .kicker{display:inline-block;background:var(--soft);color:var(--brand-dark);padding:6px 18px;border-radius:99px;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px}
+.hero h1{font-family:'Baloo 2',serif;font-size:clamp(32px,5.5vw,50px);font-weight:900;color:#fefaf1;line-height:1.1;letter-spacing:-.02em;margin-bottom:16px}
+.hero h1 em{color:var(--soft);font-style:normal}
+.hero .sub{font-size:clamp(16px,2.1vw,20px);color:#f3ddc0;max-width:640px;margin:0 auto 32px;line-height:1.5}
+.hero .stats{display:flex;justify-content:center;gap:36px;flex-wrap:wrap;padding-top:16px;border-top:1px solid rgba(249,237,218,.2);max-width:640px;margin:0 auto}
+.hero .stat{text-align:center}
+.hero .stat .num{font-family:'Baloo 2',serif;font-size:32px;font-weight:800;color:var(--soft);line-height:1}
+.hero .stat .lbl{font-size:11px;color:#f3ddc0;text-transform:uppercase;letter-spacing:.08em;font-weight:700;margin-top:4px}
+
+.wrap{max-width:920px;margin:-40px auto 0;padding:0 20px 60px;position:relative;z-index:2}
+
+.core-card{background:linear-gradient(135deg,var(--paper) 0%,#fff 100%);border:2px solid var(--brand);border-radius:24px;padding:36px 32px;box-shadow:var(--shadow);margin-bottom:24px;position:relative;overflow:hidden}
+.core-card::before{content:"☕";position:absolute;top:20px;right:24px;font-size:32px;opacity:.15}
+.core-card .badge{display:inline-block;background:var(--brand-dark);color:var(--soft);padding:5px 14px;border-radius:99px;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px}
+.core-card h2{font-family:'Baloo 2',serif;font-size:clamp(26px,4vw,34px);font-weight:800;color:var(--brand-dark);line-height:1.15;margin-bottom:10px}
+.core-card h2 em{color:var(--brand);font-style:normal}
+.core-card .desc{color:var(--ink-soft);font-size:16px;line-height:1.6;margin-bottom:22px;max-width:640px}
+.core-card .stats{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:24px;padding:14px 18px;background:#fff;border-radius:12px;border:1px solid var(--line)}
+.core-card .stats > div{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--ink)}
+.core-card .stats > div b{color:var(--brand-dark);font-weight:800}
+
+.cta-primary{display:inline-flex;align-items:center;gap:10px;background:var(--brand);color:#fff;padding:16px 32px;border-radius:14px;font-family:'Baloo 2',serif;font-weight:800;font-size:18px;text-decoration:none;cursor:pointer;border:2px solid var(--brand-dark);box-shadow:0 5px 0 var(--brand-dark),0 10px 24px rgba(158,82,0,.28);transition:.12s}
+.cta-primary:hover{transform:translateY(-2px);box-shadow:0 7px 0 var(--brand-dark),0 14px 32px rgba(158,82,0,.35)}
+.cta-primary:active{transform:translateY(3px);box-shadow:0 2px 0 var(--brand-dark)}
+.cta-primary .arrow{font-size:22px}
+
+.section-title{margin:40px 0 20px;text-align:center}
+.section-title h3{font-family:'Baloo 2',serif;font-size:clamp(22px,3vw,30px);font-weight:800;color:var(--brand-dark);margin-bottom:6px}
+.section-title p{color:var(--ink-soft);font-size:15px}
+
+.bonus-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.bonus-card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:24px 22px;display:flex;flex-direction:column;transition:.15s;text-decoration:none;color:inherit}
+.bonus-card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--brand-light)}
+.bonus-card .head{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.bonus-card .icon{width:44px;height:44px;background:var(--brand-dark);color:var(--soft);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
+.bonus-card .num{font-size:10px;font-weight:800;color:var(--brand);letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:2px}
+.bonus-card .title{font-family:'Baloo 2',serif;font-size:18px;font-weight:800;color:var(--brand-dark);line-height:1.2}
+.bonus-card .desc{color:var(--ink-soft);font-size:14px;line-height:1.5;flex:1;margin-bottom:16px}
+.bonus-card .cta{display:inline-flex;align-items:center;gap:6px;color:var(--brand-dark);font-size:14px;font-weight:800;padding-top:12px;border-top:1px dashed var(--line)}
+.bonus-card .cta .arrow{transition:.15s}
+.bonus-card:hover .cta .arrow{transform:translateX(4px)}
+
+.howto{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:28px 32px;margin-top:36px}
+.howto h3{font-family:'Baloo 2',serif;font-size:22px;color:var(--brand-dark);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.howto ol{padding-left:22px;color:var(--ink);font-size:15px;line-height:1.7}
+.howto ol li{margin-bottom:6px}
+.howto ol li b{color:var(--brand-dark)}
+
+.foot{text-align:center;color:var(--ink-soft);font-size:13px;padding:32px 20px 20px;border-top:1px solid var(--line);margin-top:40px}
+.foot b{color:var(--brand-dark)}
+
+@media(max-width:520px){
+  .hero{padding:40px 18px 60px}
+  .hero .stats{gap:24px}
+  .hero .stat .num{font-size:26px}
+  .wrap{padding:0 14px 40px;margin-top:-30px}
+  .core-card{padding:26px 22px}
+  .core-card .stats{padding:12px 14px}
+  .cta-primary{padding:14px 24px;font-size:16px;width:100%;justify-content:center}
+  .bonus-card{padding:20px 18px}
+  .howto{padding:22px 20px}
+}
 </style>
 </head>
 <body>
-  <div class="card">
-    <div class="icon">☕📦</div>
-    <h1>Artisan Cappuccino Capsules</h1>
-    <p>Your member area is being prepared. Your download links will appear here shortly — check back soon, or check your confirmation email.</p>
+
+<section class="hero">
+  <div class="inner">
+    <div class="brand">
+      <span class="logo">A</span>
+      <span>Artisan Cappuccino <em>Capsules</em></span>
+    </div>
+    <span class="kicker">✓ Order confirmed</span>
+    <h1>Welcome to <em>Artisan Cappuccino Capsules</em>.<br>Your complete access <em>is here</em>.</h1>
+    <p class="sub">Below you'll find the main training + all 6 bonuses included in your purchase. Every link is yours, with no expiration. Bookmark this page — you'll come back to it often.</p>
+    <div class="stats">
+      <div class="stat"><div class="num">25</div><div class="lbl">Capsule flavors</div></div>
+      <div class="stat"><div class="num">6</div><div class="lbl">Bonuses included</div></div>
+      <div class="stat"><div class="num">∞</div><div class="lbl">Lifetime access</div></div>
+    </div>
   </div>
+</section>
+
+<main class="wrap">
+
+  <div class="core-card">
+    <span class="badge">⭐ Main training</span>
+    <h2>25 Artisan Cappuccino Capsules <em>— The Complete Training</em></h2>
+    <p class="desc">The full library — 25 chocolate capsule flavors, each with ingredients, equipment, step-by-step preparation and a chef's tip, plus the complete tempering, filling and sealing technique behind every one of them.</p>
+    <div class="stats">
+      <div>📄 <b>34 pages</b></div>
+      <div>🇬🇧 English</div>
+      <div>📅 Edition <b>2026</b></div>
+      <div>♾️ Free updates</div>
+    </div>
+    <a class="cta-primary" href="/cappuccino-core/f839vno10q/" target="_blank">Open the Training <span class="arrow">→</span></a>
+  </div>
+
+  <div class="section-title">
+    <h3>🎁 The 6 Bonuses Included</h3>
+    <p>Each bonus is a complete guide, ready to open right now. Click whichever one you need first.</p>
+  </div>
+
+  <div class="bonus-grid">
+    <a class="bonus-card" href="/cappuccino-bonus-pricing/olks439rtx/" target="_blank">
+      <div class="head"><div class="icon">💰</div><div><span class="num">Bonus 1</span><div class="title">Pricing &amp; Profit Guide</div></div></div>
+      <p class="desc">What every capsule really costs, three ways to set your price, and how to bundle kits worth $14+.</p>
+      <div class="cta">Open the PDF <span class="arrow">→</span></div>
+    </a>
+    <a class="bonus-card" href="/cappuccino-bonus-packaging/7eky3l7wpr/" target="_blank">
+      <div class="head"><div class="icon">📦</div><div><span class="num">Bonus 2</span><div class="title">Packaging, Storage &amp; Shelf Life</div></div></div>
+      <p class="desc">How to store, wrap and ship your capsules so every customer gets the same quality you made.</p>
+      <div class="cta">Open the PDF <span class="arrow">→</span></div>
+    </a>
+    <a class="bonus-card" href="/cappuccino-bonus-sales/srpejtn1kf/" target="_blank">
+      <div class="head"><div class="icon">📣</div><div><span class="num">Bonus 3</span><div class="title">Sales &amp; Promotion Guide</div></div></div>
+      <p class="desc">Ready-to-use WhatsApp, Instagram and Facebook scripts to land your first orders this week.</p>
+      <div class="cta">Open the PDF <span class="arrow">→</span></div>
+    </a>
+    <a class="bonus-card" href="/cappuccino-bonus-materials/krs0pp2o3x/" target="_blank">
+      <div class="head"><div class="icon">🧰</div><div><span class="num">Bonus 4</span><div class="title">Basic Starter Materials</div></div></div>
+      <p class="desc">The exact ingredients, molds and tools to buy before your first batch — with costs and sourcing.</p>
+      <div class="cta">Open the PDF <span class="arrow">→</span></div>
+    </a>
+    <a class="bonus-card" href="/cappuccino-bonus-serving/umuqxxfnpn/" target="_blank">
+      <div class="head"><div class="icon">☕</div><div><span class="num">Bonus 5</span><div class="title">Serving Instructions</div></div></div>
+      <p class="desc">A printable insert card teaching your customers exactly how to enjoy their capsule.</p>
+      <div class="cta">Open the PDF <span class="arrow">→</span></div>
+    </a>
+    <a class="bonus-card" href="/cappuccino-bonus-updates/qbwmowu6xr/" target="_blank">
+      <div class="head"><div class="icon">🔔</div><div><span class="num">Bonus 6</span><div class="title">Monthly Updates</div></div></div>
+      <p class="desc">How your lifetime access works, plus seasonal flavor ideas you can try right away.</p>
+      <div class="cta">Open the PDF <span class="arrow">→</span></div>
+    </a>
+  </div>
+
+  <div class="howto">
+    <h3>💡 How to get the most out of this</h3>
+    <ol>
+      <li><b>Start here:</b> open the main training and read the <b>Essential Technique</b> section (page 4) before your first batch, even if you already temper chocolate.</li>
+      <li><b>Before you buy ingredients:</b> check <b>Bonus 4 · Basic Starter Materials</b> for the exact shopping list.</li>
+      <li><b>Before you set a price:</b> read <b>Bonus 1 · Pricing &amp; Profit Guide</b> — don't guess your numbers.</li>
+      <li><b>Before your first batch leaves the kitchen:</b> check <b>Bonus 2 · Packaging, Storage &amp; Shelf Life</b> and include a <b>Bonus 5</b> insert card in every kit.</li>
+      <li><b>When you're ready to sell:</b> open <b>Bonus 3 · Sales &amp; Promotion Guide</b> for the exact posts and scripts to use.</li>
+      <li><b>Bookmark this page</b> — it's your access hub for everything, with no password and no expiration.</li>
+    </ol>
+  </div>
+
+</main>
+
+<footer class="foot">
+  © Artisan Cappuccino Capsules · Reproduction or resale of these materials is prohibited.
+</footer>
+
 </body>
 </html>
