@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>The Kit Profit Calculator · Artisan Cappuccino Capsules</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800;900&family=Figtree:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fdf8ee;--paper:#fefaf1;--ink:#3c220f;--ink-soft:#886b54;
+  --brand:#9e5200;--brand-dark:#7c3600;--brand-light:#c98a4a;
+  --soft:#f9edda;--line:#f0e2c9;--green:#2f7d4f;--red:#a13a2f;
+  --shadow:0 12px 40px rgba(60,35,15,.15);--shadow-sm:0 4px 12px rgba(60,35,15,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Figtree',-apple-system,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased;min-height:100vh}
+.topbar{background:var(--brand-dark);color:var(--soft);padding:12px 20px;text-align:center;font-family:'Baloo 2',serif;font-weight:800;font-size:15px;letter-spacing:.02em}
+.topbar b{color:#fefaf1}
+.wrap{max-width:840px;margin:0 auto;padding:36px 20px 60px}
+h1{font-family:'Baloo 2',serif;font-size:clamp(26px,4.4vw,40px);font-weight:900;color:var(--ink);line-height:1.15;letter-spacing:-.01em;margin-bottom:8px;text-align:center}
+.subtitle{text-align:center;color:var(--ink-soft);margin-bottom:28px;font-size:16px;max-width:560px;margin-left:auto;margin-right:auto}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:30px 26px;margin-bottom:26px}
+.card h2{font-family:'Baloo 2',serif;font-size:22px;font-weight:800;color:var(--brand-dark);margin-bottom:6px}
+.card .card-sub{color:var(--ink-soft);font-size:13.5px;margin-bottom:20px}
+.form-group{margin-bottom:18px}
+.form-group label{display:block;font-size:12.5px;font-weight:800;color:var(--brand-dark);text-transform:uppercase;letter-spacing:.06em;margin-bottom:7px}
+.form-group .hint{font-size:12px;color:var(--ink-soft);margin-top:4px;font-weight:500;text-transform:none;letter-spacing:0}
+input[type="number"],select{width:100%;padding:13px 15px;font-size:16px;font-family:inherit;background:#fff;border:2px solid var(--line);border-radius:12px;color:var(--ink);transition:.15s}
+input:focus,select:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 4px rgba(158,82,0,.12)}
+select{cursor:pointer}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.row4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px}
+.chip-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+.chip{padding:9px 15px;border:2px solid var(--line);background:#fff;border-radius:99px;font-size:13.5px;font-weight:700;color:var(--ink-soft);cursor:pointer;transition:.15s;user-select:none}
+.chip:hover{border-color:var(--brand-light)}
+.chip.active{border-color:var(--brand-dark);background:var(--brand-dark);color:var(--soft)}
+button.calc-btn{width:100%;padding:17px 24px;background:linear-gradient(180deg,var(--brand),var(--brand-dark));color:#fefaf1;border:2px solid var(--brand-dark);border-radius:14px;font-family:'Baloo 2',serif;font-weight:800;font-size:18px;cursor:pointer;box-shadow:0 6px 0 #5e2700,0 12px 24px rgba(158,82,0,.28);transition:.1s;margin-top:6px}
+button.calc-btn:hover{transform:translateY(-2px);box-shadow:0 8px 0 #5e2700,0 16px 32px rgba(158,82,0,.35)}
+button.calc-btn:active{transform:translateY(4px);box-shadow:0 2px 0 #5e2700}
+.result{background:linear-gradient(135deg,var(--brand-dark) 0%,#5e2700 100%);color:var(--soft);border-radius:20px;padding:30px 26px;margin-top:22px;box-shadow:var(--shadow);animation:slideup .35s ease}
+@keyframes slideup{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.result h3{font-family:'Baloo 2',serif;font-size:19px;font-weight:800;color:#fefaf1;margin-bottom:16px;text-align:center}
+.result-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin-bottom:16px}
+.res-item{background:rgba(249,237,218,.08);border:1px solid rgba(249,237,218,.2);border-radius:12px;padding:16px 14px;text-align:center}
+.res-item .lbl{font-size:10.5px;color:#f3ddc0;text-transform:uppercase;letter-spacing:.08em;font-weight:700;margin-bottom:6px}
+.res-item .val{font-family:'Baloo 2',serif;font-size:23px;font-weight:800;color:#fefaf1;line-height:1}
+.res-floor{background:var(--soft);color:var(--brand-dark);border-radius:14px;padding:18px 20px;text-align:center;margin-top:16px}
+.res-floor .lbl{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;margin-bottom:4px}
+.res-floor .val{font-family:'Baloo 2',serif;font-size:26px;font-weight:800;line-height:1}
+.res-range{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:14px}
+.res-range .box{background:rgba(249,237,218,.08);border:1px solid rgba(249,237,218,.2);border-radius:10px;padding:12px 8px;text-align:center}
+.res-range .box .t{font-size:10.5px;color:#f3ddc0;font-weight:700;margin-bottom:4px;text-transform:uppercase;letter-spacing:.04em}
+.res-range .box .v{font-family:'Baloo 2',serif;font-size:17px;font-weight:800;color:#fefaf1}
+.hidden{display:none}
+.quote-out{background:var(--soft);border:2px dashed var(--brand);border-radius:12px;padding:16px 18px;margin-top:16px;font-size:14px;line-height:1.7;white-space:pre-wrap;color:var(--ink)}
+.copy-btn{margin-top:10px;background:var(--brand-dark);color:var(--soft);border:0;padding:9px 16px;border-radius:8px;font-weight:800;font-size:13px;cursor:pointer;font-family:'Figtree',sans-serif}
+.copy-btn:hover{background:var(--brand)}
+.tier-table{width:100%;border-collapse:collapse;margin-top:6px;font-size:13px}
+.tier-table th{background:var(--brand-dark);color:var(--soft);padding:8px 10px;text-align:left;font-weight:800;font-size:11px;text-transform:uppercase;letter-spacing:.05em}
+.tier-table td{padding:8px 10px;border-bottom:1px solid var(--line)}
+.scripts-toggle{background:none;border:2px solid var(--brand);color:var(--brand-dark);padding:10px 16px;border-radius:99px;font-weight:800;font-size:13.5px;cursor:pointer;font-family:'Figtree',sans-serif;margin:6px auto 0;display:block}
+.scripts-toggle:hover{background:var(--soft)}
+.script{background:#fff;border:1px solid var(--line);border-radius:10px;padding:13px 15px;margin:10px 0}
+.script .who{font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--brand);font-weight:800;margin-bottom:4px}
+.script p{margin:0;font-size:13.5px;line-height:1.6}
+.script-cat{font-family:'Baloo 2',serif;color:var(--brand-dark);font-size:15px;font-weight:800;margin:16px 0 6px}
+.foot{text-align:center;color:var(--ink-soft);font-size:12.5px;margin-top:36px;padding-top:18px;border-top:1px solid var(--line)}
+@media(max-width:560px){.wrap{padding:24px 14px 50px}.card{padding:22px 18px}.result{padding:22px 18px}.row2,.row4{grid-template-columns:1fr 1fr}.res-range{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="topbar">☕ <b>Kit Profit Calculator</b> · OTO 1</div>
+
+<div class="wrap">
+  <h1>Price your kits with real numbers, live.</h1>
+  <p class="subtitle">Fill in this week's real costs and get your break-even price, your recommended selling price by kit type, and a ready-to-send wholesale quote — recalculated every time your ingredients change.</p>
+
+  <div class="card">
+    <h2>1 · Your real cost per capsule</h2>
+    <p class="card-sub">Use this week's actual prices, not the estimate from Bonus 1.</p>
+
+    <div class="row4">
+      <div class="form-group"><label>Chocolate shell</label><input type="number" id="cChoc" min="0" step="0.01" value="0.35"><div class="hint">$ / capsule</div></div>
+      <div class="form-group"><label>Filling</label><input type="number" id="cFill" min="0" step="0.01" value="0.25"><div class="hint">$ / capsule</div></div>
+      <div class="form-group"><label>Wrap / seal</label><input type="number" id="cWrap" min="0" step="0.01" value="0.10"><div class="hint">$ / capsule</div></div>
+      <div class="form-group"><label>Your labor</label><input type="number" id="cLabor" min="0" step="0.01" value="0.30"><div class="hint">batch total ÷ count</div></div>
+    </div>
+
+    <h2 style="margin-top:22px">2 · Your kit</h2>
+    <div class="row2">
+      <div class="form-group"><label>Capsules in kit</label><input type="number" id="kitCount" min="1" value="6"></div>
+      <div class="form-group"><label>Packaging cost (this kit)</label><input type="number" id="kitPack" min="0" step="0.01" value="1.50"></div>
+    </div>
+
+    <div class="form-group">
+      <label>Kit type</label>
+      <div class="chip-row" id="kitType-group">
+        <div class="chip active" data-val="starter" data-mult="2.1">Starter Box · 2.0-2.2×</div>
+        <div class="chip" data-val="gift" data-mult="2.35">Gift Kit · 2.2-2.5×</div>
+        <div class="chip" data-val="premium" data-mult="2.75">Premium / Occasion · 2.5-3.0×</div>
+      </div>
+    </div>
+
+    <button class="calc-btn" onclick="calcKit()">CALCULATE MY PRICE →</button>
+
+    <div id="kitResult" class="hidden"></div>
+  </div>
+
+  <div class="card">
+    <h2>3 · The 60-second wholesale quote generator</h2>
+    <p class="card-sub">A bulk order lands in your inbox — quote it in under a minute, professionally.</p>
+
+    <table class="tier-table">
+      <thead><tr><th>Order size</th><th>Discount</th></tr></thead>
+      <tbody>
+        <tr><td>20-49 units</td><td>10% off</td></tr>
+        <tr><td>50-99 units</td><td>15% off</td></tr>
+        <tr><td>100+ units</td><td>20% off</td></tr>
+      </tbody>
+    </table>
+
+    <div class="row2" style="margin-top:16px">
+      <div class="form-group"><label>Quantity requested</label><input type="number" id="wQty" min="1" value="50"></div>
+      <div class="form-group"><label>Your standard per-unit price</label><input type="number" id="wUnit" min="0" step="0.01" value="6.00"></div>
+    </div>
+    <div class="form-group">
+      <label>Lead time you'll quote</label>
+      <input type="number" id="wLead" min="1" value="7">
+      <div class="hint">days from confirmed order</div>
+    </div>
+
+    <button class="calc-btn" onclick="calcQuote()">GENERATE MY QUOTE →</button>
+
+    <div id="quoteResult" class="hidden"></div>
+  </div>
+
+  <div class="card">
+    <h2>4 · The 12 price objection scripts</h2>
+    <p class="card-sub">Word for word. Find the moment, copy, adjust the number, send.</p>
+    <button class="scripts-toggle" onclick="toggleScripts()" id="scriptsBtn">Show all 12 scripts ▾</button>
+    <div id="scriptsBox" class="hidden"></div>
+  </div>
+
+  <div class="foot">© Artisan Cappuccino Capsules · Kit Profit Calculator · For personal training use, not for resale or redistribution.</div>
+</div>
+
+<script>
+document.querySelectorAll('.chip-row').forEach(group => {
+  group.addEventListener('click', e => {
+    const chip = e.target.closest('.chip');
+    if (!chip) return;
+    group.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+    chip.classList.add('active');
+  });
+});
+function getActiveChip(id){ const g=document.getElementById(id); const a=g.querySelector('.chip.active'); return a; }
+
+function calcKit(){
+  const cChoc = parseFloat(document.getElementById('cChoc').value)||0;
+  const cFill = parseFloat(document.getElementById('cFill').value)||0;
+  const cWrap = parseFloat(document.getElementById('cWrap').value)||0;
+  const cLabor = parseFloat(document.getElementById('cLabor').value)||0;
+  const count = parseInt(document.getElementById('kitCount').value)||1;
+  const pack = parseFloat(document.getElementById('kitPack').value)||0;
+  const chip = getActiveChip('kitType-group');
+  const mult = chip ? parseFloat(chip.dataset.mult) : 2.1;
+  const kitLabel = chip ? chip.textContent.split('·')[0].trim() : 'Starter Box';
+
+  const costPerCapsule = cChoc + cFill + cWrap + cLabor;
+  const breakEven = costPerCapsule * count + pack;
+  const sellLow = breakEven * (mult - 0.15);
+  const sellMid = breakEven * mult;
+  const sellHigh = breakEven * (mult + 0.15);
+
+  const html = `
+    <div class="result">
+      <h3>Your ${kitLabel} pricing</h3>
+      <div class="result-grid">
+        <div class="res-item"><div class="lbl">Cost / capsule</div><div class="val">$${costPerCapsule.toFixed(2)}</div></div>
+        <div class="res-item"><div class="lbl">Capsules</div><div class="val">${count}</div></div>
+        <div class="res-item"><div class="lbl">Packaging</div><div class="val">$${pack.toFixed(2)}</div></div>
+      </div>
+      <div class="res-floor">
+        <div class="lbl">Break-even price · never go below this</div>
+        <div class="val">$${breakEven.toFixed(2)}</div>
+      </div>
+      <div class="res-range">
+        <div class="box"><div class="t">Low</div><div class="v">$${sellLow.toFixed(2)}</div></div>
+        <div class="box"><div class="t">Recommended</div><div class="v">$${sellMid.toFixed(2)}</div></div>
+        <div class="box"><div class="t">High</div><div class="v">$${sellHigh.toFixed(2)}</div></div>
+      </div>
+    </div>`;
+  const r = document.getElementById('kitResult');
+  r.innerHTML = html; r.classList.remove('hidden');
+  r.scrollIntoView({behavior:'smooth', block:'nearest'});
+}
+
+function tierFor(qty){
+  if (qty >= 100) return 0.20;
+  if (qty >= 50) return 0.15;
+  if (qty >= 20) return 0.10;
+  return 0;
+}
+
+function calcQuote(){
+  const qty = parseInt(document.getElementById('wQty').value)||1;
+  const unit = parseFloat(document.getElementById('wUnit').value)||0;
+  const lead = parseInt(document.getElementById('wLead').value)||7;
+  const pct = tierFor(qty);
+  const standard = qty * unit;
+  const discountAmt = standard * pct;
+  const final = standard - discountAmt;
+
+  const msg = `Thanks for reaching out! For ${qty} capsules, here's what I can offer:
+• Standard price: $${standard.toFixed(2)}
+• Bulk discount (${(pct*100).toFixed(0)}% off at this quantity): −$${discountAmt.toFixed(2)}
+• Your total: $${final.toFixed(2)}
+Lead time is ${lead} days from confirmed order. Let me know if you'd like to move forward and I'll send a payment link!`;
+
+  const html = `
+    <div class="result">
+      <h3>Your quote — ${qty} units at ${(pct*100).toFixed(0)}% off</h3>
+      <div class="result-grid">
+        <div class="res-item"><div class="lbl">Standard price</div><div class="val">$${standard.toFixed(2)}</div></div>
+        <div class="res-item"><div class="lbl">Discount</div><div class="val">−$${discountAmt.toFixed(2)}</div></div>
+        <div class="res-item"><div class="lbl">Final total</div><div class="val">$${final.toFixed(2)}</div></div>
+      </div>
+      <div class="quote-out" id="quoteText">${msg}</div>
+      <button class="copy-btn" onclick="copyQuote()">📋 Copy quote to send</button>
+    </div>`;
+  const r = document.getElementById('quoteResult');
+  r.innerHTML = html; r.classList.remove('hidden');
+  r.scrollIntoView({behavior:'smooth', block:'nearest'});
+}
+
+function copyQuote(){
+  const t = document.getElementById('quoteText').textContent;
+  navigator.clipboard.writeText(t).then(()=>{
+    const btn = event.target;
+    const old = btn.textContent;
+    btn.textContent = '✓ Copied!';
+    setTimeout(()=>btn.textContent = old, 1600);
+  });
+}
+
+const SCRIPTS = [
+  {cat:"When a customer asks for a discount", items:[
+    ["Script 1 · \\"Can you do it cheaper?\\"","I totally get wanting the best price! My kits are priced to cover real couverture chocolate and the time that goes into each one by hand — I keep it as fair as I can, but I can't go lower without changing the quality. Want me to show you the Starter Box instead? Same flavors, smaller size, better for right now."],
+    ["Script 2 · \\"X seller sells it cheaper\\"","That's totally possible — prices vary a lot depending on the chocolate used! Mine are made with real couverture, not compound chocolate, which does cost more but also tastes and melts completely differently. Happy to have you try one first if that helps."],
+    ["Script 3 · \\"Can I get a bulk discount?\\"","Yes! At [X] units or more I can do [Y]% off — want me to put together a quick quote for the amount you're thinking? (Use the wholesale generator above for the number.)"],
+    ["Script 4 · \\"It's too expensive for what it is\\"","Totally fair to ask! Each one is hand-filled and wrapped individually, in small batches — it's more of a gift experience than a candy, which is why it's priced a bit above a bag of chocolates. Want to see the Starter Box for a smaller first try?"]
+  ]},
+  {cat:"When a customer is undecided on size", items:[
+    ["Script 5 · \\"Which kit should I get?\\"","Depends what it's for! If it's just for you, the Starter Box (6 capsules) is perfect. If it's a gift, the Gift Kit (12) looks a lot more impressive for not much more."],
+    ["Script 6 · \\"Is the bigger one worth it?\\"","Definitely — the price per capsule actually drops as the kit gets bigger, plus it comes with the ribbon and card, so it's ready to gift straight out of the box."]
+  ]},
+  {cat:"When a customer hesitates on timing", items:[
+    ["Script 7 · \\"I'll think about it\\"","Of course, no rush! Just a heads up, I make these in small batches so if you want it for a specific date I'd say order a few days ahead just in case."],
+    ["Script 8 · \\"Can you hold my order?\\"","I can hold it for 24 hours no problem — after that I release the slot since batches are limited. Want me to send you a payment link to lock it in?"]
+  ]},
+  {cat:"When a customer wants something custom", items:[
+    ["Script 9 · \\"Can you customize the flavors?\\"","Yes! Custom flavor mixes are +$[X] on top of the kit price since it means a smaller custom batch. Want me to put a quote together?"],
+    ["Script 10 · \\"Can I get it in a special box for a gift?\\"","Absolutely, gift packaging is +$[X]. It comes with a ribbon and a personalized note card if you want one."]
+  ]},
+  {cat:"When a customer wants to negotiate on delivery", items:[
+    ["Script 11 · \\"Can you deliver for free?\\"","Delivery is $[X] within [area] — it covers my time and gas. Free if you can pick up, or I sometimes waive it on orders over $[Y]."],
+    ["Script 12 · \\"Why does delivery cost extra?\\"","Totally fair question — the kit price only covers the product itself. Delivery is priced separately so people who can pick up aren't paying for gas they don't use."]
+  ]}
+];
+
+let scriptsOpen = false;
+function toggleScripts(){
+  scriptsOpen = !scriptsOpen;
+  const box = document.getElementById('scriptsBox');
+  const btn = document.getElementById('scriptsBtn');
+  if (scriptsOpen){
+    box.innerHTML = SCRIPTS.map(g => `<div class="script-cat">${g.cat}</div>` + g.items.map(([who,text]) => `<div class="script"><div class="who">${who}</div><p>${text}</p></div>`).join('')).join('');
+    box.classList.remove('hidden');
+    btn.textContent = 'Hide scripts ▴';
+  } else {
+    box.classList.add('hidden');
+    btn.textContent = 'Show all 12 scripts ▾';
+  }
+}
+</script>
+
+</body>
+</html>
