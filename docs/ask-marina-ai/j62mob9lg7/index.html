@@ -259,7 +259,8 @@ function handleKey(e) {
 }
 
 function askExample(btn) {
-  const text = btn.querySelector(':not(b)').textContent.trim() || btn.textContent.replace(btn.querySelector('b').textContent, '').trim();
+  const label = btn.querySelector('b')?.textContent || '';
+  const text = btn.textContent.replace(label, '').trim();
   document.getElementById('userInput').value = text;
   send();
 }
