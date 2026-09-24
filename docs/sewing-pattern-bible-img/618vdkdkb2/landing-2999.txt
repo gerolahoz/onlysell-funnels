@@ -1,0 +1,3897 @@
+<style>
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+#offer{scroll-margin-top:24px}
+.ssb__hero-cta{display:inline-block;margin-top:18px;padding:15px 26px;border-radius:999px;background:#c88415;color:#fff!important;font-family:Outfit,Inter,sans-serif;font-weight:800;font-size:16px;letter-spacing:.04em;text-decoration:none;box-shadow:0 10px 24px rgba(0,0,0,.28)}
+.ssb__hero-cta:hover{background:#b0730f}
+@media (max-width:520px){.ssb__hero-cta{font-size:14px;padding:13px 20px;letter-spacing:.03em}}
+</style>
+
+<div class="section-template--23307757715700__custom_liquid_CdeadJ-padding">
+
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap');
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #f7f0e6;
+}
+
+.ssb,
+.ssb * {
+  box-sizing: border-box;
+}
+
+.ssb {
+  --ssb-bg: #f6efe5;
+  --ssb-card: #fffdf9;
+  --ssb-ink: #2d211c;
+  --ssb-gold: #cb8516;
+  --ssb-line: rgba(111, 62, 34, .16);
+  --ssb-shadow: 0 18px 40px rgba(52, 30, 18, .10);
+  --ssb-shadow-soft: 0 10px 24px rgba(52, 30, 18, .07);
+  --ssb-radius-xl: 28px;
+  display: block;
+  width: 100%;
+  padding: 18px 0;
+  color: var(--ssb-ink);
+  font-family: "Outfit", Arial, sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(203,133,22,.08), transparent 24%),
+    linear-gradient(180deg, #fbf6ef 0%, var(--ssb-bg) 100%);
+}
+
+.ssb__wrap {
+  width: 100%;
+  max-width: 460px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+.ssb__section {
+  margin-bottom: 22px;
+}
+
+.ssb__card {
+  background: linear-gradient(180deg, rgba(255,253,249,1) 0%, rgba(255,247,236,1) 100%);
+  border: 1px solid var(--ssb-line);
+  border-radius: var(--ssb-radius-xl);
+  box-shadow: var(--ssb-shadow);
+  overflow: hidden;
+}
+
+.ssb__title-xl {
+  margin: 0;
+  font-size: clamp(42px, 12vw, 66px);
+  line-height: .96;
+  letter-spacing: -.04em;
+  font-weight: 900;
+  color: #fff1e1;
+}
+
+.ssb__title-accent {
+  color: var(--ssb-gold);
+  font-style: italic;
+}
+
+.ssb__text-lg {
+  margin: 0;
+  color: #fff1e1;
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.65;
+  font-weight: 700;
+}
+
+.ssb__hero-visual {
+  position: relative;
+  min-height: 520px;
+  padding: 18px 14px 18px 14px;
+  background: #2a211d;
+}
+
+.ssb__hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.ssb__hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(21,13,10,.18) 0%, rgba(21,13,10,.54) 40%, rgba(21,13,10,.84) 100%),
+    linear-gradient(135deg, rgba(111,62,34,.22) 0%, rgba(45,33,28,.08) 100%);
+}
+
+.ssb__hero-visual::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 14% 72%, rgba(255,255,255,.09), transparent 7%),
+    radial-gradient(circle at 22% 80%, rgba(255,255,255,.06), transparent 6%),
+    linear-gradient(180deg, rgba(255,255,255,.05), transparent 18%);
+  pointer-events: none;
+}
+
+.ssb__hero-kicker {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.ssb__hero-kicker-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: rgba(203, 133, 22, 0.18);
+  border: 1px solid rgba(203, 133, 22, 0.55);
+  color: #ffe9b8;
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.ssb__hero-badges {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.ssb__hero-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 16px;
+  border-radius: 999px;
+  color: #f8f0e4;
+  background: rgba(28,20,16,.74);
+  border: 1px solid rgba(203,133,22,.55);
+  box-shadow: 0 10px 18px rgba(0,0,0,.16);
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.ssb__hero-copy {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  left: 18px;
+  z-index: 1;
+  text-align: center;
+  display: grid;
+  gap: 14px;
+}
+
+.ssb__hero-bottom {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  padding: 18px 18px 20px 18px;
+  background: linear-gradient(180deg, #f8efdf 0%, #f3e6d2 100%);
+  border-top: 1px solid rgba(111,62,34,.10);
+}
+
+.ssb__mini-benefit {
+  justify-content: center;
+  padding: 12px 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background: rgba(255,255,255,.58);
+  border: 1px solid rgba(111,62,34,.10);
+  border-radius: 14px;
+  font-family: "Outfit", Arial, sans-serif;
+  color: #5d4a3d;
+  font-size: 14px;
+  font-weight: 800;
+}
+</style>
+<section class="ssb ssb__section">
+<div class="ssb__wrap">
+<div class="ssb__card">
+<div class="ssb__hero-visual">
+<img alt="The Sewing Pattern Bible" class="ssb__hero-image" src="https://resource.onlysell.lat/sewing-pattern-bible-img/618vdkdkb2/hero-bg.jpg"/>
+<div class="ssb__hero-overlay"></div>
+<div class="ssb__hero-badges">
+<span class="ssb__hero-badge">+150 clothing patterns</span>
+<span class="ssb__hero-badge">5 free bonuses</span>
+<span class="ssb__hero-badge">🖨️ Ready to print at home (A4 &amp; US Letter)
+</span>
+</div>
+<div class="ssb__hero-copy">
+<h1 class="ssb__title-xl">Make your own <span class="ssb__title-accent"> clothes with patterns<br/></span>ready to use</h1>
+<p class="ssb__text-lg">150 patterns in every size, ready to print, cut out and use on fabric. Neat, clean garments from scratch.</p>
+<a class="ssb__hero-cta" href="#offer">SEE THE FULL OFFER ↓</a></div>
+</div>
+<div class="ssb__hero-bottom">
+<div class="ssb__mini-benefit">100 women's patterns</div>
+<div class="ssb__mini-benefit">50 men's patterns</div>
+<div class="ssb__mini-benefit">Instant access</div>
+<div class="ssb__mini-benefit">15-day guarantee</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+
+
+<div class="section-template--23307757715700__custom_liquid_yAeEPy-padding">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap');
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #f7f0e6;
+}
+
+.ssb,
+.ssb * {
+  box-sizing: border-box;
+}
+
+.ssb {
+  --ssb-bg: #f6efe5;
+  --ssb-bg-2: #fffaf4;
+  --ssb-card: #fffdf9;
+  --ssb-ink: #2d211c;
+  --ssb-brown: #6f3e22;
+  --ssb-brown-2: #8a4e2b;
+  --ssb-gold: #cb8516;
+  --ssb-gold-soft: #f0d4a4;
+  --ssb-red: #92262a;
+  --ssb-green: #1f7a53;
+  --ssb-green-2: #2a8e62;
+  --ssb-line: rgba(111, 62, 34, .16);
+  --ssb-shadow: 0 18px 40px rgba(52, 30, 18, .10);
+  --ssb-shadow-soft: 0 10px 24px rgba(52, 30, 18, .07);
+  --ssb-radius-xl: 28px;
+  --ssb-radius-lg: 22px;
+  --ssb-radius-md: 16px;
+  display: block;
+  width: 100%;
+  padding: 18px 0;
+  color: var(--ssb-ink);
+  font-family: "Outfit", Arial, sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(203,133,22,.08), transparent 24%),
+    linear-gradient(180deg, #fbf6ef 0%, var(--ssb-bg) 100%);
+}
+
+.ssb__wrap {
+  width: 100%;
+  max-width: 460px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.ssb__section {
+  margin-bottom: 18px;
+}
+
+.ssb__card {
+  background: linear-gradient(180deg, rgba(255,253,249,.98) 0%, rgba(255,248,239,.98) 100%);
+  border: 1px solid var(--ssb-line);
+  border-radius: var(--ssb-radius-xl);
+  box-shadow: var(--ssb-shadow);
+  overflow: hidden;
+}
+
+.ssb__inner {
+  padding: 22px 18px;
+}
+
+.ssb__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 0 16px;
+  border: 1.5px solid rgba(203,133,22,.58);
+  border-radius: 999px;
+  color: var(--ssb-gold);
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  background: rgba(255,250,244,.92);
+}
+
+.ssb__title-xl,
+.ssb__title-lg,
+.ssb__title-md,
+.ssb__title-sm {
+  margin: 0;
+  color: var(--ssb-ink);
+  font-weight: 900;
+  letter-spacing: -.04em;
+  line-height: .96;
+}
+
+.ssb__title-xl {
+  font-size: clamp(42px, 12vw, 66px);
+}
+
+.ssb__title-lg {
+  font-size: clamp(32px, 10vw, 48px);
+}
+
+.ssb__title-md {
+  font-size: clamp(25px, 7vw, 34px);
+}
+
+.ssb__title-sm {
+  font-size: 22px;
+  line-height: 1.05;
+}
+
+.ssb__title-accent,
+.ssb__accent {
+  color: var(--ssb-gold);
+  font-style: italic;
+}
+
+.ssb__text-lg,
+.ssb__text,
+.ssb__text-sm {
+  margin: 0;
+  font-family: "Outfit", Arial, sans-serif;
+  color: #6b5a4f;
+}
+
+.ssb__text-lg {
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.ssb__text {
+  font-size: 16px;
+  line-height: 1.62;
+}
+
+.ssb__text-sm {
+  font-size: 14px;
+  line-height: 1.58;
+}
+
+.ssb__stack-8 { display: grid; gap: 8px; }
+.ssb__stack-12 { display: grid; gap: 12px; }
+.ssb__stack-16 { display: grid; gap: 16px; }
+.ssb__stack-20 { display: grid; gap: 20px; }
+.ssb__stack-24 { display: grid; gap: 24px; }
+
+.ssb__hero-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 14px;
+  background: linear-gradient(90deg, #90252a 0%, #68171e 100%);
+  color: #fff3e6;
+  font-family: "Outfit", Arial, sans-serif;
+}
+
+.ssb__hero-top strong {
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+}
+
+.ssb__timer {
+  min-width: 76px;
+  min-height: 38px;
+  padding: 0 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: rgba(255,255,255,.10);
+  border: 1px solid rgba(255,255,255,.12);
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.ssb__hero-visual {
+  position: relative;
+  min-height: 520px;
+  padding: 16px 14px 18px 14px;
+  background:
+    linear-gradient(180deg, rgba(21,13,10,.14) 0%, rgba(21,13,10,.52) 42%, rgba(21,13,10,.82) 100%),
+    linear-gradient(135deg, rgba(111,62,34,.32) 0%, rgba(45,33,28,.10) 100%);
+}
+
+.ssb__hero-visual::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 14% 72%, rgba(255,255,255,.09), transparent 7%),
+    radial-gradient(circle at 22% 80%, rgba(255,255,255,.06), transparent 6%),
+    linear-gradient(180deg, rgba(255,255,255,.05), transparent 18%);
+  pointer-events: none;
+}
+
+.ssb__hero-badges {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.ssb__hero-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 16px;
+  border-radius: 999px;
+  color: #f8f0e4;
+  background: rgba(28,20,16,.74);
+  border: 1px solid rgba(203,133,22,.55);
+  box-shadow: 0 10px 18px rgba(0,0,0,.16);
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.ssb__hero-copy {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  left: 18px;
+  z-index: 1;
+  text-align: center;
+  display: grid;
+  gap: 14px;
+}
+
+.ssb__hero-copy .ssb__title-xl,
+.ssb__hero-copy .ssb__text-lg {
+  color: #fff1e1;
+}
+
+.ssb__hero-copy .ssb__text-lg {
+  font-weight: 700;
+}
+
+.ssb__hero-bottom {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  padding: 16px 18px 20px 18px;
+  background: #f8efdf;
+  border-top: 1px solid rgba(111,62,34,.10);
+}
+
+.ssb__mini-benefit {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-family: "Outfit", Arial, sans-serif;
+  color: #5d4a3d;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.ssb__pain-quote {
+  padding: 8px 4px;
+  text-align: center;
+}
+
+.ssb__pain-quote p {
+  margin: 0;
+  color: var(--ssb-ink);
+  font-size: 18px;
+  line-height: 1.45;
+  font-style: italic;
+  font-weight: 900;
+}
+
+.ssb__pain-list,
+.ssb__check-list {
+  display: grid;
+  gap: 12px;
+}
+
+.ssb__pain-item,
+.ssb__check-item {
+  display: grid;
+  grid-template-columns: 38px 1fr;
+  gap: 12px;
+  align-items: center;
+  padding: 16px 14px;
+  background: rgba(255,255,255,.92);
+  border: 1px solid rgba(111,62,34,.08);
+  border-radius: 18px;
+  box-shadow: var(--ssb-shadow-soft);
+}
+
+.ssb__pain-icon,
+.ssb__check-icon,
+.ssb__step-num,
+.ssb__avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  color: #fff;
+}
+
+.ssb__pain-icon {
+  background: linear-gradient(135deg, #a52828 0%, #8a1f21 100%);
+}
+
+.ssb__check-icon {
+  background: linear-gradient(135deg, var(--ssb-green) 0%, var(--ssb-green-2) 100%);
+}
+
+.ssb__step-card {
+  display: grid;
+  grid-template-columns: 46px 1fr;
+  gap: 14px;
+  padding: 18px 16px;
+  border-bottom: 1px solid rgba(111,62,34,.08);
+}
+
+.ssb__step-card:last-child {
+  border-bottom: 0;
+}
+
+.ssb__step-num {
+  width: 46px;
+  height: 46px;
+  background: linear-gradient(135deg, #c88415 0%, #bb7410 100%);
+  font-size: 18px;
+}
+
+.ssb__result-box {
+  padding: 22px 18px;
+  background: rgba(255,255,255,.88);
+  border-radius: 20px;
+  border: 1px solid rgba(111,62,34,.10);
+  box-shadow: var(--ssb-shadow-soft);
+}
+
+.ssb__grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.ssb__photo-card {
+  overflow: hidden;
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid rgba(111,62,34,.10);
+  box-shadow: var(--ssb-shadow-soft);
+}
+
+.ssb__photo-placeholder {
+  min-height: 164px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(135deg, #edd6ae 0%, #d8a14d 100%);
+  color: #fff7ec;
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.ssb__photo-label {
+  padding: 10px 12px;
+  background: #c88415;
+  color: #fff9ef;
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.ssb__product-box,
+.ssb__cta-box {
+  padding: 20px 18px;
+  background: #fff;
+  border-radius: 24px;
+  border: 1px solid rgba(111,62,34,.10);
+  box-shadow: var(--ssb-shadow);
+}
+
+.ssb__book-placeholder {
+  min-height: 320px;
+  border-radius: 22px;
+  border: 1px dashed rgba(111,62,34,.22);
+  background: linear-gradient(135deg, #efe1ce 0%, #f8efe4 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+  color: #7b6557;
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.6;
+}
+
+.ssb__price-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.ssb__old-price {
+  color: #8f7d70;
+  text-decoration: line-through;
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.ssb__price {
+  color: var(--ssb-ink);
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.ssb__badge-off {
+  min-height: 38px;
+  padding: 0 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #d89018;
+  color: #fff8ef;
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.ssb__cta {
+  width: 100%;
+  min-height: 62px;
+  padding: 0 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #1f7a53 0%, #196947 100%);
+  color: #fff8ef;
+  text-decoration: none;
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  box-shadow: 0 18px 28px rgba(31,122,83,.18);
+}
+
+.ssb__trust-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  color: #8d7a6c;
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.ssb__testimonial {
+  padding: 18px 16px;
+  background: #fff;
+  border-radius: 20px;
+  border: 1px solid rgba(111,62,34,.10);
+  box-shadow: var(--ssb-shadow-soft);
+}
+
+.ssb__testimonial-top {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 12px;
+  align-items: start;
+}
+
+.ssb__avatar {
+  background: linear-gradient(135deg, #c88415 0%, #b36e0e 100%);
+  font-size: 22px;
+}
+
+.ssb__avatar--green {
+  background: linear-gradient(135deg, #177751 0%, #126343 100%);
+}
+
+.ssb__avatar--red {
+  background: linear-gradient(135deg, #a73033 0%, #8f2528 100%);
+}
+
+.ssb__name {
+  margin: 0;
+  font-family: "Outfit", Arial, sans-serif;
+  color: var(--ssb-ink);
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.ssb__meta,
+.ssb__stars,
+.ssb__verified {
+  font-family: "Outfit", Arial, sans-serif;
+}
+
+.ssb__meta {
+  color: #8b7568;
+  font-size: 13px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.ssb__stars {
+  color: #d89a22;
+  font-size: 16px;
+  font-weight: 900;
+  margin: 0;
+}
+.ssb__name a, .ssb__meta a, a[x-apple-data-detectors] {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+.ssb__quote {
+  margin: 0;
+  color: #382a23;
+  font-size: 18px;
+  line-height: 1.45;
+  font-style: italic;
+  font-weight: 900;
+}
+
+.ssb__verified {
+  color: #9a8678;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .10em;
+  text-transform: uppercase;
+}
+
+.ssb__faq {
+  background: #fff;
+  border: 1px solid rgba(111,62,34,.10);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--ssb-shadow-soft);
+}
+
+.ssb__faq + .ssb__faq {
+  margin-top: 12px;
+}
+
+.ssb__faq summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 18px 16px;
+  font-family: "Outfit", Arial, sans-serif;
+  color: var(--ssb-ink);
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.ssb__faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.ssb__faq p {
+  margin: 0;
+  padding: 0 16px 18px 16px;
+  color: #6a594d;
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.58;
+}
+
+.ssb__problem-image {
+  min-height: 260px;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(111,62,34,.10);
+  box-shadow: var(--ssb-shadow-soft);
+  background: #ead8c1;
+}
+
+.ssb__problem-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+  object-fit: cover;
+}
+</style>
+<section class="ssb ssb__section">
+<div class="ssb__wrap">
+<div class="ssb__card">
+<div class="ssb__inner ssb__stack-20" style="text-align:center;">
+<div class="ssb__stack-12">
+<div><span class="ssb__eyebrow">Does this sound familiar?</span></div>
+<h2 class="ssb__title-lg">You want to sew. And the afternoon <span class="ssb__title-accent">goes by hunting for the pattern</span>.</h2>
+<p class="ssb__text-lg">You open Pinterest. Then Google. Then a Facebook group. Two hours later, you still haven't cut a thing.</p>
+</div>
+<div class="ssb__pain-quote">
+<p>"It's not that you're a slow sewist. You're missing <span class="ssb__accent">a ready-made base</span> for every garment."</p>
+</div>
+<div class="ssb__problem-image">
+<img alt="Real index of The Sewing Pattern Bible" src="https://resource.onlysell.lat/sewing-pattern-bible-img/618vdkdkb2/process-1.jpg"/>
+</div>
+<div class="ssb__pain-list">
+<div class="ssb__pain-item">
+<span class="ssb__pain-icon">x</span>
+<div class="ssb__text">An order comes in and you don't have the pattern: back to searching from scratch.</div>
+</div>
+<div class="ssb__pain-item">
+<span class="ssb__pain-icon">x</span>
+<div class="ssb__text">You find one… but it doesn't say what size it is, and the photo doesn't match the pattern.</div>
+</div>
+<div class="ssb__pain-item">
+<span class="ssb__pain-icon">x</span>
+<div class="ssb__text">You print it and it comes out too small: was it A4, Letter or actual size?</div>
+</div>
+<div class="ssb__pain-item">
+<span class="ssb__pain-icon">x</span>
+<div class="ssb__text">You tape the sheets together, the lines don't match… and the machine is still off.</div>
+</div>
+</div>
+<div class="ssb__result-box">
+<h3 class="ssb__title-md">It's not a lack of skill. It's the lack of <span class="ssb__accent">an organized catalog</span>.</h3>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+
+
+<div class="section-template--23307757715700__custom_liquid_NyGcez-padding">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap');
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #f7f0e6;
+}
+
+.ssb,
+.ssb * {
+  box-sizing: border-box;
+}
+
+.ssb {
+  --ssb-bg: #f6efe5;
+  --ssb-bg-2: #fffaf4;
+  --ssb-card: #fffdf9;
+  --ssb-ink: #2d211c;
+  --ssb-brown: #6f3e22;
+  --ssb-brown-2: #8a4e2b;
+  --ssb-gold: #cb8516;
+  --ssb-gold-soft: #f0d4a4;
+  --ssb-red: #92262a;
+  --ssb-green: #1f7a53;
+  --ssb-green-2: #2a8e62;
+  --ssb-line: rgba(111, 62, 34, .16);
+  --ssb-shadow: 0 18px 40px rgba(52, 30, 18, .10);
+  --ssb-shadow-soft: 0 10px 24px rgba(52, 30, 18, .07);
+  --ssb-radius-xl: 28px;
+  --ssb-radius-lg: 22px;
+  --ssb-radius-md: 16px;
+  display: block;
+  width: 100%;
+  padding: 18px 0;
+  color: var(--ssb-ink);
+  font-family: "Outfit", Arial, sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(203,133,22,.08), transparent 24%),
+    linear-gradient(180deg, #fbf6ef 0%, var(--ssb-bg) 100%);
+}
+
+.ssb__wrap {
+  width: 100%;
+  max-width: 460px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.ssb__section {
+  margin-bottom: 18px;
+}
+
+.ssb__card {
+  background: linear-gradient(180deg, rgba(255,253,249,.98) 0%, rgba(255,248,239,.98) 100%);
+  border: 1px solid var(--ssb-line);
+  border-radius: var(--ssb-radius-xl);
+  box-shadow: var(--ssb-shadow);
+  overflow: hidden;
+}
+
+.ssb__inner {
+  padding: 22px 18px;
+}
+
+.ssb__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 0 16px;
+  border: 1.5px solid rgba(203,133,22,.58);
+  border-radius: 999px;
+  color: var(--ssb-gold);
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  background: rgba(255,250,244,.92);
+}
+
+.ssb__title-xl,
+.ssb__title-lg,
+.ssb__title-md,
+.ssb__title-sm {
+  margin: 0;
+  color: var(--ssb-ink);
+  font-weight: 900;
+  letter-spacing: -.04em;
+  line-height: .96;
+}
+
+.ssb__title-xl {
+  font-size: clamp(42px, 12vw, 66px);
+}
+
+.ssb__title-lg {
+  font-size: clamp(32px, 10vw, 48px);
+}
+
+.ssb__title-md {
+  font-size: clamp(25px, 7vw, 34px);
+}
+
+.ssb__title-sm {
+  font-size: 22px;
+  line-height: 1.05;
+}
+
+.ssb__title-accent,
+.ssb__accent {
+  color: var(--ssb-gold);
+  font-style: italic;
+}
+
+.ssb__text-lg,
+.ssb__text,
+.ssb__text-sm {
+  margin: 0;
+  font-family: "Outfit", Arial, sans-serif;
+  color: #6b5a4f;
+}
+
+.ssb__text-lg {
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.ssb__text {
+  font-size: 16px;
+  line-height: 1.62;
+}
+
+.ssb__text-sm {
+  font-size: 14px;
+  line-height: 1.58;
+}
+
+.ssb__stack-8 { display: grid; gap: 8px; }
+.ssb__stack-12 { display: grid; gap: 12px; }
+.ssb__stack-16 { display: grid; gap: 16px; }
+.ssb__stack-20 { display: grid; gap: 20px; }
+.ssb__stack-24 { display: grid; gap: 24px; }
+
+.ssb__hero-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 14px;
+  background: linear-gradient(90deg, #90252a 0%, #68171e 100%);
+  color: #fff3e6;
+  font-family: "Outfit", Arial, sans-serif;
+}
+
+.ssb__hero-top strong {
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+}
+
+.ssb__timer {
+  min-width: 76px;
+  min-height: 38px;
+  padding: 0 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: rgba(255,255,255,.10);
+  border: 1px solid rgba(255,255,255,.12);
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.ssb__hero-visual {
+  position: relative;
+  min-height: 520px;
+  padding: 16px 14px 18px 14px;
+  background:
+    linear-gradient(180deg, rgba(21,13,10,.14) 0%, rgba(21,13,10,.52) 42%, rgba(21,13,10,.82) 100%),
+    linear-gradient(135deg, rgba(111,62,34,.32) 0%, rgba(45,33,28,.10) 100%);
+}
+
+.ssb__hero-visual::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 14% 72%, rgba(255,255,255,.09), transparent 7%),
+    radial-gradient(circle at 22% 80%, rgba(255,255,255,.06), transparent 6%),
+    linear-gradient(180deg, rgba(255,255,255,.05), transparent 18%);
+  pointer-events: none;
+}
+
+.ssb__hero-badges {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.ssb__hero-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 16px;
+  border-radius: 999px;
+  color: #f8f0e4;
+  background: rgba(28,20,16,.74);
+  border: 1px solid rgba(203,133,22,.55);
+  box-shadow: 0 10px 18px rgba(0,0,0,.16);
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.ssb__hero-copy {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  left: 18px;
+  z-index: 1;
+  text-align: center;
+  display: grid;
+  gap: 14px;
+}
+
+.ssb__hero-copy .ssb__title-xl,
+.ssb__hero-copy .ssb__text-lg {
+  color: #fff1e1;
+}
+
+.ssb__hero-copy .ssb__text-lg {
+  font-weight: 700;
+}
+
+.ssb__hero-bottom {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  padding: 16px 18px 20px 18px;
+  background: #f8efdf;
+  border-top: 1px solid rgba(111,62,34,.10);
+}
+
+.ssb__mini-benefit {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-family: "Outfit", Arial, sans-serif;
+  color: #5d4a3d;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.ssb__pain-quote {
+  padding: 8px 4px;
+  text-align: center;
+}
+
+.ssb__pain-quote p {
+  margin: 0;
+  color: var(--ssb-ink);
+  font-size: 18px;
+  line-height: 1.45;
+  font-style: italic;
+  font-weight: 900;
+}
+
+.ssb__pain-list,
+.ssb__check-list {
+  display: grid;
+  gap: 12px;
+}
+
+.ssb__pain-item,
+.ssb__check-item {
+  display: grid;
+  grid-template-columns: 38px 1fr;
+  gap: 12px;
+  align-items: center;
+  padding: 16px 14px;
+  background: rgba(255,255,255,.92);
+  border: 1px solid rgba(111,62,34,.08);
+  border-radius: 18px;
+  box-shadow: var(--ssb-shadow-soft);
+}
+
+.ssb__pain-icon,
+.ssb__check-icon,
+.ssb__step-num,
+.ssb__avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  color: #fff;
+}
+
+.ssb__pain-icon {
+  background: linear-gradient(135deg, #a52828 0%, #8a1f21 100%);
+}
+
+.ssb__check-icon {
+  background: linear-gradient(135deg, var(--ssb-green) 0%, var(--ssb-green-2) 100%);
+}
+
+.ssb__step-card {
+  display: grid;
+  grid-template-columns: 46px 1fr;
+  gap: 14px;
+  padding: 18px 16px;
+  border-bottom: 1px solid rgba(111,62,34,.08);
+}
+
+.ssb__step-card:last-child {
+  border-bottom: 0;
+}
+
+.ssb__step-num {
+  width: 46px;
+  height: 46px;
+  background: linear-gradient(135deg, #c88415 0%, #bb7410 100%);
+  font-size: 18px;
+}
+
+.ssb__result-box {
+  padding: 22px 18px;
+  background: rgba(255,255,255,.88);
+  border-radius: 20px;
+  border: 1px solid rgba(111,62,34,.10);
+  box-shadow: var(--ssb-shadow-soft);
+}
+
+.ssb__grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.ssb__photo-card {
+  overflow: hidden;
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid rgba(111,62,34,.10);
+  box-shadow: var(--ssb-shadow-soft);
+}
+
+.ssb__photo-placeholder {
+  min-height: 164px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(135deg, #edd6ae 0%, #d8a14d 100%);
+  color: #fff7ec;
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.ssb__photo-label {
+  padding: 10px 12px;
+  background: #c88415;
+  color: #fff9ef;
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.ssb__product-box,
+.ssb__cta-box {
+  padding: 20px 18px;
+  background: #fff;
+  border-radius: 24px;
+  border: 1px solid rgba(111,62,34,.10);
+  box-shadow: var(--ssb-shadow);
+}
+
+.ssb__book-placeholder {
+  min-height: 320px;
+  border-radius: 22px;
+  border: 1px dashed rgba(111,62,34,.22);
+  background: linear-gradient(135deg, #efe1ce 0%, #f8efe4 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+  color: #7b6557;
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.6;
+}
+
+.ssb__price-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.ssb__old-price {
+  color: #8f7d70;
+  text-decoration: line-through;
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.ssb__price {
+  color: var(--ssb-ink);
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.ssb__badge-off {
+  min-height: 38px;
+  padding: 0 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #d89018;
+  color: #fff8ef;
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.ssb__cta {
+  width: 100%;
+  min-height: 62px;
+  padding: 0 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #1f7a53 0%, #196947 100%);
+  color: #fff8ef;
+  text-decoration: none;
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  box-shadow: 0 18px 28px rgba(31,122,83,.18);
+}
+
+.ssb__trust-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  color: #8d7a6c;
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.ssb__testimonial {
+  padding: 18px 16px;
+  background: #fff;
+  border-radius: 20px;
+  border: 1px solid rgba(111,62,34,.10);
+  box-shadow: var(--ssb-shadow-soft);
+}
+
+.ssb__testimonial-top {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 12px;
+  align-items: start;
+}
+
+.ssb__avatar {
+  background: linear-gradient(135deg, #c88415 0%, #b36e0e 100%);
+  font-size: 22px;
+}
+
+.ssb__avatar--green {
+  background: linear-gradient(135deg, #177751 0%, #126343 100%);
+}
+
+.ssb__avatar--red {
+  background: linear-gradient(135deg, #a73033 0%, #8f2528 100%);
+}
+
+.ssb__name {
+  margin: 0;
+  font-family: "Outfit", Arial, sans-serif;
+  color: var(--ssb-ink);
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.ssb__meta,
+.ssb__stars,
+.ssb__verified {
+  font-family: "Outfit", Arial, sans-serif;
+}
+
+.ssb__meta {
+  color: #8b7568;
+  font-size: 13px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.ssb__stars {
+  color: #d89a22;
+  font-size: 16px;
+  font-weight: 900;
+  margin: 0;
+}
+.ssb__name a, .ssb__meta a, a[x-apple-data-detectors] {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+.ssb__quote {
+  margin: 0;
+  color: #382a23;
+  font-size: 18px;
+  line-height: 1.45;
+  font-style: italic;
+  font-weight: 900;
+}
+
+.ssb__verified {
+  color: #9a8678;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .10em;
+  text-transform: uppercase;
+}
+
+.ssb__faq {
+  background: #fff;
+  border: 1px solid rgba(111,62,34,.10);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--ssb-shadow-soft);
+}
+
+.ssb__faq + .ssb__faq {
+  margin-top: 12px;
+}
+
+.ssb__faq summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 18px 16px;
+  font-family: "Outfit", Arial, sans-serif;
+  color: var(--ssb-ink);
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.ssb__faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.ssb__faq p {
+  margin: 0;
+  padding: 0 16px 18px 16px;
+  color: #6a594d;
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.58;
+}
+
+.ssb__process-image {
+  min-height: 260px;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(111,62,34,.10);
+  box-shadow: var(--ssb-shadow-soft);
+  background: #ead8c1;
+}
+
+.ssb__process-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+  object-fit: cover;
+}
+</style>
+<section class="ssb ssb__section">
+<div class="ssb__wrap">
+<div class="ssb__card">
+<div class="ssb__inner ssb__stack-20">
+<div class="ssb__stack-12" style="text-align:center;">
+<div><span class="ssb__eyebrow">The real process</span></div>
+<h2 class="ssb__title-lg">Choose, print and <span class="ssb__accent">cut</span></h2>
+<p class="ssb__text-lg">These aren't random patterns. It's a complete system for making your clothes, from choosing the base and the size to cutting and sewing.</p>
+</div>
+<div class="ssb__process-image">
+<img alt="Real catalog page: Women's section with its spec sheets" src="https://resource.onlysell.lat/sewing-pattern-bible-img/618vdkdkb2/process-2.jpg"/>
+</div>
+<div class="ssb__card" style="background:#fff; border-radius:22px;">
+<div class="ssb__step-card">
+<span class="ssb__step-num">1</span>
+<div class="ssb__stack-8">
+<h3 class="ssb__title-sm">Download the library</h3>
+<p class="ssb__text">As soon as your payment goes through, you get access. Open the catalog on your phone or computer and pick the design by its photo.</p>
+<p class="ssb__text" style="display:flex; align-items:flex-start; gap:8px; background:rgba(203,133,22,.08); border:1px solid rgba(203,133,22,.28); border-radius:12px; padding:10px 12px; color:#5a3c10; font-weight:700;"><span style="flex-shrink:0;">📐</span><span>Every design has its own spec sheet: stated size, print format and the exact folder. No guesswork.</span></p>
+</div>
+</div>
+<div class="ssb__step-card">
+<span class="ssb__step-num">2</span>
+<div class="ssb__stack-8">
+<h3 class="ssb__title-sm">Print at 100% and measure</h3>
+<p class="ssb__text">Every folder comes with its READ FIRST file listing the size of each PDF. Print at 100%, measure the test square and you're set.</p>
+</div>
+</div>
+<div class="ssb__step-card">
+<span class="ssb__step-num">3</span>
+<div class="ssb__stack-8">
+<h3 class="ssb__title-sm">Pick your size and cut</h3>
+<p class="ssb__text">Choose your size by your measurements (never by store sizing), make the usual adjustments you'd make to any pattern, and cut. The same base, as many times as you need it.</p>
+</div>
+</div>
+<div class="ssb__step-card">
+<span class="ssb__step-num">4</span>
+<div class="ssb__stack-8">
+<h3 class="ssb__title-sm">Sew and finish the garment</h3>
+<p class="ssb__text">The 5 bonuses close the loop: techniques and finishes, basic pattern making, pattern alterations, the sewing machine and creative projects.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+
+
+<div class="section-template--23307757715700__custom_liquid_crRq7h-padding">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap');
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #f6efe4;
+}
+
+.ssb-guarantee,
+.ssb-guarantee * {
+  box-sizing: border-box;
+}
+
+.ssb-guarantee {
+  --ssb-bg: #f7f0e6;
+  --ssb-card: #fffaf3;
+  --ssb-ink: #261913;
+  --ssb-muted: #6d5a50;
+  --ssb-line: rgba(86, 50, 28, 0.12);
+  --ssb-gold: #c88517;
+  --ssb-green: #1f7a52;
+  width: 100%;
+  display: block;
+  padding: 22px 0;
+  font-family: "Outfit", Arial, sans-serif;
+  color: var(--ssb-ink);
+  background:
+    radial-gradient(circle at top left, rgba(200,133,23,0.08), transparent 28%),
+    linear-gradient(180deg, #fbf7f0 0%, var(--ssb-bg) 100%);
+}
+
+.ssb-guarantee__wrap {
+  width: 100%;
+  max-width: 460px;
+  margin: 0 auto;
+  padding: 0 14px;
+}
+
+.ssb-guarantee__card {
+  position: relative;
+  overflow: hidden;
+  padding: 34px 28px;
+  background: linear-gradient(180deg, rgba(255,250,243,0.98) 0%, rgba(252,244,233,0.98) 100%);
+  border: 1px solid var(--ssb-line);
+  border-radius: 30px;
+  box-shadow: 0 22px 44px rgba(64, 34, 18, 0.08);
+}
+
+.ssb-guarantee__card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(200,133,23,0.14), transparent 18%),
+    radial-gradient(circle at 88% 22%, rgba(31,122,82,0.10), transparent 18%);
+  pointer-events: none;
+}
+
+.ssb-guarantee__inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 22px;
+}
+
+.ssb-guarantee__top {
+  display: grid;
+  gap: 14px;
+  text-align: center;
+}
+
+.ssb-guarantee__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  min-height: 40px;
+  padding: 0 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(200,133,23,0.42);
+  background: rgba(255,251,244,0.96);
+  color: #9b6310;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.ssb-guarantee__title {
+  margin: 0;
+  font-size: clamp(34px, 5vw, 58px);
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+  font-weight: 900;
+}
+
+.ssb-guarantee__accent {
+  color: var(--ssb-gold);
+  font-style: italic;
+}
+
+.ssb-guarantee__lead {
+  margin: 0;
+  color: var(--ssb-muted);
+  font-size: 20px;
+  line-height: 1.55;
+  font-weight: 500;
+}
+
+.ssb-guarantee__box {
+  display: grid;
+  grid-template-columns: 112px minmax(0, 1fr);
+  gap: 20px;
+  align-items: start;
+  padding: 24px;
+  background: rgba(255,255,255,0.82);
+  border: 1px solid rgba(86, 50, 28, 0.10);
+  border-radius: 24px;
+}
+
+.ssb-guarantee__seal {
+  width: 112px;
+  height: 112px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1f7a52 0%, #166544 100%);
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 16px 26px rgba(31,122,82,0.18);
+}
+
+.ssb-guarantee__seal strong {
+  display: block;
+  font-size: 34px;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.ssb-guarantee__seal span {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.ssb-guarantee__copy {
+  display: none;
+}
+
+@media (max-width: 99999px) {
+  .ssb-guarantee {
+    padding: 16px 0;
+  }
+
+  .ssb-guarantee__wrap {
+    padding: 0 10px;
+  }
+
+  .ssb-guarantee__card {
+    padding: 24px 16px;
+    border-radius: 24px;
+  }
+
+  .ssb-guarantee__lead {
+    font-size: 17px;
+  }
+
+  .ssb-guarantee__box {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    padding: 18px;
+  }
+
+  .ssb-guarantee__seal {
+    width: 96px;
+    height: 96px;
+  }
+
+  .ssb-guarantee__seal strong {
+    font-size: 30px;
+  }
+
+}
+</style>
+<section class="ssb-guarantee">
+<div class="ssb-guarantee__wrap">
+<div class="ssb-guarantee__card">
+<div class="ssb-guarantee__inner">
+<div class="ssb-guarantee__top">
+<span class="ssb-guarantee__eyebrow">Real guarantee</span>
+<h2 class="ssb-guarantee__title">You have 15 days to look through the material. If it's not for you, we'll refund your money. <span class="ssb-guarantee__accent">No hassle</span>.</h2>
+<p class="ssb-guarantee__lead">We want you to buy with peace of mind. If within the first 15 days you feel it's not for you, just email us and we'll refund your money.</p>
+</div>
+<div class="ssb-guarantee__box">
+<div class="ssb-guarantee__seal">
+<div>
+<strong>15</strong>
+<span>Day guarantee</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+
+
+<div class="section-template--23307757715700__custom_liquid_iQRq8x-padding">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap');
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #f6efe4;
+}
+
+.ssb-offer,
+.ssb-offer * {
+  box-sizing: border-box;
+}
+
+.ssb-offer {
+  --ssb-bg: #f7f0e6;
+  --ssb-card: #fbf7f0;
+  --ssb-ink: #241710;
+  --ssb-muted: #746459;
+  --ssb-line: rgba(86, 50, 28, 0.12);
+  --ssb-gold: #c88517;
+  --ssb-green: #1f7a52;
+  width: 100%;
+  display: block;
+  padding: 22px 0;
+  font-family: "Outfit", Arial, sans-serif;
+  color: var(--ssb-ink);
+  background:
+    radial-gradient(circle at top left, rgba(200, 133, 23, 0.08), transparent 26%),
+    linear-gradient(180deg, #fbf7f0 0%, var(--ssb-bg) 100%);
+}
+
+.ssb-offer__wrap {
+  width: 100%;
+  max-width: 460px;
+  margin: 0 auto;
+  padding: 0 14px;
+}
+
+.ssb-offer__card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, .95fr);
+  gap: 0;
+  background: #f7f4ee;
+  border: 1px solid var(--ssb-line);
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 22px 44px rgba(64, 34, 18, 0.08);
+}
+
+.ssb-offer__media {
+  min-height: 720px;
+  background: #ede6dc;
+}
+
+.ssb-offer__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ssb-offer__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 46px 42px 42px;
+}
+
+.ssb-offer__kicker {
+  margin: 0 0 12px;
+  color: #8e7d73;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.ssb-offer__title {
+  margin: 0 0 16px;
+  font-size: clamp(36px, 4.8vw, 66px);
+  line-height: 1.03;
+  letter-spacing: -0.04em;
+  font-weight: 800;
+}
+
+.ssb-offer__title-accent {
+  color: var(--ssb-gold);
+}
+
+.ssb-offer__price-row {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.ssb-offer__old {
+  color: #8b7a71;
+  font-size: 22px;
+  text-decoration: line-through;
+}
+
+.ssb-offer__price {
+  color: var(--ssb-ink);
+  font-size: clamp(34px, 4vw, 54px);
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+.ssb-offer__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: var(--ssb-gold);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.ssb-offer__rating {
+  margin-bottom: 28px;
+  color: #f4b400;
+  font-size: 28px;
+  letter-spacing: 0.08em;
+}
+
+.ssb-offer__rating small {
+  color: #6f625b;
+  font-size: 18px;
+  letter-spacing: 0;
+  margin-left: 6px;
+}
+
+.ssb-offer__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 74px;
+  padding: 18px 24px;
+  border: 0;
+  border-radius: 22px;
+  background: var(--ssb-green);
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  font-size: 30px;
+  line-height: 1.1;
+  font-weight: 800;
+  box-shadow: 0 18px 34px rgba(31, 122, 82, 0.18);
+  cursor: pointer;
+}
+
+.ssb-offer__cta:disabled {
+  opacity: 0.8;
+  cursor: wait;
+}
+
+.ssb-offer__secure {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 12px;
+  padding: 12px 16px;
+  border-radius: 16px;
+  background: rgba(0, 161, 228, 0.08);
+  border: 1px solid rgba(0, 161, 228, 0.18);
+  color: #0b5e7f;
+  font-size: 15px;
+  font-weight: 800;
+  text-align: center;
+  cursor: pointer;
+}
+
+.ssb-offer__secure-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 34px;
+  height: 34px;
+}
+
+.ssb-offer__secure-badge img {
+  display: block;
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.ssb-offer__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 18px;
+  color: #8f7f74;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.ssb-offer__features {
+  margin: 10px 0 0;
+  color: var(--ssb-gold);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 99999px) {
+  .ssb-offer__card {
+    grid-template-columns: 1fr;
+  }
+
+  .ssb-offer__media {
+    min-height: 420px;
+  }
+
+  .ssb-offer__content {
+    padding: 24px 18px 22px;
+  }
+
+  .ssb-offer__title {
+    font-size: 44px;
+  }
+
+  .ssb-offer__old {
+    font-size: 18px;
+  }
+
+  .ssb-offer__price {
+    font-size: 44px;
+  }
+
+  .ssb-offer__cta {
+    min-height: 62px;
+    font-size: 22px;
+    border-radius: 18px;
+  }
+
+}
+</style>
+<section class="ssb-offer" id="offer">
+<div class="ssb-offer__wrap">
+<div class="ssb-offer__card">
+<div class="ssb-offer__media">
+<img alt="The Sewing Pattern Bible" src="https://resource.onlysell.lat/sewing-pattern-bible-img/618vdkdkb2/bible-mockup.jpg"/>
+</div>
+<div class="ssb-offer__content">
+<p class="ssb-offer__kicker">Complete digital kit</p>
+<h2 class="ssb-offer__title">The Sewing Pattern Bible <span class="ssb-offer__title-accent">+ 67% OFF</span></h2>
+<div class="ssb-offer__price-row">
+<span class="ssb-offer__old">$89.99</span>
+<span class="ssb-offer__price">$29.99</span>
+<span class="ssb-offer__badge">67% OFF</span>
+</div>
+<div class="ssb-offer__rating" style="font-size:19px; color:#9b6310; font-weight:800;">🔥 Special launch price</div>
+<a class="ssb-offer__cta" href="/checkout">I want access now for $29.99</a>
+<div class="ssb-offer__secure">
+
+<span>🔒 Secure checkout · Card, Apple Pay &amp; Google Pay</span>
+</div>
+<div class="ssb-offer__meta">
+<span>Digital product</span>
+<span>Instant access</span>
+</div>
+<p class="ssb-offer__features">+150 patterns in every size · Creative projects for your home · 5 bonuses · 15-day guarantee</p>
+</div>
+</div>
+</div>
+</section>
+
+</div>
+
+
+<div class="section-template--23307757715700__custom_liquid_EYx83b-padding">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap');
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #f6efe4;
+}
+
+.ssb-bonus,
+.ssb-bonus * {
+  box-sizing: border-box;
+}
+
+.ssb-bonus {
+  --ssb-bg: #f6efe4;
+  --ssb-card: #fffdf8;
+  --ssb-ink: #261913;
+  --ssb-muted: #77655b;
+  --ssb-line: rgba(86, 50, 28, 0.12);
+  --ssb-gold: #c88517;
+  --ssb-green: #1f7a52;
+  --ssb-shadow: 0 20px 42px rgba(64, 34, 18, 0.08);
+  width: 100%;
+  display: block;
+  padding: 20px 0 8px;
+  font-family: "Outfit", Arial, sans-serif;
+  color: var(--ssb-ink);
+  background:
+    radial-gradient(circle at top left, rgba(200, 133, 23, 0.09), transparent 28%),
+    linear-gradient(180deg, #fbf7f0 0%, var(--ssb-bg) 100%);
+}
+
+.ssb-bonus__wrap {
+  width: 100%;
+  max-width: 460px;
+  margin: 0 auto;
+  padding: 0 14px;
+}
+
+.ssb-bonus__top {
+  max-width: 460px;
+  margin: 0 auto 22px;
+  text-align: center;
+}
+
+.ssb-bonus__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(200, 133, 23, 0.55);
+  color: #9b6310;
+  background: rgba(255, 250, 241, 0.92);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.ssb-bonus__title {
+  margin: 14px 0 10px;
+  font-size: clamp(34px, 5vw, 62px);
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+  font-weight: 900;
+}
+
+.ssb-bonus__title-accent {
+  color: var(--ssb-gold);
+  font-style: italic;
+}
+
+.ssb-bonus__lead {
+  margin: 0;
+  font-size: clamp(18px, 2.2vw, 27px);
+  line-height: 1.45;
+  font-weight: 500;
+  color: var(--ssb-ink);
+}
+
+.ssb-bonus__sub {
+  margin: 8px 0 0;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--ssb-muted);
+}
+
+.ssb-bonus__sub strong {
+  color: var(--ssb-ink);
+  font-weight: 800;
+}
+
+.ssb-bonus__sub s {
+  opacity: 0.7;
+}
+
+.ssb-bonus__slider {
+  position: relative;
+}
+
+.ssb-bonus__viewport {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 10px 2px 8px;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x proximity;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  touch-action: auto;
+  overscroll-behavior-x: contain;
+  overscroll-behavior-y: auto;
+}
+
+.ssb-bonus__viewport::-webkit-scrollbar {
+  display: none;
+}
+
+.ssb-bonus__track {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.ssb-bonus__slide {
+  flex: 0 0 calc(25% - 12px);
+  min-width: calc(25% - 12px);
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+}
+
+.ssb-bonus__card {
+  min-width: 0;
+  background: var(--ssb-card);
+  border: 1px solid var(--ssb-line);
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: var(--ssb-shadow);
+  height: 100%;
+  user-select: none;
+}
+
+.ssb-bonus__media {
+  position: relative;
+  aspect-ratio: 4 / 5.25;
+  background:
+    linear-gradient(180deg, rgba(30, 18, 12, 0.05), rgba(30, 18, 12, 0.25)),
+    radial-gradient(circle at top, rgba(200, 133, 23, 0.2), transparent 35%),
+    linear-gradient(135deg, #4d2f1f 0%, #9a5a1f 50%, #362017 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+}
+
+.ssb-bonus__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 18px 34px rgba(15, 9, 6, 0.28);
+}
+
+.ssb-bonus__placeholder {
+  width: 72%;
+  height: 84%;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 240, 220, 0.35);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.04)),
+    rgba(18, 12, 8, 0.22);
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,0.08),
+    0 18px 34px rgba(15, 9, 6, 0.28);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 16px;
+  color: #fff5e8;
+  font-size: 18px;
+  line-height: 1.35;
+  font-weight: 800;
+}
+
+.ssb-bonus__placeholder small {
+  display: block;
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.ssb-bonus__body {
+  padding: 16px 16px 18px;
+}
+
+.ssb-bonus__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.ssb-bonus__kicker {
+  color: #a66310;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.ssb-bonus__value {
+  color: #9f8b81;
+  font-weight: 700;
+  text-decoration: line-through;
+}
+
+.ssb-bonus__name {
+  margin: 0 0 8px;
+  font-size: 28px;
+  line-height: 1.14;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.ssb-bonus__desc {
+  margin: 0 0 14px;
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--ssb-muted);
+}
+
+.ssb-bonus__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: var(--ssb-green);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.ssb-bonus__nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.ssb-bonus__arrow {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(200, 133, 23, 0.30);
+  border-radius: 999px;
+  background: #fffaf2;
+  color: #6d4628;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 10px 18px rgba(64, 34, 18, 0.08);
+}
+
+.ssb-bonus__arrow:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.ssb-bonus__dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.ssb-bonus__dot {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(109, 70, 40, 0.2);
+  cursor: pointer;
+}
+
+.ssb-bonus__dot.is-active {
+  width: 26px;
+  background: var(--ssb-gold);
+}
+
+.ssb-bonus__footer {
+  text-align: center;
+  margin-top: 12px;
+  color: #9b8a7c;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+@media (max-width: 1080px) {
+  .ssb-bonus__slide {
+    flex-basis: calc(33.333% - 11px);
+    min-width: calc(33.333% - 11px);
+  }
+}
+
+@media (max-width: 99999px) {
+  .ssb-bonus {
+    padding-top: 16px;
+  }
+
+  .ssb-bonus__wrap {
+    padding: 0 10px;
+  }
+
+  .ssb-bonus__top {
+    margin-bottom: 16px;
+  }
+
+  .ssb-bonus__title {
+    font-size: 50px;
+  }
+
+  .ssb-bonus__lead {
+    font-size: 18px;
+  }
+
+  .ssb-bonus__sub {
+    font-size: 15px;
+  }
+
+  .ssb-bonus__track {
+    gap: 12px;
+  }
+
+  .ssb-bonus__slide {
+    flex-basis: 100%;
+    min-width: 100%;
+  }
+
+  .ssb-bonus__body {
+    padding: 14px 14px 16px;
+  }
+
+  .ssb-bonus__name {
+    font-size: 24px;
+  }
+
+  .ssb-bonus__desc {
+    font-size: 15px;
+  }
+
+  .ssb-bonus__arrow {
+    width: 42px;
+    height: 42px;
+    right: 6px;
+  }
+}
+</style>
+<section class="ssb-bonus" id="ssb-bonus-slider">
+<div class="ssb-bonus__wrap">
+<div class="ssb-bonus__top">
+<span class="ssb-bonus__eyebrow">Included with The Bible</span>
+<h2 class="ssb-bonus__title">🎁 And that's not <span class="ssb-bonus__title-accent">all</span></h2>
+<p class="ssb-bonus__lead">If you buy today, you also get <strong>5 complete bonuses for free</strong> to put together, fit and finish every garment — and to sew beyond clothing.</p>
+<p class="ssb-bonus__sub">Real value: <s>$67</s> <strong>INCLUDED FREE TODAY</strong></p>
+</div>
+<div class="ssb-bonus__slider">
+<div class="ssb-bonus__viewport">
+<div class="ssb-bonus__track">
+<div class="ssb-bonus__slide">
+<article class="ssb-bonus__card">
+<div class="ssb-bonus__media">
+<img alt="Sewing 360° Method" src="https://resource.onlysell.lat/sewing-pattern-bible-img/618vdkdkb2/bonus1.jpg"/>
+</div>
+<div class="ssb-bonus__body">
+<div class="ssb-bonus__meta"><span class="ssb-bonus__kicker">Bonus #1 · 152 pages</span><span class="ssb-bonus__value"></span></div>
+<h3 class="ssb-bonus__name">Sewing 360° Method</h3>
+<p class="ssb-bonus__desc">An all-in-one sewing course: machine, fabrics, techniques, finishes, alterations and garments step by step.</p>
+<span class="ssb-bonus__badge">Included</span>
+</div>
+</article>
+</div>
+<div class="ssb-bonus__slide">
+<article class="ssb-bonus__card">
+<div class="ssb-bonus__media">
+<img alt="Basic Pattern Making" src="https://resource.onlysell.lat/sewing-pattern-bible-img/618vdkdkb2/bonus2.jpg"/>
+</div>
+<div class="ssb-bonus__body">
+<div class="ssb-bonus__meta"><span class="ssb-bonus__kicker">Bonus #2 · 48 pages</span><span class="ssb-bonus__value"></span></div>
+<h3 class="ssb-bonus__name">Basic Pattern Making</h3>
+<p class="ssb-bonus__desc">From measurements to pattern: basic blocks, toile and grading, so you understand how a pattern works from the inside.</p>
+<span class="ssb-bonus__badge">Included</span>
+</div>
+</article>
+</div>
+<div class="ssb-bonus__slide">
+<article class="ssb-bonus__card">
+<div class="ssb-bonus__media">
+<img alt="Pattern Alterations" src="https://resource.onlysell.lat/sewing-pattern-bible-img/618vdkdkb2/bonus3.jpg"/>
+</div>
+<div class="ssb-bonus__body">
+<div class="ssb-bonus__meta"><span class="ssb-bonus__kicker">Bonus #3 · 76 pages</span><span class="ssb-bonus__value"></span></div>
+<h3 class="ssb-bonus__name">Pattern Alterations</h3>
+<p class="ssb-bonus__desc">One pattern, many versions: lengths, necklines, sleeves, darts, and fitting it to your measurements or your client's.</p>
+<span class="ssb-bonus__badge">Included</span>
+</div>
+</article>
+</div>
+<div class="ssb-bonus__slide">
+<article class="ssb-bonus__card">
+<div class="ssb-bonus__media">
+<img alt="Sewing Machine: Use &amp; Care" src="https://resource.onlysell.lat/sewing-pattern-bible-img/618vdkdkb2/bonus4.jpg"/>
+</div>
+<div class="ssb-bonus__body">
+<div class="ssb-bonus__meta"><span class="ssb-bonus__kicker">Bonus #4 · 21 pages</span><span class="ssb-bonus__value"></span></div>
+<h3 class="ssb-bonus__name">Sewing Machine: Use &amp; Care</h3>
+<p class="ssb-bonus__desc">Setup, tension, needles, cleaning and the 15 most common problems, solved at home.</p>
+<span class="ssb-bonus__badge">Included</span>
+</div>
+</article>
+</div>
+<div class="ssb-bonus__slide">
+<article class="ssb-bonus__card">
+<div class="ssb-bonus__media">
+<img alt="Creative Sewing Projects" src="https://resource.onlysell.lat/sewing-pattern-bible-img/618vdkdkb2/bonus5.jpg"/>
+</div>
+<div class="ssb-bonus__body">
+<div class="ssb-bonus__meta"><span class="ssb-bonus__kicker">Bonus #5 · 486 PDFs</span><span class="ssb-bonus__value"></span></div>
+<h3 class="ssb-bonus__name">Creative Sewing Projects</h3>
+<p class="ssb-bonus__desc">Bags, decor, parties, kitchen, baby, accessories and pets: 486 step-by-step projects, translated into English, with their own catalog.</p>
+<span class="ssb-bonus__badge">Included</span>
+</div>
+</article>
+</div>
+</div>
+</div>
+<div class="ssb-bonus__nav">
+<button aria-label="Next bonus" class="ssb-bonus__arrow ssb-bonus__arrow--next" type="button">›</button>
+<div class="ssb-bonus__dots"></div>
+</div>
+</div>
+<div class="ssb-bonus__footer">Swipe to see all 5 bonuses 👉</div>
+</div>
+</section>
+<script>
+(function () {
+  var root = document.getElementById('ssb-bonus-slider');
+  if (!root) return;
+
+  var viewport = root.querySelector('.ssb-bonus__viewport');
+  var slides = Array.prototype.slice.call(root.querySelectorAll('.ssb-bonus__slide'));
+  var dotsWrap = root.querySelector('.ssb-bonus__dots');
+  var nextBtn = root.querySelector('.ssb-bonus__arrow--next');
+  var visible = 1;
+  var pages = 1;
+  var pageWidth = 0;
+  var currentPage = 0;
+
+  function getVisible() {
+    if (window.innerWidth <= 767) return 1;
+    if (window.innerWidth <= 1080) return 3;
+    return 4;
+  }
+
+  function buildDots() {
+    dotsWrap.innerHTML = '';
+    for (var i = 0; i < pages; i++) {
+      var dot = document.createElement('button');
+      dot.type = 'button';
+      dot.className = 'ssb-bonus__dot';
+      dot.setAttribute('aria-label', 'Ir al slide ' + (i + 1));
+      dot.addEventListener('click', (function (page) {
+        return function () {
+          scrollToPage(page);
+        };
+      })(i));
+      dotsWrap.appendChild(dot);
+    }
+  }
+
+  function updateDots() {
+    var index = pageWidth ? Math.round(viewport.scrollLeft / pageWidth) : 0;
+    if (index < 0) index = 0;
+    if (index > pages - 1) index = pages - 1;
+    currentPage = index;
+    var dots = dotsWrap.querySelectorAll('.ssb-bonus__dot');
+    for (var i = 0; i < dots.length; i++) {
+      dots[i].classList.toggle('is-active', i === index);
+    }
+  }
+
+  function scrollToPage(page) {
+    if (page < 0) page = 0;
+    if (page > pages - 1) page = pages - 1;
+    currentPage = page;
+    viewport.scrollTo({
+      left: pageWidth * page,
+      behavior: 'smooth'
+    });
+  }
+
+  function getGap() {
+    return window.innerWidth <= 767 ? 12 : 16;
+  }
+
+  function recalc() {
+    visible = getVisible();
+    var slideWidth = slides[0] ? slides[0].getBoundingClientRect().width : 0;
+    pageWidth = (slideWidth * visible) + (getGap() * Math.max(0, visible - 1));
+    pages = Math.max(1, Math.ceil(slides.length / visible));
+    buildDots();
+    updateDots();
+    if (nextBtn) {
+      nextBtn.disabled = pages <= 1;
+    }
+  }
+
+  viewport.addEventListener('scroll', updateDots);
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', function () {
+      var nextPage = currentPage + 1;
+      if (nextPage >= pages) nextPage = 0;
+      scrollToPage(nextPage);
+    });
+  }
+
+  window.addEventListener('resize', recalc);
+  recalc();
+})();
+</script>
+</div>
+
+
+<div class="section-template--23307757715700__custom_liquid_azPR9r-padding">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap');
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #f7f0e6;
+}
+
+.ssb,
+.ssb * {
+  box-sizing: border-box;
+}
+
+.ssb {
+  --ssb-bg: #f6efe5;
+  --ssb-bg-2: #fffaf4;
+  --ssb-card: #fffdf9;
+  --ssb-ink: #2d211c;
+  --ssb-brown: #6f3e22;
+  --ssb-brown-2: #8a4e2b;
+  --ssb-gold: #cb8516;
+  --ssb-gold-soft: #f0d4a4;
+  --ssb-red: #92262a;
+  --ssb-green: #1f7a53;
+  --ssb-green-2: #2a8e62;
+  --ssb-line: rgba(111, 62, 34, .16);
+  --ssb-shadow: 0 18px 40px rgba(52, 30, 18, .10);
+  --ssb-shadow-soft: 0 10px 24px rgba(52, 30, 18, .07);
+  --ssb-radius-xl: 28px;
+  --ssb-radius-lg: 22px;
+  --ssb-radius-md: 16px;
+  display: block;
+  width: 100%;
+  padding: 18px 0;
+  color: var(--ssb-ink);
+  font-family: "Outfit", Arial, sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(203,133,22,.08), transparent 24%),
+    linear-gradient(180deg, #fbf6ef 0%, var(--ssb-bg) 100%);
+}
+
+.ssb__wrap {
+  width: 100%;
+  max-width: 460px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.ssb__section {
+  margin-bottom: 18px;
+}
+
+.ssb__card {
+  background: linear-gradient(180deg, rgba(255,253,249,.98) 0%, rgba(255,248,239,.98) 100%);
+  border: 1px solid var(--ssb-line);
+  border-radius: var(--ssb-radius-xl);
+  box-shadow: var(--ssb-shadow);
+  overflow: hidden;
+}
+
+.ssb__inner {
+  padding: 22px 18px;
+}
+
+.ssb__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 0 16px;
+  border: 1.5px solid rgba(203,133,22,.58);
+  border-radius: 999px;
+  color: var(--ssb-gold);
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  background: rgba(255,250,244,.92);
+}
+
+.ssb__title-xl,
+.ssb__title-lg,
+.ssb__title-md,
+.ssb__title-sm {
+  margin: 0;
+  color: var(--ssb-ink);
+  font-weight: 900;
+  letter-spacing: -.04em;
+  line-height: .96;
+}
+
+.ssb__title-xl {
+  font-size: clamp(42px, 12vw, 66px);
+}
+
+.ssb__title-lg {
+  font-size: clamp(32px, 10vw, 48px);
+}
+
+.ssb__title-md {
+  font-size: clamp(25px, 7vw, 34px);
+}
+
+.ssb__title-sm {
+  font-size: 22px;
+  line-height: 1.05;
+}
+
+.ssb__title-accent,
+.ssb__accent {
+  color: var(--ssb-gold);
+  font-style: italic;
+}
+
+.ssb__text-lg,
+.ssb__text,
+.ssb__text-sm {
+  margin: 0;
+  font-family: "Outfit", Arial, sans-serif;
+  color: #6b5a4f;
+}
+
+.ssb__text-lg {
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.ssb__text {
+  font-size: 16px;
+  line-height: 1.62;
+}
+
+.ssb__text-sm {
+  font-size: 14px;
+  line-height: 1.58;
+}
+
+.ssb__stack-8 { display: grid; gap: 8px; }
+.ssb__stack-12 { display: grid; gap: 12px; }
+.ssb__stack-16 { display: grid; gap: 16px; }
+.ssb__stack-20 { display: grid; gap: 20px; }
+.ssb__stack-24 { display: grid; gap: 24px; }
+
+.ssb__hero-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 14px;
+  background: linear-gradient(90deg, #90252a 0%, #68171e 100%);
+  color: #fff3e6;
+  font-family: "Outfit", Arial, sans-serif;
+}
+
+.ssb__hero-top strong {
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+}
+
+.ssb__timer {
+  min-width: 76px;
+  min-height: 38px;
+  padding: 0 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: rgba(255,255,255,.10);
+  border: 1px solid rgba(255,255,255,.12);
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.ssb__hero-visual {
+  position: relative;
+  min-height: 520px;
+  padding: 16px 14px 18px 14px;
+  background:
+    linear-gradient(180deg, rgba(21,13,10,.14) 0%, rgba(21,13,10,.52) 42%, rgba(21,13,10,.82) 100%),
+    linear-gradient(135deg, rgba(111,62,34,.32) 0%, rgba(45,33,28,.10) 100%);
+}
+
+.ssb__hero-visual::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 14% 72%, rgba(255,255,255,.09), transparent 7%),
+    radial-gradient(circle at 22% 80%, rgba(255,255,255,.06), transparent 6%),
+    linear-gradient(180deg, rgba(255,255,255,.05), transparent 18%);
+  pointer-events: none;
+}
+
+.ssb__hero-badges {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.ssb__hero-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 16px;
+  border-radius: 999px;
+  color: #f8f0e4;
+  background: rgba(28,20,16,.74);
+  border: 1px solid rgba(203,133,22,.55);
+  box-shadow: 0 10px 18px rgba(0,0,0,.16);
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.ssb__hero-copy {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  left: 18px;
+  z-index: 1;
+  text-align: center;
+  display: grid;
+  gap: 14px;
+}
+
+.ssb__hero-copy .ssb__title-xl,
+.ssb__hero-copy .ssb__text-lg {
+  color: #fff1e1;
+}
+
+.ssb__hero-copy .ssb__text-lg {
+  font-weight: 700;
+}
+
+.ssb__hero-bottom {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  padding: 16px 18px 20px 18px;
+  background: #f8efdf;
+  border-top: 1px solid rgba(111,62,34,.10);
+}
+
+.ssb__mini-benefit {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-family: "Outfit", Arial, sans-serif;
+  color: #5d4a3d;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.ssb__pain-quote {
+  padding: 8px 4px;
+  text-align: center;
+}
+
+.ssb__pain-quote p {
+  margin: 0;
+  color: var(--ssb-ink);
+  font-size: 18px;
+  line-height: 1.45;
+  font-style: italic;
+  font-weight: 900;
+}
+
+.ssb__pain-list,
+.ssb__check-list {
+  display: grid;
+  gap: 12px;
+}
+
+.ssb__pain-item,
+.ssb__check-item {
+  display: grid;
+  grid-template-columns: 38px 1fr;
+  gap: 12px;
+  align-items: center;
+  padding: 16px 14px;
+  background: rgba(255,255,255,.92);
+  border: 1px solid rgba(111,62,34,.08);
+  border-radius: 18px;
+  box-shadow: var(--ssb-shadow-soft);
+}
+
+.ssb__pain-icon,
+.ssb__check-icon,
+.ssb__step-num,
+.ssb__avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  color: #fff;
+}
+
+.ssb__pain-icon {
+  background: linear-gradient(135deg, #a52828 0%, #8a1f21 100%);
+}
+
+.ssb__check-icon {
+  background: linear-gradient(135deg, var(--ssb-green) 0%, var(--ssb-green-2) 100%);
+}
+
+.ssb__step-card {
+  display: grid;
+  grid-template-columns: 46px 1fr;
+  gap: 14px;
+  padding: 18px 16px;
+  border-bottom: 1px solid rgba(111,62,34,.08);
+}
+
+.ssb__step-card:last-child {
+  border-bottom: 0;
+}
+
+.ssb__step-num {
+  width: 46px;
+  height: 46px;
+  background: linear-gradient(135deg, #c88415 0%, #bb7410 100%);
+  font-size: 18px;
+}
+
+.ssb__result-box {
+  padding: 22px 18px;
+  background: rgba(255,255,255,.88);
+  border-radius: 20px;
+  border: 1px solid rgba(111,62,34,.10);
+  box-shadow: var(--ssb-shadow-soft);
+}
+
+.ssb__grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.ssb__photo-card {
+  overflow: hidden;
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid rgba(111,62,34,.10);
+  box-shadow: var(--ssb-shadow-soft);
+}
+
+.ssb__photo-placeholder {
+  min-height: 164px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(135deg, #edd6ae 0%, #d8a14d 100%);
+  color: #fff7ec;
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.ssb__photo-label {
+  padding: 10px 12px;
+  background: #c88415;
+  color: #fff9ef;
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.ssb__product-box,
+.ssb__cta-box {
+  padding: 20px 18px;
+  background: #fff;
+  border-radius: 24px;
+  border: 1px solid rgba(111,62,34,.10);
+  box-shadow: var(--ssb-shadow);
+}
+
+.ssb__book-placeholder {
+  min-height: 320px;
+  border-radius: 22px;
+  border: 1px dashed rgba(111,62,34,.22);
+  background: linear-gradient(135deg, #efe1ce 0%, #f8efe4 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+  color: #7b6557;
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.6;
+}
+
+.ssb__price-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.ssb__old-price {
+  color: #8f7d70;
+  text-decoration: line-through;
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.ssb__price {
+  color: var(--ssb-ink);
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.ssb__badge-off {
+  min-height: 38px;
+  padding: 0 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #d89018;
+  color: #fff8ef;
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.ssb__cta {
+  width: 100%;
+  min-height: 62px;
+  padding: 0 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #1f7a53 0%, #196947 100%);
+  color: #fff8ef;
+  text-decoration: none;
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  box-shadow: 0 18px 28px rgba(31,122,83,.18);
+}
+
+.ssb__trust-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  color: #8d7a6c;
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.ssb__testimonial {
+  padding: 18px 16px;
+  background: #fff;
+  border-radius: 20px;
+  border: 1px solid rgba(111,62,34,.10);
+  box-shadow: var(--ssb-shadow-soft);
+}
+
+.ssb__testimonial-top {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 12px;
+  align-items: start;
+}
+
+.ssb__avatar {
+  background: linear-gradient(135deg, #c88415 0%, #b36e0e 100%);
+  font-size: 22px;
+}
+
+.ssb__avatar--green {
+  background: linear-gradient(135deg, #177751 0%, #126343 100%);
+}
+
+.ssb__avatar--red {
+  background: linear-gradient(135deg, #a73033 0%, #8f2528 100%);
+}
+
+.ssb__name {
+  margin: 0;
+  font-family: "Outfit", Arial, sans-serif;
+  color: var(--ssb-ink);
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.ssb__meta,
+.ssb__stars,
+.ssb__verified {
+  font-family: "Outfit", Arial, sans-serif;
+}
+
+.ssb__meta {
+  color: #8b7568;
+  font-size: 13px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.ssb__stars {
+  color: #d89a22;
+  font-size: 16px;
+  font-weight: 900;
+  margin: 0;
+}
+.ssb__name a, .ssb__meta a, a[x-apple-data-detectors] {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+.ssb__quote {
+  margin: 0;
+  color: #382a23;
+  font-size: 18px;
+  line-height: 1.45;
+  font-style: italic;
+  font-weight: 900;
+}
+
+.ssb__verified {
+  color: #9a8678;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .10em;
+  text-transform: uppercase;
+}
+
+.ssb__faq {
+  background: #fff;
+  border: 1px solid rgba(111,62,34,.10);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--ssb-shadow-soft);
+}
+
+.ssb__faq + .ssb__faq {
+  margin-top: 12px;
+}
+
+.ssb__faq summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 18px 16px;
+  font-family: "Outfit", Arial, sans-serif;
+  color: var(--ssb-ink);
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.ssb__faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.ssb__faq p {
+  margin: 0;
+  padding: 0 16px 18px 16px;
+  color: #6a594d;
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.58;
+}
+</style>
+<section class="ssb ssb__section">
+<div class="ssb__wrap">
+<div class="ssb__cta-box ssb__section" style="text-align:center;">
+<div class="ssb__stack-16">
+<p class="ssb__text-sm" style="letter-spacing:.14em; text-transform:uppercase; color:var(--ssb-gold); font-weight:900;">You've seen how it works. Now's the time.</p>
+<div class="ssb__price-row" style="justify-content:center;">
+<span class="ssb__old-price"></span>
+<span class="ssb__price">$29.99</span>
+<span class="ssb__badge-off">One-time payment</span>
+</div>
+<a class="ssb__cta" href="#offer">I want access now ↓</a>
+<div class="ssb__trust-row">
+<span>Instant access</span>
+<span>15-day guarantee</span>
+<span>Digital delivery</span>
+</div>
+</div>
+</div>
+<div class="ssb__card">
+<div class="ssb__inner ssb__stack-20">
+<div class="ssb__stack-12" style="text-align:center;">
+<div><span class="ssb__eyebrow">What customers say</span></div>
+<h2 class="ssb__title-lg">Less time searching. <span class="ssb__accent">More time sewing.</span></h2>
+<p class="ssb__text-lg">Here's what sewists who use the Spanish edition of the patterns have to say (translated from Spanish).</p>
+</div>
+<div class="ssb__stack-16">
+<div class="ssb__testimonial">
+<div class="ssb__stack-16">
+<div class="ssb__testimonial-top">
+<span class="ssb__avatar">C</span>
+<div class="ssb__stack-8">
+<h3 class="ssb__name">Carla Silva</h3>
+<p class="ssb__meta">Salta, Argentina</p>
+<p class="ssb__stars">★★★★★</p>
+</div>
+</div>
+<p class="ssb__quote">"I knew how to sew. What held me back was starting every design from scratch."</p>
+<p class="ssb__text">I used to spend so much time looking for a pattern that would work, comparing options and trying to get everything set up before cutting. Having the patterns on hand changed that part for me: now I pick the design, prep what I need, and I can get to the actual sewing much faster.</p>
+<p class="ssb__verified">Spanish edition · June 2026</p>
+</div>
+</div>
+<div class="ssb__testimonial">
+<div class="ssb__stack-16">
+<div class="ssb__testimonial-top">
+<span class="ssb__avatar ssb__avatar--green">M</span>
+<div class="ssb__stack-8">
+<h3 class="ssb__name">Marina Rodríguez</h3>
+<p class="ssb__meta">Jujuy, Argentina</p>
+<p class="ssb__stars">★★★★★</p>
+</div>
+</div>
+<p class="ssb__quote">"Now I have designs ready for whenever a different order comes in."</p>
+<p class="ssb__text">I sew to order, and my problem was that every client asked for something different. Sometimes I'd take the job and then the endless pattern hunt would begin. Having several options in one place helps me decide much faster which base I'll use for each garment.</p>
+<p class="ssb__verified">Spanish edition · June 2026</p>
+</div>
+</div>
+<div class="ssb__testimonial">
+<div class="ssb__stack-16">
+<div class="ssb__testimonial-top">
+<span class="ssb__avatar ssb__avatar--red">R</span>
+<div class="ssb__stack-8">
+<h3 class="ssb__name">Romina Píriz</h3>
+<p class="ssb__meta">Buenos Aires, Argentina</p>
+<p class="ssb__stars">★★★★★</p>
+</div>
+</div>
+<p class="ssb__quote">"I had tons of files saved and could never find the one I needed."</p>
+<p class="ssb__text">I'd downloaded free patterns from everywhere and ended up wasting more time searching than sewing. What I value most is being able to go straight to a specific design when I need it, instead of digging through Pinterest, groups and folders every time I want to make something new.</p>
+<p class="ssb__verified">Spanish edition · July 2026</p>
+</div>
+</div>
+<div class="ssb__testimonial">
+<div class="ssb__stack-16">
+<div class="ssb__testimonial-top">
+<span class="ssb__avatar ssb__avatar--green">A</span>
+<div class="ssb__stack-8">
+<h3 class="ssb__name">Andrea Techera</h3>
+<p class="ssb__meta">Santa Fe, Argentina</p>
+<p class="ssb__stars">★★★★★</p>
+</div>
+</div>
+<p class="ssb__quote">"What I wanted most was to stop getting stuck before I even reached the machine."</p>
+<p class="ssb__text">Whenever I got excited about a garment, I'd often end up putting the idea off because I had to find the pattern, understand it and get everything ready. Now I feel like I have a much clearer starting point, and that makes me want to sit down and sew.</p>
+<p class="ssb__verified">Spanish edition · July 2026</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+
+
+<div class="section-template--23307757715700__custom_liquid_UG3AbR-padding">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap');
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #f7f0e6;
+}
+.ssb,
+.ssb * {
+  box-sizing: border-box;
+}
+.ssb {
+  --ssb-bg: #f6efe5;
+  --ssb-bg-2: #fffaf4;
+  --ssb-card: #fffdf9;
+  --ssb-ink: #2d211c;
+  --ssb-brown: #6f3e22;
+  --ssb-brown-2: #8a4e2b;
+  --ssb-gold: #cb8516;
+  --ssb-gold-soft: #f0d4a4;
+  --ssb-red: #92262a;
+  --ssb-green: #1f7a53;
+  --ssb-green-2: #2a8e62;
+  --ssb-line: rgba(111, 62, 34, .16);
+  --ssb-shadow: 0 18px 40px rgba(52, 30, 18, .10);
+  --ssb-shadow-soft: 0 10px 24px rgba(52, 30, 18, .07);
+  --ssb-radius-xl: 28px;
+  --ssb-radius-lg: 22px;
+  --ssb-radius-md: 16px;
+  display: block;
+  width: 100%;
+  padding: 18px 0;
+  color: var(--ssb-ink);
+  font-family: "Outfit", Arial, sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(203,133,22,.08), transparent 24%),
+    linear-gradient(180deg, #fbf6ef 0%, var(--ssb-bg) 100%);
+}
+.ssb__wrap {
+  width: 100%;
+  max-width: 460px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.ssb__section {
+  margin-bottom: 18px;
+}
+.ssb__card {
+  background: linear-gradient(180deg, rgba(255,253,249,.98) 0%, rgba(255,248,239,.98) 100%);
+  border: 1px solid var(--ssb-line);
+  border-radius: var(--ssb-radius-xl);
+  box-shadow: var(--ssb-shadow);
+  overflow: hidden;
+}
+.ssb__inner {
+  padding: 22px 18px;
+}
+.ssb__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 0 16px;
+  border: 1.5px solid rgba(203,133,22,.58);
+  border-radius: 999px;
+  color: var(--ssb-gold);
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  background: rgba(255,250,244,.92);
+}
+.ssb__title-xl,
+.ssb__title-lg,
+.ssb__title-md,
+.ssb__title-sm {
+  margin: 0;
+  color: var(--ssb-ink);
+  font-weight: 900;
+  letter-spacing: -.04em;
+  line-height: .96;
+}
+.ssb__title-xl {
+  font-size: clamp(42px, 12vw, 66px);
+}
+.ssb__title-lg {
+  font-size: clamp(32px, 10vw, 48px);
+}
+.ssb__title-md {
+  font-size: clamp(25px, 7vw, 34px);
+}
+.ssb__title-sm {
+  font-size: 22px;
+  line-height: 1.05;
+}
+.ssb__title-accent,
+.ssb__accent {
+  color: var(--ssb-gold);
+  font-style: italic;
+}
+.ssb__text-lg,
+.ssb__text,
+.ssb__text-sm {
+  margin: 0;
+  font-family: "Outfit", Arial, sans-serif;
+  color: #6b5a4f;
+}
+.ssb__text-lg {
+  font-size: 18px;
+  line-height: 1.65;
+}
+.ssb__text {
+  font-size: 16px;
+  line-height: 1.62;
+}
+.ssb__text-sm {
+  font-size: 14px;
+  line-height: 1.58;
+}
+.ssb__stack-8 { display: grid; gap: 8px; }
+.ssb__stack-12 { display: grid; gap: 12px; }
+.ssb__stack-16 { display: grid; gap: 16px; }
+.ssb__stack-20 { display: grid; gap: 20px; }
+.ssb__stack-24 { display: grid; gap: 24px; }
+.ssb__hero-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 14px;
+  background: linear-gradient(90deg, #90252a 0%, #68171e 100%);
+  color: #fff3e6;
+  font-family: "Outfit", Arial, sans-serif;
+}
+.ssb__hero-top strong {
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+}
+.ssb__timer {
+  min-width: 76px;
+  min-height: 38px;
+  padding: 0 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: rgba(255,255,255,.10);
+  border: 1px solid rgba(255,255,255,.12);
+  font-size: 15px;
+  font-weight: 900;
+}
+.ssb__hero-visual {
+  position: relative;
+  min-height: 520px;
+  padding: 16px 14px 18px 14px;
+  background:
+    linear-gradient(180deg, rgba(21,13,10,.14) 0%, rgba(21,13,10,.52) 42%, rgba(21,13,10,.82) 100%),
+    linear-gradient(135deg, rgba(111,62,34,.32) 0%, rgba(45,33,28,.10) 100%);
+}
+.ssb__hero-visual::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 14% 72%, rgba(255,255,255,.09), transparent 7%),
+    radial-gradient(circle at 22% 80%, rgba(255,255,255,.06), transparent 6%),
+    linear-gradient(180deg, rgba(255,255,255,.05), transparent 18%);
+  pointer-events: none;
+}
+.ssb__hero-badges {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.ssb__hero-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 16px;
+  border-radius: 999px;
+  color: #f8f0e4;
+  background: rgba(28,20,16,.74);
+  border: 1px solid rgba(203,133,22,.55);
+  box-shadow: 0 10px 18px rgba(0,0,0,.16);
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+}
+.ssb__hero-copy {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  left: 18px;
+  z-index: 1;
+  text-align: center;
+  display: grid;
+  gap: 14px;
+}
+.ssb__hero-copy .ssb__title-xl,
+.ssb__hero-copy .ssb__text-lg {
+  color: #fff1e1;
+}
+.ssb__hero-copy .ssb__text-lg {
+  font-weight: 700;
+}
+.ssb__hero-bottom {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  padding: 16px 18px 20px 18px;
+  background: #f8efdf;
+  border-top: 1px solid rgba(111,62,34,.10);
+}
+.ssb__mini-benefit {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-family: "Outfit", Arial, sans-serif;
+  color: #5d4a3d;
+  font-size: 14px;
+  font-weight: 800;
+}
+.ssb__pain-quote {
+  padding: 8px 4px;
+  text-align: center;
+}
+.ssb__pain-quote p {
+  margin: 0;
+  color: var(--ssb-ink);
+  font-size: 18px;
+  line-height: 1.45;
+  font-style: italic;
+  font-weight: 900;
+}
+.ssb__pain-list,
+.ssb__check-list {
+  display: grid;
+  gap: 12px;
+}
+.ssb__pain-item,
+.ssb__check-item {
+  display: grid;
+  grid-template-columns: 38px 1fr;
+  gap: 12px;
+  align-items: center;
+  padding: 16px 14px;
+  background: rgba(255,255,255,.92);
+  border: 1px solid rgba(111,62,34,.08);
+  border-radius: 18px;
+  box-shadow: var(--ssb-shadow-soft);
+}
+.ssb__pain-icon,
+.ssb__check-icon,
+.ssb__step-num,
+.ssb__avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  color: #fff;
+}
+.ssb__pain-icon {
+  background: linear-gradient(135deg, #a52828 0%, #8a1f21 100%);
+}
+.ssb__check-icon {
+  background: linear-gradient(135deg, var(--ssb-green) 0%, var(--ssb-green-2) 100%);
+}
+.ssb__step-card {
+  display: grid;
+  grid-template-columns: 46px 1fr;
+  gap: 14px;
+  padding: 18px 16px;
+  border-bottom: 1px solid rgba(111,62,34,.08);
+}
+.ssb__step-card:last-child {
+  border-bottom: 0;
+}
+.ssb__step-num {
+  width: 46px;
+  height: 46px;
+  background: linear-gradient(135deg, #c88415 0%, #bb7410 100%);
+  font-size: 18px;
+}
+.ssb__result-box {
+  padding: 22px 18px;
+  background: rgba(255,255,255,.88);
+  border-radius: 20px;
+  border: 1px solid rgba(111,62,34,.10);
+  box-shadow: var(--ssb-shadow-soft);
+}
+.ssb__grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.ssb__photo-card {
+  overflow: hidden;
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid rgba(111,62,34,.10);
+  box-shadow: var(--ssb-shadow-soft);
+}
+.ssb__photo-placeholder {
+  min-height: 164px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(135deg, #edd6ae 0%, #d8a14d 100%);
+  color: #fff7ec;
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.5;
+}
+.ssb__photo-label {
+  padding: 10px 12px;
+  background: #c88415;
+  color: #fff9ef;
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  text-align: center;
+}
+.ssb__product-box,
+.ssb__cta-box {
+  padding: 20px 18px;
+  background: #fff;
+  border-radius: 24px;
+  border: 1px solid rgba(111,62,34,.10);
+  box-shadow: var(--ssb-shadow);
+}
+.ssb__book-placeholder {
+  min-height: 320px;
+  border-radius: 22px;
+  border: 1px dashed rgba(111,62,34,.22);
+  background: linear-gradient(135deg, #efe1ce 0%, #f8efe4 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+  color: #7b6557;
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.6;
+}
+.ssb__price-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.ssb__old-price {
+  color: #8f7d70;
+  text-decoration: line-through;
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+.ssb__price {
+  color: var(--ssb-ink);
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 900;
+}
+.ssb__badge-off {
+  min-height: 38px;
+  padding: 0 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #d89018;
+  color: #fff8ef;
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+}
+.ssb__cta {
+  width: 100%;
+  min-height: 62px;
+  padding: 0 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #1f7a53 0%, #196947 100%);
+  color: #fff8ef;
+  text-decoration: none;
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  box-shadow: 0 18px 28px rgba(31,122,83,.18);
+  border: 0;
+  cursor: pointer;
+}
+.ssb__trust-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  color: #8d7a6c;
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+}
+.ssb__testimonial {
+  padding: 18px 16px;
+  background: #fff;
+  border-radius: 20px;
+  border: 1px solid rgba(111,62,34,.10);
+  box-shadow: var(--ssb-shadow-soft);
+}
+.ssb__testimonial-top {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 12px;
+  align-items: start;
+}
+.ssb__avatar {
+  background: linear-gradient(135deg, #c88415 0%, #b36e0e 100%);
+  font-size: 22px;
+}
+.ssb__avatar--green {
+  background: linear-gradient(135deg, #177751 0%, #126343 100%);
+}
+.ssb__avatar--red {
+  background: linear-gradient(135deg, #a73033 0%, #8f2528 100%);
+}
+.ssb__name {
+  margin: 0;
+  font-family: "Outfit", Arial, sans-serif;
+  color: var(--ssb-ink);
+  font-size: 22px;
+  font-weight: 900;
+}
+.ssb__meta,
+.ssb__stars,
+.ssb__verified {
+  font-family: "Outfit", Arial, sans-serif;
+}
+.ssb__meta {
+  color: #8b7568;
+  font-size: 13px;
+  font-weight: 700;
+  margin: 0;
+}
+.ssb__stars {
+  color: #d89a22;
+  font-size: 16px;
+  font-weight: 900;
+  margin: 0;
+}
+.ssb__name a, .ssb__meta a, a[x-apple-data-detectors] {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+.ssb__quote {
+  margin: 0;
+  color: #382a23;
+  font-size: 18px;
+  line-height: 1.45;
+  font-style: italic;
+  font-weight: 900;
+}
+.ssb__verified {
+  color: #9a8678;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .10em;
+  text-transform: uppercase;
+}
+.ssb__faq {
+  background: #fff;
+  border: 1px solid rgba(111,62,34,.10);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--ssb-shadow-soft);
+}
+.ssb__faq + .ssb__faq {
+  margin-top: 12px;
+}
+.ssb__faq summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 18px 16px;
+  font-family: "Outfit", Arial, sans-serif;
+  color: var(--ssb-ink);
+  font-size: 16px;
+  font-weight: 900;
+}
+.ssb__faq summary::-webkit-details-marker {
+  display: none;
+}
+.ssb__faq p {
+  margin: 0;
+  padding: 0 16px 18px 16px;
+  color: #6a594d;
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.58;
+}
+
+
+/* fix: sacar espacio vacío al final (el footer se oculta desde el bloque hero) */
+[id$="__custom_liquid_UG3AbR"] .ssb{margin-bottom:0 !important;padding-bottom:0 !important}
+</style>
+<section class="ssb ssb__section">
+<div class="ssb__wrap">
+<div class="ssb__card">
+<div class="ssb__inner ssb__stack-20">
+<div class="ssb__stack-12" style="text-align:center;">
+<div><span class="ssb__eyebrow">Frequently asked questions</span></div>
+<h2 class="ssb__title-lg">Everything you want to know <span class="ssb__accent">before you buy</span></h2>
+</div>
+<div>
+<details class="ssb__faq">
+<summary>What do I get, and how?</summary>
+<p>As soon as your payment goes through, you get access to download everything: The Bible (the 45-page catalog), the folders with the 1,180 PDFs (694 for the 156 garment designs and 486 for projects) in 5 sections, a READ FIRST file in every folder, and the 5 bonuses. It opens on your phone, tablet or computer.</p>
+</details>
+<details class="ssb__faq">
+<summary>Do I need to know how to sew?</summary>
+<p>No. The whole idea is that you can get started even if you don't have any experience yet. 🧵✨ <br/>
+
+The sewing patterns give you a clear base for every garment, and the guides + bonuses walk you through how to take measurements, prep the pattern, cut the fabric and move forward with sewing step by step.<br/>
+
+You'll also get resources like the Sewing 360° Method and Basic Pattern Making to learn the fundamentals and build confidence while you practice.<br/>
+
+✂️ You choose the pattern<br/>
+📐 You follow the instructions<br/>
+🧵 You learn as you sew<br/>
+👗 And you end up making your own garment<br/>
+
+You don't need to know everything before you start. The idea is to begin with a clear guide and learn along the way.</p>
+</details>
+<details class="ssb__faq">
+<summary>Do the patterns come in A4 or Letter?</summary>
+<p>It depends on the project. 🖨️✂️<br/>
+
+Most of them print at home on Letter, A4 or A3. And the larger patterns
+(which used to be plotter-only) now also come in a tiled A4 version
+with an assembly map, so you can print them at home at 100%, tape
+the sheets together and you're done. <br/>Every folder tells you the format and includes its READ FIRST file with the
+step-by-step. If you prefer, the original plotter file is still there.<br/>
+
+Before using each pattern, you'll be able to check which format it needs, so you know exactly how to print it. 📐<br/>
+
+✨ That way you can start with projects that are easy to print at home and, when you're ready for bigger or more complex garments, use the files prepared for the plotter.</p>
+</details>
+<details class="ssb__faq">
+<summary>How do I choose my size?</summary>
+<p>By measurements, never by store size. Measure your bust, waist and hips and compare them with the chart: for tops, go by bust; for bottoms, go by hips. In between two sizes? Pick the larger one. Every spec sheet states the size or size range of the design.</p>
+</details>
+<details class="ssb__faq">
+<summary>Can I sell the clothes I make?</summary>
+<p>Yes. The physical garments you sew with these patterns are yours: to wear, gift or sell, for your custom orders or your own brand. What you can't do is resell or share the PDF files.</p>
+</details>
+<details class="ssb__faq">
+<summary>Is it a video course?</summary>
+<p>No. It's downloadable digital material: the catalog, the 1,180 pattern and project PDFs, and the 5 bonuses in PDF. You download it and it stays saved on your devices.</p>
+</details>
+<details class="ssb__faq">
+<summary>What exactly is included?</summary>
+<p>156 garment patterns ready to print: sweaters, sweatshirts and hoodies, jeans, dresses, blouses, polos, shirts, pajamas, shorts, and cycling and fitness activewear. That's 99+ designs for women and 50+ for men, in sizes 34 to 56 (European sizing, XS to 5XL depending on the design).
+
++ 486 creative sewing projects to sell or gift: bags, purses, home decor, kitchen, parties and accessories.
+
++ 4 free ebooks: a complete sewing course, pattern making, pattern alterations and the sewing machine.
+
+Over 1,000 PDFs in total, organized in a visual catalog: every pattern with its photo, size and how to print it. You're free to sell whatever you make.</p>
+</details>
+<details class="ssb__faq">
+<summary>What if it's not for me?</summary>
+<p>You have a 15-day guarantee. If the material isn't what you expected, just send us an email and we'll refund 100% of your money. No questions asked. The risk is on us.</p>
+</details>
+</div>
+<div class="ssb__cta-box" style="text-align:center;">
+<div class="ssb__stack-16">
+<h3 class="ssb__title-md">You don't need more patterns saved in folders. You need <span class="ssb__accent">to find the right one and sew</span>.</h3>
+<p class="ssb__text">If you know how to sew and every new garment sends you searching from scratch — for yourself, as a gift or to sell — this is the push you were missing.</p>
+<p class="ssb__text">The Sewing Pattern Bible gives you the design, the size, the print format and the bonuses to put the garment together. All in one place.</p>
+<p class="ssb__text">One-time payment in USD. Instant access and a 15-day guarantee.</p>
+<div class="ssb__price-row" style="justify-content:center;">
+<span class="ssb__old-price"></span>
+<span class="ssb__price">$29.99</span>
+</div>
+<a class="ssb__cta" href="#offer">I WANT ACCESS NOW ↓</a>
+<div class="ssb__trust-row">
+<span>Instant access</span>
+<span>15-day guarantee</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
