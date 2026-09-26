@@ -1,0 +1,559 @@
+<style>
+html{scroll-behavior:smooth}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;background:#faf7f0;color:#2b2a25;line-height:1.5;text-rendering:optimizeSpeed;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+b,strong{font-weight:800}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+.section{padding:56px 0}
+.section .inner{max-width:900px;margin:0 auto}
+h1,h2,h3{line-height:1.18;letter-spacing:-.005em;overflow-wrap:break-word;word-wrap:break-word}
+p,li{overflow-wrap:break-word;word-wrap:break-word}
+h1{font-size:42px;font-weight:900;color:#111}
+h2{font-size:32px;font-weight:900;color:#111}
+h3{font-size:22px;font-weight:800;color:#111}
+.kicker{display:inline-block;font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#a37500;background:#fff2cc;padding:6px 12px;border-radius:999px}
+.chip{display:inline-block;font-size:13px;font-weight:800;letter-spacing:.06em;color:#111;background:#F5B301;padding:8px 14px;border-radius:999px}
+
+/* Sticky top */
+.stickytop{position:sticky;top:0;z-index:60;background:#111;color:#fff;padding:10px 18px;display:flex;gap:12px;align-items:center;justify-content:center;font-weight:800;font-size:14px;text-align:center}
+.stickytop b{color:#F5B301}
+.stickytop a{background:#F5B301;color:#111;padding:8px 14px;border-radius:999px;font-weight:900;white-space:nowrap;font-size:13px}
+
+/* Hero */
+.hero{background:linear-gradient(180deg,#0e0e0e 0%,#1a1815 100%);color:#fff;padding:70px 0 60px;overflow:hidden;position:relative}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(1200px 400px at 50% -100px, rgba(245,179,1,.18), transparent 60%);pointer-events:none}
+.hero .kicker{background:rgba(245,179,1,.15);color:#F5B301}
+.hero h1{color:#fff;font-size:52px;margin:16px 0 14px;font-weight:900}
+.hero h1 .yl{color:#F5B301}
+.hero .sub{font-size:19px;color:#e2ddd0;max-width:640px;margin:0 auto 26px}
+.hero .center{text-align:center;position:relative;z-index:2}
+.badges{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:22px 0 30px}
+.badge-pill{background:rgba(255,255,255,.06);border:1px solid rgba(245,179,1,.35);color:#fff;font-weight:700;font-size:13px;padding:8px 14px;border-radius:999px;letter-spacing:.02em}
+.hero-pack{max-width:640px;margin:32px auto 0;filter:drop-shadow(0 24px 50px rgba(0,0,0,.55))}
+.hero-pack img{width:100%;height:auto;display:block}
+.cta{display:inline-block;background:linear-gradient(180deg,#F5B301 0%,#e6a800 100%);color:#111;font-weight:900;font-size:18px;padding:16px 28px;border-radius:14px;box-shadow:0 12px 24px rgba(245,179,1,.28);letter-spacing:.02em;animation:breathe 2.4s ease-in-out infinite;will-change:transform;text-align:center}
+.cta:hover{transform:translateY(-2px)}
+@keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
+.trust-chips{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:22px;font-size:14px;color:#d1cdbf}
+
+/* Guarda com'è */
+.sec-white{background:#faf7f0}
+.mueble-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:32px 0 26px}
+.mueble-grid img{border-radius:14px;aspect-ratio:3/4;object-fit:cover;box-shadow:0 6px 18px rgba(0,0,0,.08)}
+
+/* Calcolatore */
+.sec-dark{background:#0f0e0d;color:#faf7f0}
+.sec-dark h2{color:#fff}
+.calc-wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;margin-top:34px}
+.calc-copy .chip{margin-bottom:14px}
+.calc-copy .sub{color:#c9c3b5;margin:14px 0 20px;font-size:17px}
+.calc-list{list-style:none;padding:0;margin:0 0 20px}
+.calc-list li{padding:8px 0;color:#e6e0cf;font-size:16px;border-bottom:1px dashed rgba(255,255,255,.08)}
+.calc-list li:last-child{border-bottom:0}
+.calc-list li b{color:#F5B301}
+.calc-callout{background:rgba(245,179,1,.08);border-left:3px solid #F5B301;padding:14px 18px;border-radius:10px;color:#e6e0cf;font-size:15px;margin-top:18px}
+.calc-callout b{color:#F5B301}
+.calc-mockup{text-align:center}
+.calc-mockup img{max-width:340px;margin:0 auto;filter:drop-shadow(0 24px 40px rgba(0,0,0,.5))}
+
+/* Testis WhatsApp */
+.testi-scroll{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:32px}
+.testi-scroll img{border-radius:22px;aspect-ratio:9/16;object-fit:cover;box-shadow:0 8px 24px rgba(0,0,0,.14);background:#e5ddd4}
+
+/* Beneficios grid */
+.benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+.benefit{background:#fff;border:1px solid #f0e8d3;border-radius:14px;padding:22px;box-shadow:0 3px 10px rgba(0,0,0,.03)}
+.benefit .emoji{font-size:32px}
+.benefit h3{font-size:17px;margin-top:8px;font-weight:800}
+
+/* Bloque dolor */
+.pain-bloc{background:linear-gradient(180deg,#171512 0%,#0f0e0d 100%);color:#fff;padding:56px 24px;border-radius:22px;text-align:center;margin-top:20px}
+.pain-bloc h2{color:#fff}
+.pain-bloc .em{color:#F5B301}
+.pain-bloc .sub{color:#c9c3b5;margin:14px auto 24px;max-width:620px;font-size:17px}
+
+/* Perché no YouTube */
+.why-list{list-style:none;padding:0;margin:26px 0 0}
+.why-list li{background:#fff;border-left:4px solid #F5B301;padding:16px 20px;border-radius:0 12px 12px 0;margin-bottom:10px;font-size:17px;line-height:1.5}
+.why-list li b{color:#111}
+
+/* Todo lo que incluye */
+.includes-list{list-style:none;padding:0;margin:24px 0 0;max-width:640px}
+.includes-list li{padding:12px 0;font-size:17px;border-bottom:1px dashed #d9d0b6;color:#3a3830}
+.includes-list li:last-child{border-bottom:0}
+.includes-list li b{color:#111}
+
+/* Oferta */
+#offer{background:linear-gradient(180deg,#faf7f0 0%,#f2ead4 100%);padding:56px 0}
+.offer-card{background:#fff;border-radius:22px;padding:34px 32px;box-shadow:0 24px 60px rgba(0,0,0,.09);border:2px solid #F5B301;max-width:720px;margin:0 auto}
+.countdown-bar{background:#111;color:#F5B301;padding:10px 18px;border-radius:12px;text-align:center;font-size:14px;font-weight:800;letter-spacing:.06em;margin-bottom:22px}
+.countdown-bar .t{color:#fff;font-size:22px;font-weight:900;letter-spacing:.15em;font-variant-numeric:tabular-nums}
+.offer-badge{display:inline-block;background:#F5B301;color:#111;font-weight:900;font-size:12px;padding:6px 12px;border-radius:999px;letter-spacing:.14em;margin-bottom:12px}
+.offer-title{font-size:22px;font-weight:900;color:#111;margin-bottom:6px;line-height:1.2}
+.offer-sub{color:#665f4c;font-size:15px;margin-bottom:22px}
+.price-top{display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap;margin:0 0 6px}
+.price-top .savings-pill{background:#e6a800;color:#111;font-weight:900;padding:4px 10px;border-radius:8px;font-size:13px;white-space:nowrap}
+.price-old-o{color:#8a8578;font-size:18px;text-decoration:line-through;white-space:nowrap;display:inline-block}
+.price-new-o{font-family:Georgia,serif;font-size:64px;font-weight:900;color:#111;line-height:1}
+.price-caption{color:#665f4c;font-size:13px;margin:0 0 20px}
+.stack-box{background:#fff8e1;border:1.5px dashed #F5B301;border-radius:14px;padding:20px 22px;margin:22px 0}
+.stack-box .stack-title{font-weight:900;font-size:15px;color:#111;letter-spacing:.06em;margin-bottom:12px}
+.stack-list{list-style:none;padding:0;margin:0}
+.stack-list li{padding:8px 0;font-size:16px;color:#2b2a25;display:flex;gap:10px;align-items:flex-start}
+.stack-list li .ic{flex-shrink:0}
+.trust-line{text-align:center;color:#665f4c;font-size:13px;margin-top:14px}
+.cta-block{text-align:center;margin-top:16px}
+.cta-block .cta{font-size:19px;padding:18px 30px}
+
+/* Bonos detalle */
+.bonos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
+.bono{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.06);position:relative;display:flex;flex-direction:column}
+.bono .tag{position:absolute;top:12px;left:12px;background:#F5B301;color:#111;font-size:11px;font-weight:900;padding:4px 8px;border-radius:6px;letter-spacing:.06em;z-index:2}
+.bono img{aspect-ratio:2/3;object-fit:cover;background:#111}
+.bono .info{padding:16px 18px}
+.bono .info h3{font-size:16px;font-weight:800;margin-bottom:6px}
+.bono .info p{color:#665f4c;font-size:14px;line-height:1.5}
+.bono .info .inc{margin-top:10px;color:#a37500;font-weight:800;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+
+/* Garantía */
+.guarantee{background:#fff;border:2px solid #F5B301;border-radius:22px;padding:34px;max-width:720px;margin:0 auto;text-align:center}
+.guarantee .shield{font-size:56px;line-height:1}
+.guarantee h3{margin:10px 0 12px;font-size:22px}
+.guarantee p{color:#4b483d;font-size:16px;max-width:560px;margin:0 auto}
+.guarantee .em{color:#111;font-weight:800;margin-top:10px;display:block}
+
+/* Comparativa */
+.compare{background:#fff;border-radius:18px;padding:24px;box-shadow:0 4px 14px rgba(0,0,0,.06);margin-top:26px;overflow-x:auto}
+.compare table{width:100%;border-collapse:collapse;min-width:520px}
+.compare th{padding:14px 12px;font-size:15px;font-weight:900;text-align:left;color:#111;border-bottom:2px solid #ecdfb6}
+.compare th.no{color:#a5372e}
+.compare th.yes{color:#2a7a3a}
+.compare td{padding:12px;font-size:15px;color:#33312a;border-bottom:1px solid #f2ead4;vertical-align:top}
+.compare td:first-child{color:#a5372e}
+.compare td:last-child{color:#2a7a3a;font-weight:600}
+
+/* FAQ */
+.faq-list{max-width:760px;margin:32px auto 0}
+details{background:#fff;border:1px solid #eee0ba;border-radius:12px;padding:16px 20px;margin-bottom:10px}
+details[open]{background:#fff9e6}
+summary{cursor:pointer;font-weight:800;font-size:17px;color:#111;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:24px;color:#F5B301;font-weight:900}
+details[open] summary::after{content:"−"}
+details p{margin-top:12px;color:#4b483d;font-size:15px;line-height:1.55}
+
+/* Testis grid nombres */
+.testis-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:32px}
+.tcard{background:#fff;border-radius:14px;padding:22px;box-shadow:0 4px 14px rgba(0,0,0,.05);border:1px solid #f0e8d3}
+.tcard .stars{color:#F5B301;font-size:15px;letter-spacing:2px;margin-bottom:8px}
+.tcard p{color:#33312a;font-size:15px;font-style:italic;line-height:1.55}
+.tcard .name{margin-top:12px;font-weight:800;color:#111;font-size:14px}
+
+/* Final CTA */
+.final{background:linear-gradient(180deg,#faf7f0 0%,#f2ead4 100%);text-align:center;padding:70px 22px}
+.final h2{max-width:640px;margin:0 auto 16px}
+.final .sub{color:#665f4c;font-size:17px;max-width:520px;margin:0 auto 26px}
+.final .meta{color:#8a8578;font-size:13px;margin-top:14px}
+
+/* Footer */
+footer{background:#0f0e0d;color:#c9c3b5;padding:36px 22px;text-align:center;font-size:13px;line-height:1.7}
+footer p{max-width:720px;margin:6px auto}
+
+/* Sticky bottom */
+.stickybottom{position:fixed;bottom:0;left:0;right:0;background:#111;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px;justify-content:space-between;z-index:60;box-shadow:0 -8px 20px rgba(0,0,0,.25);padding-bottom:calc(12px + env(safe-area-inset-bottom))}
+.stickybottom .lb{font-size:12px;font-weight:800;letter-spacing:.06em;color:#F5B301;display:block;margin-bottom:2px}
+.stickybottom .prices{display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}
+.stickybottom .prices .now{font-size:22px;font-weight:900;color:#fff;white-space:nowrap}
+.stickybottom .prices .old{font-size:14px;color:#7a7466;text-decoration:line-through;white-space:nowrap}
+.stickybottom a{background:#F5B301;color:#111;padding:12px 18px;border-radius:12px;font-weight:900;font-size:14px;white-space:nowrap}
+
+/* Padding para no tapar contenido */
+body{padding-bottom:80px}
+
+/* Mobile */
+@media(max-width:900px){
+  .mueble-grid,.testi-scroll{grid-template-columns:repeat(2,1fr)}
+  .calc-wrap{grid-template-columns:1fr}
+  .benefits,.bonos-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:640px){
+  .section{padding:44px 0}
+  h1{font-size:30px;letter-spacing:0;line-height:1.2}
+  h2{font-size:22px;letter-spacing:0;line-height:1.25}
+  h3{font-size:18px}
+  .wrap{padding:0 14px}
+  .hero{padding:52px 0 46px}
+  .hero h1{font-size:26px;line-height:1.22}
+  .hero .sub{font-size:15px}
+  .pain-bloc{padding:36px 20px}
+  .pain-bloc h2{font-size:22px}
+  .pain-bloc .sub{font-size:15px}
+  .benefit{padding:18px 14px}
+  .benefit h3{font-size:15px}
+  .why-list li{font-size:15px;padding:14px 16px}
+  .includes-list li{font-size:15px}
+  .stickytop{font-size:12px;padding:8px 12px;gap:8px}
+  .stickytop b{display:block}
+  .stickytop a{padding:6px 12px;font-size:12px}
+  .hero-pack{max-width:100%;margin-top:22px}
+  .cta{font-size:16px;padding:14px 24px}
+  .badges{gap:6px}
+  .badge-pill{font-size:11px;padding:6px 10px}
+  .mueble-grid,.testi-scroll{gap:10px}
+  .calc-wrap{gap:24px}
+  .calc-mockup img{max-width:280px}
+  .benefits,.bonos-grid{grid-template-columns:1fr;gap:12px}
+  .offer-card{padding:24px 20px}
+  .offer-title{font-size:19px}
+  .price-new-o{font-size:52px}
+  .price-old-o{font-size:16px}
+  .price-top{gap:10px}
+  .stack-box{padding:16px}
+  .stack-list li{font-size:15px}
+  .cta-block .cta{font-size:17px;padding:16px 22px;width:100%}
+  .compare{padding:14px}
+  .compare table{font-size:14px}
+  .guarantee{padding:26px 20px}
+  .guarantee h3{font-size:19px}
+  .testis-cards{grid-template-columns:1fr}
+  .final{padding:52px 18px}
+  .stickybottom{padding:10px 14px;gap:10px}
+  .stickybottom a{padding:10px 14px;font-size:13px}
+  .stickybottom .prices .now{font-size:19px}
+  body{padding-bottom:76px}
+}
+@media(max-width:420px){
+  h1{font-size:26px}
+  h2{font-size:20px}
+  h3{font-size:16px}
+  .hero h1{font-size:24px}
+  .hero .sub{font-size:14px}
+  .pain-bloc{padding:32px 16px}
+  .pain-bloc h2{font-size:20px}
+  .benefit h3{font-size:14px}
+  .price-new{font-size:38px}
+  .price-new-o{font-size:44px}
+  .cta{font-size:15px;padding:13px 20px}
+  .cta-block .cta{font-size:15px;padding:14px 18px}
+  .stickybottom .prices{flex-direction:column;gap:0;align-items:flex-start}
+  .stickybottom .prices .now{font-size:17px}
+  .stickybottom .prices .old{font-size:12px}
+  .stickytop{flex-wrap:wrap}
+}
+</style>
+
+
+<!-- Sticky top -->
+<div class="stickytop">
+  <span>🚀 <b>PREZZO DI LANCIO</b> · SOLO OGGI <b>€2,99</b></span>
+  <a href="#offer">LO VOGLIO ➤</a>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="wrap center">
+    <span class="kicker">Materiale esclusivo</span>
+    <h1>+160 progetti di mobili con <span class="yl">pallet</span>, pronti per scaricare, costruire e vendere</h1>
+    <p class="sub">Misure, tagli e incastri: tutto pronto per prendere il pallet e iniziare. Trasforma qualsiasi pallet dimenticato in un pezzo bello e redditizio.</p>
+    <div class="badges">
+      <span class="badge-pill">🪵 +160 PROGETTI</span>
+      <span class="badge-pill">⚡ ACCESSO IMMEDIATO</span>
+      <span class="badge-pill">🎁 6 BONUS OMAGGIO</span>
+      <span class="badge-pill">🔨 SENZA ESSERE FALEGNAME</span>
+    </div>
+    <div class="hero-pack">
+      <img src="https://files.catbox.moe/bhgcr2.webp" alt="Pallet Pro — +160 progetti con pallet + 6 bonus" width="1400" height="1400" fetchpriority="high">
+    </div>
+    <div style="margin-top:26px"><a class="cta" href="#offer">LO VOGLIO SUBITO</a></div>
+    <div class="trust-chips">
+      <span>✅ Soddisfazione garantita</span>
+      <span>🔒 Acquisto sicuro</span>
+      <span>🎧 Accesso immediato</span>
+    </div>
+  </div>
+</section>
+
+<!-- Guarda com'è dentro -->
+<section class="section sec-white">
+  <div class="wrap inner" style="text-align:center">
+    <span class="kicker">Guarda com'è dentro</span>
+    <h2 style="margin-top:12px">Dal taglio alla finitura. Questo è ciò che potrai costruire.</h2>
+    <div class="mueble-grid">
+      <img src="https://files.catbox.moe/y0jmkn.webp" alt="Tavolino d'ingresso in pallet" loading="lazy" width="900" height="1200">
+      <img src="https://files.catbox.moe/giqxf3.webp" alt="Poltrone da cortile in pallet" loading="lazy" width="900" height="1200">
+      <img src="https://files.catbox.moe/irbvqt.webp" alt="Divano ad angolo con tavolino in pallet" loading="lazy" width="900" height="1200">
+      <img src="https://files.catbox.moe/01i882.webp" alt="Prima poltrona in pallet" loading="lazy" width="900" height="1200">
+    </div>
+    <a class="cta" href="#offer">VOGLIO ACCESSO AI PROGETTI</a>
+  </div>
+</section>
+
+<!-- Calcolatore -->
+<section class="section sec-dark">
+  <div class="wrap">
+    <div style="text-align:center">
+      <span class="kicker" style="background:rgba(245,179,1,.15);color:#F5B301">Ciò che nessun PDF può fare</span>
+      <h2 style="margin-top:12px">Sai quanti pallet raccogliere prima di andare a cercarli</h2>
+    </div>
+    <div class="calc-wrap">
+      <div class="calc-copy">
+        <span class="chip">📐 Calcolatore di Pallet · FUNZIONA DAL TUO CELLULARE</span>
+        <p class="sub">Inserisci la misura del mobile e <b>ti dice quanti pallet raccogliere e cosa comprare</b>. Guarda come funziona 👇</p>
+        <ul class="calc-list">
+          <li>✓ <b>Quanti pallet</b> ti servono</li>
+          <li>✓ <b>Tavole, viti e metri</b></li>
+          <li>✓ Si adatta al <b>pallet che hai trovato</b></li>
+          <li>✓ Include già il <b>15% di margine</b></li>
+          <li>✓ Dal cellulare, <b>senza installare nulla</b></li>
+        </ul>
+        <div class="calc-callout">♻️ E la parte migliore: <b>il pallet lo trovi GRATIS</b> in magazzini, negozi, falegnamerie e ferramenta → il tuo margine è quasi tutto guadagno.</div>
+      </div>
+      <div class="calc-mockup">
+        <img src="https://files.catbox.moe/yvds04.webp" alt="Mockup calcolatore Pallet Pro su cellulare" loading="lazy" width="540" height="960">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testis WhatsApp -->
+<section class="section sec-white">
+  <div class="wrap" style="text-align:center">
+    <span class="kicker">★★★★★ · RECENSIONI VERE</span>
+    <h2 style="margin-top:12px">Guarda cosa stanno realizzando</h2>
+    <div class="testi-scroll">
+      <img src="https://files.catbox.moe/jfetvl.webp" alt="Testimonial WhatsApp di Marco" loading="lazy" width="720" height="1280">
+      <img src="https://files.catbox.moe/xig0zj.webp" alt="Testimonial WhatsApp di Luca" loading="lazy" width="720" height="1280">
+      <img src="https://files.catbox.moe/u34p3h.webp" alt="Testimonial WhatsApp di Roberto" loading="lazy" width="720" height="1280">
+      <img src="https://files.catbox.moe/9c7j1r.webp" alt="Testimonial WhatsApp di Andrea" loading="lazy" width="720" height="1280">
+    </div>
+  </div>
+</section>
+
+<!-- Beneficios -->
+<section class="section sec-white" style="padding-top:0">
+  <div class="wrap" style="text-align:center">
+    <span class="kicker">Sfrutta i tuoi pallet come si deve</span>
+    <h2 style="margin-top:12px">Progetti pensati per trasformare qualsiasi pallet in pezzi pronti da usare o vendere.</h2>
+    <div class="benefits">
+      <div class="benefit"><div class="emoji">📐</div><h3>Misure adattabili per ogni pezzo</h3></div>
+      <div class="benefit"><div class="emoji">🪚</div><h3>Lista dei tagli pronta</h3></div>
+      <div class="benefit"><div class="emoji">🔩</div><h3>Incastri semplici e chiari</h3></div>
+      <div class="benefit"><div class="emoji">💰</div><h3>Pezzi pensati per essere venduti</h3></div>
+      <div class="benefit"><div class="emoji">♻️</div><h3>Sfrutti qualsiasi dimensione di pallet</h3></div>
+      <div class="benefit"><div class="emoji">📱</div><h3>Accesso dal cellulare o dal computer</h3></div>
+    </div>
+    <div style="margin-top:30px"><a class="cta" href="#offer">VOGLIO IL MIO ACCESSO</a></div>
+    <div style="margin-top:12px;color:#8a8578;font-size:13px">⏳ Prezzo promozionale per tempo limitato</div>
+  </div>
+</section>
+
+<!-- Bloque dolor -->
+<section class="section sec-white" style="padding-top:0">
+  <div class="wrap">
+    <div class="pain-bloc">
+      <h2>Un pallet dimenticato è <span class="em">denaro nella spazzatura</span>. Trasformalo in mobili e vendi OGGI.</h2>
+      <p class="sub">Ogni pallet che tieni da parte può essere un pezzo redditizio. Con i progetti in mano sai già cosa tagliare e come incastrare. Non si spreca nemmeno una tavola.</p>
+      <a class="cta" href="#offer">VEDI TUTTI I PROGETTI</a>
+    </div>
+  </div>
+</section>
+
+<!-- Perché no YouTube -->
+<section class="section sec-white" style="padding-top:0">
+  <div class="wrap inner">
+    <h2>Perché questo e non un video gratis di YouTube?</h2>
+    <p style="color:#665f4c;font-size:17px;margin-top:8px">Mille video sparsi non ti danno quello che hai qui.</p>
+    <ul class="why-list">
+      <li>🎬 Un video mostra <b>un</b> mobile. Qui ne trovi <b>+160</b>, con misure e tagli.</li>
+      <li>🪵 I tutorial partono dal legno nuovo. Qui, dal <b>pallet che hai già gratis</b>.</li>
+      <li>⚡ Niente pause né riavvolgi: <b>apri il piano e ti riesce al primo colpo</b>.</li>
+    </ul>
+    <div style="margin-top:24px"><span class="chip">⚡ ACCESSO IMMEDIATO</span></div>
+  </div>
+</section>
+
+<!-- Todo lo que incluye -->
+<section class="section sec-white" style="padding-top:0">
+  <div class="wrap inner">
+    <h2>Tutto ciò che include Pallet Pro</h2>
+    <ul class="includes-list">
+      <li>✔ <b>2 volumi con +160 progetti</b> per pallet: misure, tagli e incastri.</li>
+      <li>✔ <b>Guida per principianti</b>: attrezzi base e come preparare il pallet.</li>
+    </ul>
+    <div style="margin-top:26px">
+      <div style="font-size:14px;font-weight:800;color:#a37500;letter-spacing:.12em;text-transform:uppercase">Inizia oggi</div>
+      <div style="color:#665f4c;font-size:16px;margin-top:6px">Tutto incluso, in un unico pagamento. Senza abbonamenti, senza giri.</div>
+    </div>
+  </div>
+</section>
+
+<!-- Oferta principal -->
+<section id="offer">
+  <div class="wrap">
+    <div class="offer-card">
+      <div class="countdown-bar">⏰ ULTIMA CHANCE · L'OFFERTA SCADE TRA: <span class="t" id="cd">02:47:00</span></div>
+      <div style="text-align:center">
+        <span class="offer-badge">⚡ OFFERTA COMPLETA</span>
+        <div class="offer-title">PALLET PRO — +160 PROGETTI + 6 BONUS</div>
+        <div class="offer-sub">+160 progetti + 6 bonus omaggio</div>
+      </div>
+
+      <div class="price-top">
+        <span class="price-old-o">€89,99</span>
+        <span class="savings-pill">RISPARMI €87,00</span>
+      </div>
+      <div class="price-new-o">€2,99</div>
+      <div class="price-caption">🚀 Prezzo di lancio · pagamento unico · accesso immediato</div>
+
+      <div class="stack-box">
+        <div class="stack-title">✨ COSA OTTIENI OGGI</div>
+        <ul class="stack-list">
+          <li><span class="ic">✔</span><span><b>2 volumi con +160 progetti:</b> misure, tagli e incastri</span></li>
+          <li><span class="ic">🎁</span><span><b>Bonus #1</b> Attrezzi Essenziali</span></li>
+          <li><span class="ic">🎁</span><span><b>Bonus #2</b> Come Scegliere il Pallet Giusto</span></li>
+          <li><span class="ic">🎁</span><span><b>Bonus #3</b> Passo Passo di Esecuzione</span></li>
+          <li><span class="ic">🎁</span><span><b>Bonus #4</b> Modelli Extra per Esterni</span></li>
+          <li><span class="ic">🎁</span><span><b>Bonus #5</b> Finitura Professionale</span></li>
+          <li><span class="ic">🎁</span><span><b>Bonus #6</b> Calcolatore di Pallet</span></li>
+          <li><span class="ic">✔</span><span><b>Aggiornamenti inclusi</b></span></li>
+        </ul>
+      </div>
+
+      <div class="cta-block">
+        <a class="cta" href="/checkout">VOGLIO IL PACK COMPLETO 🔥 — €2,99</a>
+      </div>
+      <div class="trust-line">🔒 Pagamento 100% sicuro · 🛡️ Garanzia di 7 giorni o rimborso</div>
+    </div>
+  </div>
+</section>
+
+<!-- Bonos detalle -->
+<section class="section sec-white">
+  <div class="wrap" style="text-align:center">
+    <span class="kicker">Guarda in dettaglio</span>
+    <h2 style="margin-top:12px">i tuoi 6 bonus</h2>
+    <p style="color:#665f4c;font-size:16px;margin-top:8px">Tutti inclusi nel pack, senza costi aggiuntivi:</p>
+    <div class="bonos-grid">
+      <div class="bono"><div class="tag">GRATIS OGGI</div><img src="https://files.catbox.moe/vus7a6.webp" alt="Bonus 1 Attrezzi Essenziali" loading="lazy" width="600" height="900"><div class="info"><h3>Bonus 1 · Attrezzi Essenziali</h3><p>Il minimo che ti serve per iniziare con i pallet senza spendere di più.</p><div class="inc">✓ Incluso gratis</div></div></div>
+      <div class="bono"><div class="tag">GRATIS OGGI</div><img src="https://files.catbox.moe/3n197h.webp" alt="Bonus 2 Come scegliere il pallet giusto" loading="lazy" width="600" height="900"><div class="info"><h3>Bonus 2 · Come scegliere il pallet giusto</h3><p>Identifica pallet buoni, sicuri e facili da lavorare, e dove trovarli gratis.</p><div class="inc">✓ Incluso gratis</div></div></div>
+      <div class="bono"><div class="tag">GRATIS OGGI</div><img src="https://files.catbox.moe/b7k5t3.webp" alt="Bonus 3 Passo passo di esecuzione" loading="lazy" width="600" height="900"><div class="info"><h3>Bonus 3 · Passo passo di esecuzione</h3><p>Smontaggio, taglio, montaggio e finitura senza errori, dall'inizio alla fine.</p><div class="inc">✓ Incluso gratis</div></div></div>
+      <div class="bono"><div class="tag">GRATIS OGGI</div><img src="https://files.catbox.moe/d64134.webp" alt="Bonus 4 Modelli extra per esterni" loading="lazy" width="600" height="900"><div class="info"><h3>Bonus 4 · Modelli extra per esterni</h3><p>Progetti speciali per balcone, giardino e cortile, fatti solo con pallet.</p><div class="inc">✓ Incluso gratis</div></div></div>
+      <div class="bono"><div class="tag">GRATIS OGGI</div><img src="https://files.catbox.moe/cxarpr.webp" alt="Bonus 5 Finitura professionale" loading="lazy" width="600" height="900"><div class="info"><h3>Bonus 5 · Finitura professionale</h3><p>Levigare, trattare e lasciare i tuoi pezzi belli e con l'aspetto vendibile.</p><div class="inc">✓ Incluso gratis</div></div></div>
+      <div class="bono"><div class="tag">GRATIS OGGI</div><img src="https://files.catbox.moe/k1n7m7.webp" alt="Bonus 6 Calcolatore di Pallet" loading="lazy" width="600" height="900"><div class="info"><h3>Bonus 6 · Calcolatore di Pallet</h3><p>Inserisci la misura del mobile e ti dice quanti pallet, tavole e viti ti servono.</p><div class="inc">✓ Incluso gratis</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Garantía -->
+<section class="section sec-white" style="padding-top:0">
+  <div class="wrap">
+    <div class="guarantee">
+      <div class="shield">🛡️</div>
+      <h3>Garanzia incondizionata di 7 giorni</h3>
+      <p>Ci fidiamo talmente tanto del materiale che hai 7 giorni interi per provare tutto senza alcun rischio. Se per qualsiasi motivo non sei soddisfatto, ti restituiamo il 100% del tuo denaro. Senza domande, senza burocrazia, senza giri.</p>
+      <span class="em">Il rischio è tutto nostro.</span>
+    </div>
+  </div>
+</section>
+
+<!-- Comparativa -->
+<section class="section sec-white" style="padding-top:0">
+  <div class="wrap inner" style="text-align:center">
+    <h2>Con Pallet Pro cambia il gioco</h2>
+    <p style="color:#665f4c;font-size:16px;margin:10px 0 0">Da un pallet che raccoglie polvere a pezzi da usare e vendere.</p>
+    <div class="compare">
+      <table>
+        <thead><tr><th class="no">Senza Pallet Pro</th><th class="yes">Con Pallet Pro</th></tr></thead>
+        <tbody>
+          <tr><td>❌ Il pallet che raccoglie polvere in cortile</td><td>✅ Pallet trasformati in pezzi che danno orgoglio</td></tr>
+          <tr><td>❌ Non sai da dove iniziare né cosa tagliare</td><td>✅ +160 progetti con misure e passo passo</td></tr>
+          <tr><td>❌ Paura di rovinare il legno tagliando a occhio</td><td>✅ Segui il piano e ti riesce al primo colpo</td></tr>
+          <tr><td>❌ Spendi in legno nuovo dalla falegnameria</td><td>✅ Usi pallet che trovi gratis</td></tr>
+          <tr><td>❌ Mobili che vorresti ma non compri perché costosi</td><td>✅ Pezzi per la tua casa o da vendere e fatturare</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="margin-top:26px"><a class="cta" href="#offer">VOGLIO INIZIARE OGGI</a></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section sec-white" style="padding-top:0">
+  <div class="wrap" style="text-align:center">
+    <h2>Domande frequenti</h2>
+    <div class="faq-list" style="text-align:left">
+      <details><summary>Funziona se non ho mai costruito un mobile?</summary><p>Sì. È pensato per principianti: ogni progetto ha il passo passo illustrato e le misure esatte. Inizi dai facili e sali gradualmente.</p></details>
+      <details><summary>Come lo ricevo?</summary><p>È 100% digitale. Appena paghi, ricevi l'accesso per scaricarlo subito. Lo vedi dal cellulare, dal computer o dal tablet.</p></details>
+      <details><summary>Mi servono attrezzi costosi?</summary><p>No. Con gli attrezzi base basta, e all'interno ti diciamo esattamente quali conviene avere per iniziare.</p></details>
+      <details><summary>Davvero trovo i pallet gratis?</summary><p>Sì. Magazzini, negozi, falegnamerie, ferramenta e supermercati spesso li regalano per liberarsene. Nel Bonus #2 ti diamo la lista di dove e come chiederli.</p></details>
+      <details><summary>Posso vendere quello che faccio?</summary><p>Assolutamente. Molti usano Pallet Pro proprio per questo: include i bonus di vendita e finitura per iniziare a fatturare.</p></details>
+      <details><summary>Cosa include esattamente?</summary><p>I +160 progetti con misure, tagli e incastri, i 6 bonus (attrezzi, scelta del pallet, passo passo, modelli per esterno, finitura professionale e il calcolatore di pallet) e gli aggiornamenti. Tutto con un unico pagamento.</p></details>
+      <details><summary>E se non mi piace?</summary><p>Hai 7 giorni di garanzia. Se non ti convince, ti restituiamo il 100%.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- Testis grid nombres -->
+<section class="section sec-white" style="padding-top:0">
+  <div class="wrap" style="text-align:center">
+    <h2>Cosa dicono chi lo ha già</h2>
+    <div class="testis-cards" style="text-align:left">
+      <div class="tcard"><div class="stars">★★★★★</div><p>"Ho fatto un tavolino e una mensola il primo weekend. Ho speso zero in legno, un magazzino del quartiere mi ha regalato i pallet."</p><div class="name">— Marco</div></div>
+      <div class="tcard"><div class="stars">★★★★★</div><p>"Ho iniziato per arredare casa mia e ho finito per vendere. Ho già fatto 3 divani su commissione. I piani con le misure sono un capolavoro."</p><div class="name">— Sara</div></div>
+      <div class="tcard"><div class="stars">★★★★★</div><p>"Sono zero manualità e comunque ho capito tutto. Il passo passo è spiegato per principianti veri."</p><div class="name">— Luca</div></div>
+      <div class="tcard"><div class="stars">★★★★★</div><p>"Non sapevo da dove generare entrate. Con questa guida è stato un prima e un dopo. Un 10 il passo passo di ogni progetto. Ho già 4 venduti e 2 su commissione."</p><div class="name">— Andrea</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA final -->
+<section class="final">
+  <h2>Il tuo primo mobile può essere pronto questo weekend</h2>
+  <p class="sub">Materiale gratis, piani con misure e il passo passo. Manca solo che tu inizi.</p>
+  <a class="cta" href="#offer">LO VOGLIO SUBITO</a>
+  <div class="meta">Accesso immediato · Garanzia 7 giorni · Pagamento unico</div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p><b>Copyright © 2026 · Pallet Pro · Tutti i diritti riservati.</b></p>
+  <p>Questo sito non è affiliato a Facebook, Instagram né a nessun social network.</p>
+  <p>I risultati presentati sono individuali e possono variare da persona a persona. Non garantiamo risultati specifici; l'applicazione delle tecniche dipende dallo sforzo di ciascuno.</p>
+</footer>
+
+<!-- Sticky bottom -->
+<div class="stickybottom">
+  <div>
+    <span class="lb">🚀 PREZZO DI LANCIO · SOLO OGGI</span>
+    <div class="prices"><span class="now">€2,99</span><span class="old">€89,99</span></div>
+  </div>
+  <a href="#offer">LO VOGLIO →</a>
+</div>
+
+<script>
+(function(){
+  function run(){
+    // Countdown 02:47:00 → cuenta regresiva a partir de load
+    var el = document.getElementById('cd');
+    if(!el) return;
+    var total = 2*3600 + 47*60; // segundos
+    function tick(){
+      var h = Math.floor(total/3600).toString().padStart(2,'0');
+      var m = Math.floor((total%3600)/60).toString().padStart(2,'0');
+      var s = (total%60).toString().padStart(2,'0');
+      el.textContent = h+':'+m+':'+s;
+      if(total > 0) total--;
+    }
+    tick();
+    setInterval(tick, 1000);
+  }
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', run);
+  } else {
+    run();
+  }
+})();
+</script>
+
